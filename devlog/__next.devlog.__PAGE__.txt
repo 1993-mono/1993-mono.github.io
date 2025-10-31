@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"buildId":"lgj1LA63ABM2KrFvlwZoo","rsc":["$","$1","c",{"children":[[["$","h2",null,{"children":"개발 기록"}],["$","p",null,{"children":"보드 형식으로 글 목록을 보여줄 예정입니다."}]],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+4:null
