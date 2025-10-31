@@ -10,9 +10,13 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: false
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -20,7 +24,7 @@ jobs:
           node-version: 20
           cache: 'yarn'
 
-      - name: Install
+      - name: Install dependencies
         run: yarn install --frozen-lockfile
 
       - name: Build
@@ -31,3 +35,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          publish_branch: gh-pages
+          force_orphan: true
