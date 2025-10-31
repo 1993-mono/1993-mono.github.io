@@ -1,6 +1,3 @@
-# deploy_key
-# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH3bJEgQ7rQmV+3gUBitbUY2OyFwDPqs1eR/5Y4d6/H0 deploy@1993-mono.github.io
-
 name: Deploy to GitHub Pages
 
 on:
