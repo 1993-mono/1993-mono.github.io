@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import "./globals.scss";
+import "./styles.scss";
 
 export const metadata: Metadata = {
   title: "DevFolio",
