@@ -38,3 +38,94 @@ body {
   color: var(--foreground);
   line-height: 1.5;
 }
+
+
+
+/* Devlog 마크다운 콘텐츠 스타일 */
+.devlog-content {
+  line-height: 1.8;
+}
+
+.devlog-content h1,
+.devlog-content h2,
+.devlog-content h3,
+.devlog-content h4,
+.devlog-content h5,
+.devlog-content h6 {
+  font-weight: 700;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.devlog-content h1 {
+  font-size: 2em;
+}
+
+.devlog-content h2 {
+  font-size: 1.5em;
+}
+
+.devlog-content h3 {
+  font-size: 1.25em;
+}
+
+.devlog-content p {
+  margin-bottom: 1em;
+}
+
+.devlog-content ul,
+.devlog-content ol {
+  margin-bottom: 1em;
+  padding-left: 2em;
+}
+
+.devlog-content li {
+  margin-bottom: 0.5em;
+}
+
+.devlog-content code {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25em;
+  font-size: 0.9em;
+}
+
+.devlog-content pre {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.devlog-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.devlog-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.devlog-content a:hover {
+  color: #1d4ed8;
+}
+
+@media (prefers-color-scheme: dark) {
+  .devlog-content code {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .devlog-content pre {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .devlog-content a {
+    color: #60a5fa;
+  }
+
+  .devlog-content a:hover {
+    color: #93c5fd;
+  }
+}
