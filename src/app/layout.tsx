@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BriefcaseIcon, DocumentTextIcon } from "@heroicons/react/24/outline";
+import { BriefcaseIcon as BriefcaseIconOutline, DocumentTextIcon as DocumentTextIconOutline } from "@heroicons/react/24/outline";
+import { BriefcaseIcon as BriefcaseIconSolid, DocumentTextIcon as DocumentTextIconSolid } from "@heroicons/react/24/solid";
 import "./styles.scss";
 
 export const metadata: Metadata = {
@@ -16,30 +17,38 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <header className="flex justify-between items-center border-b border-gray-200 px-5 py-2.5">
-          <h1>
-            <Link href="/" className="text-2xl font-bold">DevFolio</Link>
-          </h1>
-          <nav>
-            <ul className="flex gap-5">
-              <li>
-                <Link href="/portfolio" className="flex items-center gap-1">
-                  <BriefcaseIcon className="w-5 h-5" />
-                  <span>포트폴리오</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/devlog" className="flex items-center gap-1">
-                  <DocumentTextIcon className="w-5 h-5" />
-                  <span>개발 기록</span>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <main>
-          {children}
-        </main>
+        <div id="wrapper" className="flex flex-col min-h-screen">
+          <header className="flex justify-between items-center border-b border-gray-200 px-[var(--spacing-container-x)] py-[var(--spacing-header-y)]">
+            <h1>
+              <Link href="/" className="text-2xl text-gray-950 font-bold">DevFolio</Link>
+            </h1>
+            <nav>
+              <ul className="flex gap-5">
+                <li>
+                  <Link href="/portfolio" className="group flex items-center gap-1 transition-all duration-300 hover:text-gray-950 hover:font-semibold">
+                    <span className="w-4.5 h-4.5 relative">
+                      <BriefcaseIconOutline className="w-full h-full absolute top-0 left-0 transition-all duration-300 group-hover:opacity-0" />
+                      <BriefcaseIconSolid className="w-full h-full absolute top-0 left-0 opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                    </span>
+                    <span>포트폴리오</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/devlog" className="group flex items-center gap-1 transition-all duration-300 hover:text-gray-950 hover:font-semibold">
+                    <span className="w-4.5 h-4.5 relative">
+                      <DocumentTextIconOutline className="w-full h-full absolute top-0 left-0 transition-all duration-300 group-hover:opacity-0" />
+                      <DocumentTextIconSolid className="w-full h-full absolute top-0 left-0 opacity-0 transition-all duration-300 group-hover:opacity-100" />
+                    </span>
+                    <span>개발 기록</span>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <main className="flex-1 flex flex-col px-[var(--spacing-container-x)] py-[var(--spacing-main-y)]">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
