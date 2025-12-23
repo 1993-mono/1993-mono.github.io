@@ -1,1 +1,151 @@
 @import "./globals.css";
+
+#wrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    width: var(--layout-header-width);
+    border-right: 1px solid var(--color-border-gray);
+    background-color: var(--color-background-gray);
+
+    .logo a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: var(--height-header);
+      padding: 0 var(--spacing-container-x);
+      font-size: var(--font-size-logo);
+      color: #000;
+      font-weight: 700;
+    }
+
+    nav {
+      flex: 1;
+      padding: 0;
+      overflow-y: auto;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        li a {
+          display: flex;
+          align-items: center;
+          gap: 0.375em;
+          padding: 1em var(--spacing-container-x);
+          font-size: var(--font-size-nav);
+          transition: 0.3s;
+
+          .icn-container {
+            width: var(--size-icn);
+            height: var(--size-icn);
+            transform-origin: center 75%;
+            position: relative;
+
+            .icn {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              left: 0;
+              top: 0;
+              transition: 0.3s;
+
+              &.hover {
+                opacity: 0;
+              }
+            }
+          }
+
+          .txt {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.625em;
+            white-space: nowrap;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              border-top: 1px dashed var(--color-border-gray-dashed);
+            }
+          }
+
+          &:hover {
+            color: #000;
+            font-weight: 600;
+
+            .icn-container {
+              animation: wave 2s ease-in-out infinite;
+
+              .icn {
+
+                &.default {
+                  opacity: 0;
+                }
+
+                &.hover {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          &.active {
+            color: #000;
+            font-weight: 600;
+
+            .icn-container .icn {
+
+              &.default {
+                opacity: 0;
+              }
+
+              &.hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@keyframes wave {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-15deg);
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  35% {
+    transform: rotate(-15deg);
+  }
+
+  45% {
+    transform: rotate(15deg);
+  }
+
+  55% {
+    transform: rotate(0deg);
+  }
+}

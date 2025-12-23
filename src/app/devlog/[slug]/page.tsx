@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllDevlogSlugs, getDevlogPost } from '@/lib/devlog';
+import './styles.scss';
 
 interface PageProps {
   params: Promise<{
