@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Navigation from "./components/Navigation";
+import ResponsiveLayout from "./components/ResponsiveLayout";
+import ResponsiveDetector from "./components/ResponsiveDetector";
 import "./styles.scss";
 
 export const metadata: Metadata = {
@@ -16,13 +16,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <div id="wrapper">
-          <header>
-            <h1 className="logo"><Link href="/">DevFolio</Link></h1>
-            <Navigation />
-          </header>
-          {children}
-        </div>
+        <ResponsiveDetector />
+        <ResponsiveLayout>{children}</ResponsiveLayout>
       </body>
     </html>
   );
