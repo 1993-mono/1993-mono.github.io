@@ -79,6 +79,8 @@ export default function DevlogTabs({
 
   return (
     <main id="devlog">
+      탭 활성화 시 활성화된 탭 뒤로 움직이는 배경 작업 예정
+
       {/* 탭 목록 */}
       {folders.length > 0 && (
         <>
