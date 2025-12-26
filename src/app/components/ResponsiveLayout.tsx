@@ -17,10 +17,7 @@ export default function ResponsiveLayout({
           <aside>
             <Header />
             <footer>
-              <p>
-                Copyright 2025 DevFolio.<br />
-                All Rights Reserved.
-              </p>
+              <p>Copyright 2025 DevFolio.<br /> All Rights Reserved.</p>
             </footer>
           </aside>
           {children}
@@ -30,10 +27,7 @@ export default function ResponsiveLayout({
           <Header />
           {children}
           <footer>
-            <p>
-              Copyright 2025 DevFolio.<br />
-              All Rights Reserved.
-            </p>
+            <p>Copyright 2025 DevFolio.<br /> All Rights Reserved.</p>
           </footer>
         </>
       )}

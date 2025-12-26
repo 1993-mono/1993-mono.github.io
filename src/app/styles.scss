@@ -1,7 +1,11 @@
 @import "./globals.css";
 
+
+
 #wrapper {
   position: relative;
+
+
 
   // MIN
   @media (min-width: 1461px) {
@@ -135,12 +139,7 @@
     }
   }
 
-  @media (min-width: 381px) {
 
-    footer p br {
-      display: none;
-    }
-  }
 
   // MAX
   @media (max-width: 1460px) {
@@ -268,6 +267,10 @@
       font-size: var(--font-size-footer);
       color: var(--color-gray-500);
       text-align: center;
+
+      p br {
+        display: none;
+      }
     }
   }
 
@@ -279,7 +282,16 @@
       padding: 1em var(--spacing-container-x);
     }
   }
+
+  @media (max-width: 380px) {
+
+    footer p br {
+      display: inline;
+    }
+  }
 }
+
+
 
 @keyframes wave {
 

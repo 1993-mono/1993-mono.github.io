@@ -1,29 +1,52 @@
-import Link from 'next/link';
-import { getAllDevlogPosts, type DevlogPost } from '@/lib/devlog';
+import {
+  getDevlogFolders,
+  getSubFolders,
+  getDevlogPostsByFolder,
+  getPostCount,
+} from '@/lib/devlog';
+import DevlogTabs from './components/DevlogClient';
 import './styles.scss';
 
 export default function Devlog() {
-  const posts = getAllDevlogPosts();
+  const folders = getDevlogFolders();
+  const allPosts = getDevlogPostsByFolder(null);
+
+  // 각 폴더의 포스트 개수 계산
+  const folderPostCounts: Record<string, number> = {};
+  folders.forEach((folder) => {
+    folderPostCounts[folder] = getPostCount(folder);
+  });
+
+  // 각 폴더의 하위 폴더 목록 계산
+  const subFoldersMap: Record<string, string[]> = {};
+  folders.forEach((folder) => {
+    const subFolders = getSubFolders(folder);
+    if (subFolders.length > 0) {
+      subFoldersMap[folder] = subFolders;
+    }
+  });
+
+  // 전체 선택 시의 하위 폴더들도 계산 (중첩 폴더 포함)
+  const allSubFolders = getSubFolders(null);
+  allSubFolders.forEach((folder) => {
+    const subFolders = getSubFolders(folder);
+    if (subFolders.length > 0) {
+      const folderPath = folder;
+      subFoldersMap[folderPath] = subFolders;
+      // 하위 폴더의 포스트 개수도 계산
+      subFolders.forEach((subFolder) => {
+        const fullPath = `${folder}/${subFolder}`;
+        folderPostCounts[fullPath] = getPostCount(fullPath);
+      });
+    }
+  });
 
   return (
-    <main id="devlog" className="flex-1 flex flex-col gap-4">
-      {posts.length === 0 ? (
-        <p className="text-gray-600">아직 작성된 글이 없습니다.</p>
-      ) : (
-        <ul className="space-y-4">
-          {posts.map((post: DevlogPost) => (
-            <li key={post.slug}>
-              <Link
-                href={`/devlog/${post.slug}`}
-                className="block p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
-              >
-                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                <p className="text-sm text-gray-500">{post.date}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </main>
+    <DevlogTabs
+      folders={folders}
+      allPosts={allPosts}
+      folderPostCounts={folderPostCounts}
+      subFoldersMap={subFoldersMap}
+    />
   );
 }
