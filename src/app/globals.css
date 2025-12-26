@@ -69,6 +69,10 @@ body {
 
 ::-webkit-scrollbar {display: none;}
 
+button {
+  cursor: pointer;
+}
+
 
 
 @media (max-width: 1460px) {
@@ -76,14 +80,14 @@ body {
   :root {
   
     /* height */
-    --height-header: 4rem;
-    --height-footer: 4rem;
+    --height-header: 3.75rem;
+    --height-footer: 3.75rem;
 
     /* size */
     --size-menu-button: calc(var(--height-header) * 0.45);
 
     /* font-size */
-    --font-size-logo: var(--text-3xl);
+    --font-size-logo: var(--text-2xl);
     --font-size-nav: var(--text-base);
   }
 }
@@ -97,9 +101,6 @@ body {
     /* height */
     --height-header: 3.5rem;
     --height-footer: 3.5rem;
-
-    /* font-size */
-    --font-size-logo: var(--text-2xl);
   }
 }
 
