@@ -85,7 +85,7 @@ export default function Header() {
               initial={{ x: "100%", opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
-              transition={{ type: "tween", duration: 0.2, ease: "easeOut" }}
+              transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
             >
               <div className="nav-title">
                 <button type="button" className="menu-button" aria-label="메뉴 닫기" onClick={handleMenuButtonClick}><XMarkIcon /></button>

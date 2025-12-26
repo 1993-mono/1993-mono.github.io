@@ -25,6 +25,8 @@
   --color-background-gray: var(--color-gray-50);
   --color-border-gray: var(--color-gray-200);
   --color-border-gray-dashed: var(--color-gray-300);
+  --color-tab-background: var(--color-gray-100);
+  --color-tab-dot-background: var(--color-gray-400);
 
   /* layout */
   --layout-header-width: 16rem;
@@ -43,6 +45,7 @@
   /* font-size */
   --font-size-logo: var(--text-4xl);
   --font-size-nav: var(--text-lg);
+  --font-size-tab: var(--text-base);
   --font-size-footer: var(--text-sm);
 }
 
@@ -57,7 +60,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: var(--font-size-base);
 }
 
 body {
@@ -71,6 +74,12 @@ body {
 
 button {
   cursor: pointer;
+}
+
+/* common */
+.no-data {
+  color: var(--color-gray-500);
+  text-align: center;
 }
 
 

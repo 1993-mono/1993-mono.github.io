@@ -79,71 +79,78 @@ export default function DevlogTabs({
 
   return (
     <main id="devlog">
-      {/* 1차 탭 */}
-      <div className="tabs-primary mb-4">
-        <button
-          type="button"
-          onClick={() => handlePrimaryTabClick(null)}
-          className={`tab-button ${selectedPrimaryTab === null ? 'active' : ''}`}
-        >
-          전체 ({getPostCount(null)})
-        </button>
-        {folders.map((folder) => (
-          <button
-            key={folder}
-            type="button"
-            onClick={() => handlePrimaryTabClick(folder)}
-            className={`tab-button ${selectedPrimaryTab === folder ? 'active' : ''}`}
-          >
-            {folder} ({getPostCount(folder)})
-          </button>
-        ))}
-      </div>
-
-      {/* 2차 탭 (1차 탭이 선택되었고 하위 폴더가 있을 때만 표시) */}
-      {selectedPrimaryTab !== null && secondaryTabs.length > 0 && (
-        <div className="tabs-secondary mb-4">
-          <button
-            type="button"
-            onClick={() => handleSecondaryTabClick(null)}
-            className={`tab-button ${selectedSecondaryTab === null ? 'active' : ''}`}
-          >
-            전체 ({getPostCount(selectedPrimaryTab)})
-          </button>
-          {secondaryTabs.map((folder) => {
-            const folderPath = `${selectedPrimaryTab}/${folder}`;
-            return (
+      {/* 탭 목록 */}
+      {folders.length > 0 && (
+        <>
+          {/* 1차 탭 */}
+          <div className="tabs primary" aria-label="1차 탭">
+            <button
+              type="button"
+              onClick={() => handlePrimaryTabClick(null)}
+              className={`tab-button ${selectedPrimaryTab === null ? 'active' : ''}`}
+            >
+              전체 <span className="count">{getPostCount(null)}</span>
+            </button>
+            {folders.map((folder) => (
               <button
                 key={folder}
                 type="button"
-                onClick={() => handleSecondaryTabClick(folder)}
-                className={`tab-button ${selectedSecondaryTab === folder ? 'active' : ''}`}
+                onClick={() => handlePrimaryTabClick(folder)}
+                className={`tab-button ${selectedPrimaryTab === folder ? 'active' : ''}`}
               >
-                {folder} ({getPostCount(folderPath)})
+                {folder} <span className="count">{getPostCount(folder)}</span>
               </button>
-            );
-          })}
-        </div>
+            ))}
+          </div>
+
+          {/* 2차 탭 */}
+          {selectedPrimaryTab !== null && secondaryTabs.length > 0 && (
+            <div className="tabs secondary" aria-label="2차 탭">
+              <button
+                type="button"
+                onClick={() => handleSecondaryTabClick(null)}
+                className={`tab-button ${selectedSecondaryTab === null ? 'active' : ''}`}
+              >
+                전체 <span className="count">{getPostCount(selectedPrimaryTab)}</span>
+              </button>
+              {secondaryTabs.map((folder) => {
+                const folderPath = `${selectedPrimaryTab}/${folder}`;
+                return (
+                  <button
+                    key={folder}
+                    type="button"
+                    onClick={() => handleSecondaryTabClick(folder)}
+                    className={`tab-button ${selectedSecondaryTab === folder ? 'active' : ''}`}
+                  >
+                    {folder} <span className="count">{getPostCount(folderPath)}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </>
       )}
 
       {/* 포스트 목록 */}
-      {filteredPosts.length === 0 ? (
-        <p className="text-gray-600">아직 작성된 글이 없습니다.</p>
-      ) : (
-        <ul className="space-y-4">
-          {filteredPosts.map((post: DevlogPost) => (
-            <li key={post.slug}>
-              <Link
-                href={`/devlog/${post.slug}`}
-                className="block p-4 border border-gray-200 rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-colors"
-              >
-                <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-                <p className="text-sm text-gray-500">{post.date}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
+      <div className="posts-list">
+        {filteredPosts.length === 0 ? (
+          <p className="no-data">아직 작성된 글이 없습니다.</p>
+        ) : (
+          <ul>
+            {filteredPosts.map((post: DevlogPost) => (
+              <li key={post.slug}>
+                <Link
+                  href={`/devlog/${post.slug}`}
+                  className="post-button"
+                >
+                  <h3 className="title">{post.title}</h3>
+                  <p className="date">{post.date}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </main>
   );
 }
