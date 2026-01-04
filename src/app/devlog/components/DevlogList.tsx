@@ -4,19 +4,19 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import type { DevlogPost } from '@/lib/devlog';
 
-interface DevlogTabsProps {
+interface DevlogListProps {
   folders: string[];
   allPosts: DevlogPost[];
   folderPostCounts: Record<string, number>;
   subFoldersMap: Record<string, string[]>;
 }
 
-export default function DevlogTabs({
+export default function DevlogList({
   folders,
   allPosts,
   folderPostCounts,
   subFoldersMap,
-}: DevlogTabsProps) {
+}: DevlogListProps) {
   const [selectedPrimaryTab, setSelectedPrimaryTab] = useState<string | null>(null);
   const [selectedSecondaryTab, setSelectedSecondaryTab] = useState<string | null>(null);
 

@@ -4,7 +4,7 @@ import {
   getDevlogPostsByFolder,
   getPostCount,
 } from '@/lib/devlog';
-import DevlogTabs from './components/DevlogClient';
+import DevlogList from './components/DevlogList';
 import './styles.scss';
 
 export default function Devlog() {
@@ -42,7 +42,7 @@ export default function Devlog() {
   });
 
   return (
-    <DevlogTabs
+    <DevlogList
       folders={folders}
       allPosts={allPosts}
       folderPostCounts={folderPostCounts}
