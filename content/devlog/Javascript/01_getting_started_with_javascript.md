@@ -1,6 +1,6 @@
 ---
-title: 첫 번째 개발 기록
-date: 2024-01-15
+title: 01. 자바스크립트 시작하기
+date: 2026-01-11
 ---
 
 이것은 첫 번째 개발 기록입니다.
@@ -15,5 +15,5 @@ date: 2024-01-15
 코드 블록도 가능합니다:
 
 ```javascript
-console.log('Hello, World!');
+console.log("Hello, World!");
 ```

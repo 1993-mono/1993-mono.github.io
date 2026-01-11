@@ -5,20 +5,21 @@ import './styles.scss';
 
 interface PageProps {
   params: Promise<{
-    slug: string;
+    slug: string[];
   }>;
 }
 
 export async function generateStaticParams() {
   const slugs = getAllDevlogSlugs();
   return slugs.map((slug) => ({
-    slug,
+    slug: slug.split('/'), // 슬래시로 분리하여 배열로 변환
   }));
 }
 
 export default async function DevlogPost({ params }: PageProps) {
   const { slug } = await params;
-  const post = await getDevlogPost(slug);
+  const slugString = Array.isArray(slug) ? slug.join('/') : slug; // 배열을 문자열로 조인
+  const post = await getDevlogPost(slugString);
 
   if (!post) {
     notFound();
@@ -43,4 +44,3 @@ export default async function DevlogPost({ params }: PageProps) {
     </>
   );
 }
-

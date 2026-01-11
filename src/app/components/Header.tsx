@@ -16,15 +16,21 @@ import {
   HandRaisedIcon as HandRaisedIconSolid,
 } from "@heroicons/react/24/solid";
 import { useResponsiveStore } from "@/stores/responsive";
+import { useDevlogStore } from "@/stores/devlog";
 import { motion, AnimatePresence } from "framer-motion";
 
 function NavMenu() {
   const pathname = usePathname();
+  const resetTabs = useDevlogStore((state) => state.resetTabs);
 
   return (
     <ul className="depth-1">
       <li>
-        <Link href="/" className={pathname === "/" ? "active" : ""}>
+        <Link
+          href="/"
+          className={pathname === "/" ? "active" : ""}
+          onClick={resetTabs}
+        >
           <span className="icn-container">
             <HandRaisedIconOutline className="icn default" />
             <HandRaisedIconSolid className="icn hover" />
@@ -36,6 +42,7 @@ function NavMenu() {
         <Link
           href="/portfolio"
           className={pathname.startsWith("/portfolio") ? "active" : ""}
+          onClick={resetTabs}
         >
           <span className="icn-container">
             <BriefcaseIconOutline className="icn default" />
@@ -48,6 +55,7 @@ function NavMenu() {
         <Link
           href="/devlog"
           className={pathname.startsWith("/devlog") ? "active" : ""}
+          onClick={resetTabs}
         >
           <span className="icn-container">
             <DocumentTextIconOutline className="icn default" />

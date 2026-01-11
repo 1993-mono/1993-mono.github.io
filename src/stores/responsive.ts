@@ -11,4 +11,3 @@ export const useResponsiveStore = create<ResponsiveStore>((set) => ({
   mode: "pc",
   setMode: (mode) => set({ mode }),
 }));
-
