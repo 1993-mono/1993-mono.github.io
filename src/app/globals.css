@@ -9,7 +9,6 @@
 }
 
 
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -41,6 +40,9 @@
 
   /* size */
   --size-icn: 1em;
+
+  /* radius */
+  --radius: 0.5rem;
 
   /* font-size */
   --font-size-logo: var(--text-4xl);
@@ -83,7 +85,6 @@ button {
 }
 
 
-
 @media (max-width: 1460px) {
 
   :root {
@@ -102,7 +103,6 @@ button {
 }
 
 
-
 @media (max-width: 768px) {
 
   :root {
@@ -112,7 +112,6 @@ button {
     --height-footer: 3.5rem;
   }
 }
-
 
 
 @media (max-width: 380px) {

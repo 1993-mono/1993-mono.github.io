@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import type { DevlogPost } from '@/lib/devlog';
 import { useDevlogStore } from '@/stores/devlog';
+import Tabs from '@/app/components/Tabs';
 
 interface DevlogListProps {
   folders: string[];
@@ -60,12 +61,12 @@ export default function DevlogList({
     return folderPostCounts[folder] || 0;
   };
 
-  const handlePrimaryTabClick = (folder: string | null) => {
-    setSelectedPrimaryTab(folder);
+  const handlePrimaryTabClick = (value: string | number | null) => {
+    setSelectedPrimaryTab(value as string | null);
   };
 
-  const handleSecondaryTabClick = (folder: string | null) => {
-    setSelectedSecondaryTab(folder);
+  const handleSecondaryTabClick = (value: string | number | null) => {
+    setSelectedSecondaryTab(value as string | null);
   };
 
   return (
@@ -77,50 +78,38 @@ export default function DevlogList({
       {folders.length > 0 && (
         <>
           {/* 1차 탭 */}
-          <div className="tabs primary" aria-label="1차 탭">
-            <button
-              type="button"
-              onClick={() => handlePrimaryTabClick(null)}
-              className={`tab-button ${selectedPrimaryTab === null ? 'active' : ''}`}
-            >
-              전체 <span className="count">{getPostCount(null)}</span>
-            </button>
-            {folders.map((folder) => (
-              <button
-                key={folder}
-                type="button"
-                onClick={() => handlePrimaryTabClick(folder)}
-                className={`tab-button ${selectedPrimaryTab === folder ? 'active' : ''}`}
-              >
-                {folder} <span className="count">{getPostCount(folder)}</span>
-              </button>
-            ))}
-          </div>
+          <Tabs
+            items={[
+              { label: '전체', value: null, count: getPostCount(null) },
+              ...folders.map((folder) => ({
+                label: folder,
+                value: folder,
+                count: getPostCount(folder),
+              })),
+            ]}
+            selectedValue={selectedPrimaryTab}
+            onTabClick={handlePrimaryTabClick}
+            ariaLabel="1차 탭"
+          />
 
           {/* 2차 탭 */}
           {selectedPrimaryTab !== null && secondaryTabs.length > 0 && (
-            <div className="tabs secondary" aria-label="2차 탭">
-              <button
-                type="button"
-                onClick={() => handleSecondaryTabClick(null)}
-                className={`tab-button ${selectedSecondaryTab === null ? 'active' : ''}`}
-              >
-                전체 <span className="count">{getPostCount(selectedPrimaryTab)}</span>
-              </button>
-              {secondaryTabs.map((folder) => {
-                const folderPath = `${selectedPrimaryTab}/${folder}`;
-                return (
-                  <button
-                    key={folder}
-                    type="button"
-                    onClick={() => handleSecondaryTabClick(folder)}
-                    className={`tab-button ${selectedSecondaryTab === folder ? 'active' : ''}`}
-                  >
-                    {folder} <span className="count">{getPostCount(folderPath)}</span>
-                  </button>
-                );
-              })}
-            </div>
+            <Tabs
+              items={[
+                { label: '전체', value: null, count: getPostCount(selectedPrimaryTab) },
+                ...secondaryTabs.map((folder) => {
+                  const folderPath = `${selectedPrimaryTab}/${folder}`;
+                  return {
+                    label: folder,
+                    value: folder,
+                    count: getPostCount(folderPath),
+                  };
+                }),
+              ]}
+              selectedValue={selectedSecondaryTab}
+              onTabClick={handleSecondaryTabClick}
+              ariaLabel="2차 탭"
+            />
           )}
         </>
       )}
