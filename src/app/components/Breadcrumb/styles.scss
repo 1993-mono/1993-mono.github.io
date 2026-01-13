@@ -1,0 +1,38 @@
+.breadcrumb-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1rem;
+
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.375em;
+
+    .icn-container {
+      display: block;
+      width: var(--size-icn);
+      height: var(--size-icn);
+    }
+  }
+
+  nav {
+    overflow: hidden;
+
+    --li-gap: 0.375em;
+
+    ol {
+      display: flex;
+      width: calc(100% + var(--li-gap));
+      margin-left: calc(var(--li-gap) * -1);
+
+      li {
+        padding-left: var(--li-gap);
+
+        a {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

@@ -52,6 +52,7 @@
               transition: 0.3s;
 
               .icn-container {
+                display: block;
                 width: var(--size-icn);
                 height: var(--size-icn);
                 transform-origin: center 75%;
@@ -192,6 +193,7 @@
             transition: 0.3s;
 
             .icn-container {
+              display: block;
               width: var(--size-icn);
               height: var(--size-icn);
               transform-origin: center 75%;
