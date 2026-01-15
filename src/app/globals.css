@@ -44,6 +44,9 @@
   /* radius */
   --radius: 0.5rem;
 
+  /* box-shadow */
+  --box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+
   /* font-size */
   --font-size-logo: var(--text-4xl);
   --font-size-nav: var(--text-lg);

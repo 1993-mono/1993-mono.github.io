@@ -1,1 +1,8 @@
-#devlog {}
+#devlog {
+  display: flex;
+  flex-direction: column;
+
+  .posts-list {
+    flex: 1;
+  }
+}

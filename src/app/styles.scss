@@ -5,6 +5,19 @@
   position: relative;
 
 
+
+  // No Data
+  .no-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--color-gray-500);
+    text-align: center;
+  }
+
+
   // MIN
   @media (min-width: 1461px) {
     display: flex;
@@ -49,6 +62,7 @@
               gap: 0.375em;
               padding: 1em var(--spacing-container-x);
               font-size: var(--font-size-nav);
+              font-weight: 500;
               transition: 0.3s;
 
               .icn-container {
@@ -78,7 +92,7 @@
 
               &:hover {
                 color: #000;
-                font-weight: 600;
+                font-weight: 700;
 
                 .icn-container {
                   animation: wave 1.5s ease-in-out infinite;
