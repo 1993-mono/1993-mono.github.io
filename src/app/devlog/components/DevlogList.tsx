@@ -165,22 +165,47 @@ export default function DevlogList({
               }
 
               return (
-                <li key={post.slug}>
+                <motion.li
+                  key={post.slug}
+                  layout
+                  transition={{
+                    layout: { duration: 0.15 }
+                  }}
+                >
                   <Link
                     href={`/devlog/${post.slug}`}
                     className="post-button"
                   >
-                    {categoryPath.length > 0 && (
-                      <p className="category">
-                        {categoryPath.map((category, index) => (
-                          <span key={index}>{category}</span>
-                        ))}
-                      </p>
-                    )}
-                    <h3 className="title">{post.title}</h3>
-                    <p className="date">{post.date}</p>
+                    <AnimatePresence mode="popLayout">
+                      {categoryPath.length > 0 && (
+                        <motion.p
+                          className="category"
+                          key="category"
+                          initial={{ scaleY: 0, opacity: 0 }}
+                          animate={{ scaleY: 1, opacity: 1 }}
+                          exit={{ scaleY: 0, opacity: 0 }}
+                          transition={{ duration: 0.15 }}
+                        >
+                          {categoryPath.map((category, index) => (
+                            <span key={index}>{category}</span>
+                          ))}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                    <motion.h3
+                      className="title"
+                      layout
+                      transition={{
+                        layout: { duration: 0.15 }
+                      }}
+                    >
+                      {post.title}
+                    </motion.h3>
+                    <p className="date">
+                      {post.date}
+                    </p>
                   </Link>
-                </li>
+                </motion.li>
               );
             })}
           </ul>
