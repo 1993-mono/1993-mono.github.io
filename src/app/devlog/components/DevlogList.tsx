@@ -131,7 +131,7 @@ export default function DevlogList({
         }}
       >
         {filteredPosts.length === 0 ? (
-          <p className="no-data">아직 작성된 글이 없습니다.</p>
+          <p className="no-data">아직은 작성된 글이 없어요 :^(</p>
         ) : (
           <ul>
             {filteredPosts.map((post: DevlogPost) => {
