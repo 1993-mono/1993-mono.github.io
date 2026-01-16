@@ -9,14 +9,17 @@ import {
   BriefcaseIcon as BriefcaseIconOutline,
   DocumentTextIcon as DocumentTextIconOutline,
   HandRaisedIcon as HandRaisedIconOutline,
+  CheckCircleIcon as CheckCircleIconOutline,
 } from "@heroicons/react/24/outline";
 import {
   BriefcaseIcon as BriefcaseIconSolid,
   DocumentTextIcon as DocumentTextIconSolid,
   HandRaisedIcon as HandRaisedIconSolid,
+  CheckCircleIcon as CheckCircleIconSolid,
 } from "@heroicons/react/24/solid";
 import { useResponsiveStore } from "@/stores/responsive";
 import { useDevlogStore } from "@/stores/devlog";
+import { SITE_NAME, MENU } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 function NavMenu() {
@@ -35,7 +38,7 @@ function NavMenu() {
             <HandRaisedIconOutline className="icn default" />
             <HandRaisedIconSolid className="icn hover" />
           </span>
-          <span className="txt">인사말</span>
+          <span className="txt">{MENU.HOME.name}</span>
         </Link>
       </li>
       <li>
@@ -48,7 +51,7 @@ function NavMenu() {
             <BriefcaseIconOutline className="icn default" />
             <BriefcaseIconSolid className="icn hover" />
           </span>
-          <span className="txt">포트폴리오</span>
+          <span className="txt">{MENU.PORTFOLIO.name}</span>
         </Link>
       </li>
       <li>
@@ -61,7 +64,20 @@ function NavMenu() {
             <DocumentTextIconOutline className="icn default" />
             <DocumentTextIconSolid className="icn hover" />
           </span>
-          <span className="txt">개발 기록</span>
+          <span className="txt">{MENU.DEVLOG.name}</span>
+        </Link>
+      </li>
+      <li>
+        <Link
+          href="/todo"
+          className={pathname.startsWith("/todo") ? "active" : ""}
+          onClick={resetTabs}
+        >
+          <span className="icn-container">
+            <CheckCircleIconOutline className="icn default" />
+            <CheckCircleIconSolid className="icn hover" />
+          </span>
+          <span className="txt">{MENU.TODO.name}</span>
         </Link>
       </li>
     </ul>
@@ -78,7 +94,7 @@ export default function Header() {
 
   return (
     <header>
-      <h1 className="logo"><Link href="/">DevFolio</Link></h1>
+      <h1 className="logo"><Link href="/">{SITE_NAME}</Link></h1>
       {mode === "mobile" && (
         <button type="button" className="menu-button" aria-label="메뉴 열기" onClick={handleMenuButtonClick}><Bars3Icon /></button>
       )}

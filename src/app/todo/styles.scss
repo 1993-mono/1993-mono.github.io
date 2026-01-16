@@ -1,0 +1,159 @@
+.todo-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.todo-category {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+
+  .category-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid var(--color-border-gray);
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.todo-checkbox {
+  width: 1.25em;
+  height: 1.25em;
+  cursor: not-allowed;
+  flex-shrink: 0;
+}
+
+.todo-title {
+  font-size: 1.125em;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+
+.todo-details {
+  padding-left: 2em;
+  line-height: 1.8;
+  color: var(--color-gray-600);
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+
+    li {
+      margin-bottom: 0.5em;
+      position: relative;
+
+      &::marker {
+        font-weight: 600;
+        color: var(--color-gray-700);
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    li {
+      &::marker {
+        color: var(--color-gray-600);
+      }
+    }
+  }
+
+  ol {
+    list-style-type: decimal;
+
+    li {
+      &::marker {
+        color: var(--color-gray-600);
+      }
+    }
+  }
+
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1em;
+    border-radius: 0.5em;
+    overflow-x: auto;
+    margin-bottom: 1em;
+
+    code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: underline;
+
+    &:hover {
+      color: #1d4ed8;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .todo-details {
+    color: var(--color-gray-400);
+
+    ul,
+    ol {
+      li {
+        &::marker {
+          color: var(--color-gray-300);
+        }
+      }
+    }
+
+    code {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    pre {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      color: #60a5fa;
+
+      &:hover {
+        color: #93c5fd;
+      }
+    }
+  }
+}

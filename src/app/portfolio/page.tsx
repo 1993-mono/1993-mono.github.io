@@ -1,8 +1,10 @@
 export default function Portfolio() {
   return (
-    <main id="portfolio">
-      <h2>포트폴리오</h2>
-      <p>갤러리 형식으로 글 목록을 보여줄 예정입니다.</p>
-    </main>
+    <>
+      <div className="no-data">
+        아직 이곳에 담긴 작품이 없어요.<br />
+        언젠가 찬찬히 채워나갈 예정입니다 :)
+      </div>
+    </>
   );
 }

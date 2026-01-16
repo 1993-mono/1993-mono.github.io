@@ -5,7 +5,6 @@
   position: relative;
 
 
-
   // No Data
   .no-data {
     display: flex;
@@ -311,6 +310,13 @@
   }
 }
 
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
 @keyframes wave {

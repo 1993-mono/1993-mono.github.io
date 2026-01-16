@@ -2,6 +2,7 @@
 
 import Header from "./Header";
 import { useResponsiveStore } from "@/stores/responsive";
+import { SITE_NAME } from "@/lib/constants";
 
 export default function ResponsiveLayout({
   children,
@@ -17,7 +18,7 @@ export default function ResponsiveLayout({
           <aside>
             <Header />
             <footer>
-              <p>Copyright 2025 DevFolio.<br /> All Rights Reserved.</p>
+              <p>Copyright 2025 {SITE_NAME}.<br /> All Rights Reserved.</p>
             </footer>
           </aside>
           {children}

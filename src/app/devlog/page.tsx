@@ -5,7 +5,6 @@ import {
   getPostCount,
 } from '@/lib/devlog';
 import DevlogList from './components/DevlogList';
-import './styles.scss';
 
 export default function Devlog() {
   const folders = getDevlogFolders();

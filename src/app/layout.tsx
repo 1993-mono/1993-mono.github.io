@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import ResponsiveLayout from "./components/ResponsiveLayout";
 import ResponsiveDetector from "./components/ResponsiveDetector";
+import { SITE_NAME, MENU } from "@/lib/constants";
 import "./styles.scss";
 
 export const metadata: Metadata = {
-  title: "DevFolio",
-  description: "포트폴리오 + 개발 기록",
+  title: SITE_NAME,
+  description: MENU.HOME.description,
 };
 
 export default function RootLayout({
