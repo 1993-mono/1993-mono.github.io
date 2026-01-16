@@ -3,7 +3,6 @@ import { ArrowLeftIcon } from '@heroicons/react/24/outline';
 import './styles.scss';
 
 interface BreadcrumbItem {
-  href: string;
   children: React.ReactNode;
 }
 
@@ -35,11 +34,11 @@ export default function Breadcrumb({
           {backLink.children ?? defaultBackLinkChildren}
         </Link>
       )}
-      <nav aria-label={ariaLabel}>
+      <nav className="category-navigation" aria-label={ariaLabel}>
         <ol>
           {items.map((item, idx) => (
             <li key={idx}>
-              <Link href={item.href}>{item.children}</Link>
+              {item.children}
             </li>
           ))}
         </ol>

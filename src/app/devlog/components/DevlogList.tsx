@@ -178,18 +178,20 @@ export default function DevlogList({
                   >
                     <AnimatePresence mode="popLayout">
                       {categoryPath.length > 0 && (
-                        <motion.p
-                          className="category"
-                          key="category"
+                        <motion.nav
+                          className="category-navigation"
+                          key="category-navigation"
                           initial={{ scaleY: 0, opacity: 0 }}
                           animate={{ scaleY: 1, opacity: 1 }}
                           exit={{ scaleY: 0, opacity: 0 }}
                           transition={{ duration: 0.15 }}
                         >
-                          {categoryPath.map((category, index) => (
-                            <span key={index}>{category}</span>
-                          ))}
-                        </motion.p>
+                          <ol>
+                            {categoryPath.map((category, index) => (
+                              <li key={index}>{category}</li>
+                            ))}
+                          </ol>
+                        </motion.nav>
                       )}
                     </AnimatePresence>
                     <motion.h3

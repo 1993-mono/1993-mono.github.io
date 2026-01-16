@@ -1,87 +1,125 @@
-.devlog-content {
+.markdown-content {
   line-height: 1.8;
-}
 
-.devlog-content h1,
-.devlog-content h2,
-.devlog-content h3,
-.devlog-content h4,
-.devlog-content h5,
-.devlog-content h6 {
-  font-weight: 700;
-  margin-top: 2em;
-  margin-bottom: 1em;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
 
-.devlog-content h1 {
-  font-size: 2em;
-}
+  h1 {
+    font-size: 2em;
+  }
 
-.devlog-content h2 {
-  font-size: 1.5em;
-}
+  h2 {
+    font-size: 1.5em;
+  }
 
-.devlog-content h3 {
-  font-size: 1.25em;
-}
+  h3 {
+    font-size: 1.25em;
+  }
 
-.devlog-content p {
-  margin-bottom: 1em;
-}
+  p {
+    margin-bottom: 1em;
+  }
 
-.devlog-content ul,
-.devlog-content ol {
-  margin-bottom: 1em;
-  padding-left: 2em;
-}
+  ul,
+  ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
 
-.devlog-content li {
-  margin-bottom: 0.5em;
-}
+    li {
+      margin-bottom: 0.5em;
+      position: relative;
 
-.devlog-content code {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 0.2em 0.4em;
-  border-radius: 0.25em;
-  font-size: 0.9em;
-}
+      &::marker {
+        font-weight: 600;
+        color: var(--color-gray-700);
+      }
+    }
+  }
 
-.devlog-content pre {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 1em;
-  border-radius: 0.5em;
-  overflow-x: auto;
-  margin-bottom: 1em;
-}
+  ul {
+    list-style-type: disc;
 
-.devlog-content pre code {
-  background-color: transparent;
-  padding: 0;
-}
+    li {
+      &::marker {
+        color: var(--color-gray-600);
+      }
+    }
+  }
 
-.devlog-content a {
-  color: #2563eb;
-  text-decoration: underline;
-}
+  ol {
+    list-style-type: decimal;
 
-.devlog-content a:hover {
-  color: #1d4ed8;
+    li {
+      &::marker {
+        color: var(--color-gray-600);
+      }
+    }
+  }
+
+  code {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 0.2em 0.4em;
+    border-radius: 0.25em;
+    font-size: 0.9em;
+  }
+
+  pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1em;
+    border-radius: 0.5em;
+    overflow-x: auto;
+    margin-bottom: 1em;
+
+    code {
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: underline;
+
+    &:hover {
+      color: #1d4ed8;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-  .devlog-content code {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+  .markdown-content {
 
-  .devlog-content pre {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+    ul,
+    ol {
+      li {
+        &::marker {
+          color: var(--color-gray-300);
+        }
+      }
+    }
 
-  .devlog-content a {
-    color: #60a5fa;
-  }
+    code {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
 
-  .devlog-content a:hover {
-    color: #93c5fd;
+    pre {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    a {
+      color: #60a5fa;
+
+      &:hover {
+        color: #93c5fd;
+      }
+    }
   }
 }

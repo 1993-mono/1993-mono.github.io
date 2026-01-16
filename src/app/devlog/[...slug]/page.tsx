@@ -26,12 +26,11 @@ export default async function DevlogPost({ params }: PageProps) {
   }
 
   const breadcrumbItems = [
-    { href: '/devlog', children: '개발 기록' },
+    { children: '개발 기록' },
     ...(Array.isArray(slug) && slug.length > 1
-      ? slug.slice(0, -1).map((part, idx) => {
-        const path = '/devlog/' + slug.slice(0, idx + 1).join('/');
-        return { href: path, children: part };
-      })
+      ? slug.slice(0, -1).map((part) => ({
+        children: part,
+      }))
       : []),
   ];
 
@@ -44,10 +43,12 @@ export default async function DevlogPost({ params }: PageProps) {
         items={breadcrumbItems}
       />
       <article className="post-page">
-        <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-        <p className="text-sm text-gray-500 mb-8">{post.date}</p>
+        <div className="post-header">
+          <h1 className="title">{post.title}</h1>
+          <p className="date">{post.date}</p>
+        </div>
         <div
-          className="devlog-content"
+          className="markdown-content"
           dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}
         />
       </article>

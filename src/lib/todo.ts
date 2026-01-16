@@ -24,6 +24,21 @@ async function markdownToHtml(markdown: string): Promise<string> {
 // TODO 데이터
 const todoData: TodoCategory[] = [
   {
+    id: 'urgent',
+    name: '긴급 !',
+    todos: [
+      {
+        id: 'urgent-1',
+        title: "'할 일' 메뉴와 '개발 기록' 메뉴 상세 페이지에서 사용하는 markdown 스타일 통일하기",
+        checked: false,
+        details: `- 마크다운(Hast/HTML 변환, 스타일링 SCSS) 규칙 정리
+- 기존 두 메뉴에서 사용된 마크다운 스타일/컴포넌트 비교 및 통일 방안 도출
+- 통일된 마크다운 렌더링 및 스타일을 적용
+- 테스트 및 문서화`,
+      },
+    ],
+  },
+  {
     id: 'devlog-language',
     name: '개발 기록',
     todos: [

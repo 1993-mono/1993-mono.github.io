@@ -5,6 +5,51 @@
   position: relative;
 
 
+  // Icon
+  .icn-container {
+    display: block;
+    width: var(--size-icn);
+    height: var(--size-icn);
+
+    .icn {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Category Navigation
+  .category-navigation {
+    font-size: var(--font-size-information);
+    color: var(--color-tab);
+    font-weight: 500;
+    overflow: hidden;
+
+    ol {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + var(--spacing-category-to-category) + var(--size-category-dot));
+      margin-left: calc((var(--spacing-category-to-category) + var(--size-category-dot)) * -1);
+
+      li {
+        padding-left: calc(var(--spacing-category-to-category) + var(--size-category-dot));
+        position: relative;
+
+        &::before {
+          content: "";
+          width: var(--size-category-dot);
+          height: var(--size-category-dot);
+          background-color: var(--color-tab);
+          border-radius: 50%;
+          position: absolute;
+          left: calc(var(--spacing-category-to-category) * 0.5);
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+
   // No Data
   .no-data {
     display: flex;
@@ -62,22 +107,17 @@
               padding: 1em var(--spacing-container-x);
               font-size: var(--font-size-nav);
               font-weight: 500;
-              transition: 0.3s;
+              transition: var(--transition-duration-base);
 
               .icn-container {
-                display: block;
-                width: var(--size-icn);
-                height: var(--size-icn);
                 transform-origin: center 75%;
                 position: relative;
 
                 .icn {
-                  width: 100%;
-                  height: 100%;
                   position: absolute;
                   left: 0;
                   top: 0;
-                  transition: 0.3s;
+                  transition: var(--transition-duration-base);
 
                   &.hover {
                     opacity: 0;
@@ -203,7 +243,7 @@
             gap: 0.375em;
             padding: 1em var(--spacing-container-x);
             font-size: var(--font-size-nav);
-            transition: 0.3s;
+            transition: var(--transition-duration-base);
 
             .icn-container {
               display: block;
@@ -218,7 +258,7 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                transition: 0.3s;
+                transition: var(--transition-duration-base);
 
                 &.hover {
                   opacity: 0;

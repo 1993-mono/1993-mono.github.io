@@ -36,6 +36,7 @@
   --spacing-container-x: calc(var(--spacing) * 5);
   --spacing-main: calc(var(--spacing) * 7.5);
   --spacing-box-to-box: 1rem;
+  --spacing-category-to-category: 1em;
 
   /* height */
   --height-header: 7.5rem;
@@ -43,6 +44,7 @@
 
   /* size */
   --size-icn: 1em;
+  --size-category-dot: 2px;
 
   /* radius */
   --radius: 0.5rem;
@@ -54,9 +56,12 @@
   --font-size-logo: var(--text-4xl);
   --font-size-nav: var(--text-lg);
   --font-size-tab: var(--text-base);
-  --font-size-devlog-title: var(--text-xl);
-  --font-size-devlog-information: var(--text-sm);
+  --font-size-title: var(--text-xl);
+  --font-size-information: var(--text-sm);
   --font-size-footer: var(--text-sm);
+
+  /* transition */
+  --transition-duration-base: 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -84,12 +89,6 @@ body {
 
 button {
   cursor: pointer;
-}
-
-/* common */
-.no-data {
-  color: var(--color-gray-500);
-  text-align: center;
 }
 
 
