@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { remark } from 'remark';
-import html from 'remark-html';
+import { markdownToHtmlCustom } from './markdown';
 
 const devlogDirectory = path.join(process.cwd(), 'content/devlog');
 
@@ -64,9 +63,8 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    // 마크다운을 HTML로 변환
-    const processedContent = await remark().use(html).process(content);
-    const htmlContent = processedContent.toString();
+    // 마크다운을 HTML로 변환 (체크박스는 커스텀 태그로 변환)
+    const htmlContent = await markdownToHtmlCustom(content);
 
     // 폴더 정보 추출
     const relativePath = path.relative(devlogDirectory, fullPath);
@@ -80,7 +78,7 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
       htmlContent,
       folder,
     };
-  } catch (error) {
+  } catch {
     return null;
   }
 }

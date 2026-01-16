@@ -58,6 +58,9 @@
   --font-size-tab: var(--text-base);
   --font-size-title: var(--text-xl);
   --font-size-information: var(--text-sm);
+  --font-size-markdown-h1: var(--text-2xl);
+  --font-size-markdown-h2: var(--text-xl);
+  --font-size-markdown-h3: var(--text-lg);
   --font-size-footer: var(--text-sm);
 
   /* transition */

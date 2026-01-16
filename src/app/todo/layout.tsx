@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { SITE_NAME, MENU } from '@/lib/constants';
-import './styles.scss';
 
 export const metadata: Metadata = {
   title: `${MENU.TODO.name} | ${SITE_NAME}`,
@@ -12,5 +11,5 @@ export default function TodoLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <main id="todo">{children}</main>;
 }

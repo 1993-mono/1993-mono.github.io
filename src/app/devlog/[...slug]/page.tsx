@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getAllDevlogSlugs, getDevlogPost } from '@/lib/devlog';
 import Breadcrumb from '@/app/components/Breadcrumb';
-import './styles.scss';
 
 interface PageProps {
   params: Promise<{
