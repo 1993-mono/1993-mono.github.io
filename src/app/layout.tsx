@@ -3,6 +3,7 @@ import ResponsiveLayout from "./components/ResponsiveLayout";
 import ResponsiveDetector from "./components/ResponsiveDetector";
 import { SITE_NAME, MENU } from "@/lib/constants";
 import "./styles.scss";
+import "./styles_markdown.scss";
 
 export const metadata: Metadata = {
   title: SITE_NAME,
