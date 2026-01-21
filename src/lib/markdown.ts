@@ -19,12 +19,14 @@ export async function markdownToHtml(markdown: string): Promise<string> {
 }
 
 /**
- * 체크박스를 label로 감싸는 rehype 플러그인
+ * 체크박스에 explicit linking (for/id)을 적용하는 rehype 플러그인
  */
 function rehypeCheckboxLabel() {
   return (tree: Root) => {
+    let checkboxCounter = 0;
+
     visit(tree, 'element', (node, index, parent) => {
-      // input[type="checkbox"] 태그를 찾아서 label로 감싸기
+      // input[type="checkbox"] 태그를 찾아서 id 부여 및 label 생성
       if (
         node.tagName === 'input' &&
         node.properties &&
@@ -35,38 +37,52 @@ function rehypeCheckboxLabel() {
         Array.isArray(parent.children)
       ) {
         const checkboxIndex = parent.children.indexOf(node as ElementContent);
-        
-        // 체크박스 다음에 오는 텍스트 노드들을 찾아서 label로 감싸기
+
+        // 체크박스에 고유한 id 부여
+        checkboxCounter++;
+        const checkboxId = `checkbox-${checkboxCounter}`;
+
+        if (!node.properties) {
+          node.properties = {};
+        }
+        node.properties.id = checkboxId;
+
+        // 체크박스 다음의 텍스트와 인라인 요소들을 수집
         const textNodes: ElementContent[] = [];
         let i = checkboxIndex + 1;
-        
-        // 체크박스 다음의 텍스트와 인라인 요소들을 수집
+
         while (i < parent.children.length) {
           const sibling = parent.children[i];
-          if (sibling.type === 'text' || 
-              (sibling.type === 'element' && 
-               ['strong', 'em', 'code', 'a'].includes(sibling.tagName))) {
+          if (sibling.type === 'text') {
+            // 텍스트 노드는 그대로 사용
+            textNodes.push(sibling);
+            i++;
+          } else if (
+            sibling.type === 'element' &&
+            ['strong', 'em', 'code', 'a'].includes(sibling.tagName)
+          ) {
+            // 이미 태그로 감싸진 인라인 요소는 그대로 사용
             textNodes.push(sibling);
             i++;
           } else {
             break;
           }
         }
-        
-        // label로 감싸기
+
+        // label 생성 (explicit linking)
         if (textNodes.length > 0) {
-          // 기존 노드들을 제거하고 label로 감싸기
           const labelNode: Element = {
             type: 'element',
             tagName: 'label',
             properties: {
-              style: 'cursor: pointer; display: flex; align-items: flex-start; gap: 0.5em;'
+              for: checkboxId
             },
-            children: [node, ...textNodes]
+            children: textNodes
           };
-          
-          // 원본 노드들을 label로 교체
-          parent.children.splice(checkboxIndex, textNodes.length + 1, labelNode);
+
+          // 체크박스와 label을 형제 노드로 배치
+          // 기존 텍스트 노드들을 제거하고 label로 교체
+          parent.children.splice(checkboxIndex + 1, textNodes.length, labelNode);
         }
       }
     });
@@ -74,9 +90,9 @@ function rehypeCheckboxLabel() {
 }
 
 /**
- * 마크다운을 HTML로 변환 (체크박스는 input + label로 변환)
+ * 마크다운을 HTML로 변환 (체크박스는 explicit linking 방식으로 변환)
  * @param markdown - 변환할 마크다운 문자열
- * @returns HTML 문자열 (체크박스는 input[type="checkbox"]와 label로 변환됨)
+ * @returns HTML 문자열 (체크박스는 input[type="checkbox"]에 id와 label[for]로 연결됨)
  */
 export async function markdownToHtmlCustom(markdown: string): Promise<string> {
   const file = await unified()
@@ -86,6 +102,6 @@ export async function markdownToHtmlCustom(markdown: string): Promise<string> {
     .use(rehypeCheckboxLabel) // 체크박스를 label로 감싸기
     .use(rehypeStringify)
     .process(markdown);
-  
+
   return String(file);
 }
