@@ -4,6 +4,7 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
+import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
 import { visit } from 'unist-util-visit';
 import type { Root, Element, ElementContent } from 'hast';
@@ -71,13 +72,23 @@ function rehypeCheckboxLabel() {
 
         // label 생성 (explicit linking)
         if (textNodes.length > 0) {
+          // 텍스트 앞에 span[aria-hidden="true"] 추가
+          const hiddenSpan: Element = {
+            type: 'element',
+            tagName: 'span',
+            properties: {
+              'aria-hidden': 'true'
+            },
+            children: []
+          };
+
           const labelNode: Element = {
             type: 'element',
             tagName: 'label',
             properties: {
               for: checkboxId
             },
-            children: textNodes
+            children: [hiddenSpan, ...textNodes]
           };
 
           // 체크박스와 label을 형제 노드로 배치
@@ -98,7 +109,8 @@ export async function markdownToHtmlCustom(markdown: string): Promise<string> {
   const file = await unified()
     .use(remarkParse)
     .use(remarkGfm) // GitHub Flavored Markdown 지원 (체크박스 포함)
-    .use(remarkRehype)
+    .use(remarkRehype, { allowDangerousHtml: true }) // HTML 태그 허용
+    .use(rehypeRaw) // HTML 태그를 파싱
     .use(rehypeCheckboxLabel) // 체크박스를 label로 감싸기
     .use(rehypeStringify)
     .process(markdown);

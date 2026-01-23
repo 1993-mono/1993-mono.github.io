@@ -58,9 +58,9 @@
   --font-size-tab: var(--text-base);
   --font-size-title: var(--text-xl);
   --font-size-information: var(--text-sm);
-  --font-size-markdown-h1: var(--text-2xl);
-  --font-size-markdown-h2: var(--text-xl);
-  --font-size-markdown-h3: var(--text-lg);
+  --font-size-markdown-h1: var(--text-3xl);
+  --font-size-markdown-h2: var(--text-2xl);
+  --font-size-markdown-h3: var(--text-xl);
   --font-size-footer: var(--text-sm);
 
   /* transition */
@@ -88,7 +88,9 @@ body {
   line-height: 1.5;
 }
 
-::-webkit-scrollbar {display: none;}
+::-webkit-scrollbar {
+  display: none;
+}
 
 button {
   cursor: pointer;
@@ -98,7 +100,7 @@ button {
 @media (max-width: 1460px) {
 
   :root {
-  
+
     /* height */
     --height-header: 3.75rem;
     --height-footer: 3.75rem;
@@ -116,7 +118,7 @@ button {
 @media (max-width: 768px) {
 
   :root {
-  
+
     /* height */
     --height-header: 3.5rem;
     --height-footer: 3.5rem;
@@ -130,7 +132,7 @@ button {
 
     /* spacing */
     --spacing-container-x: calc(var(--spacing) * 3.5);
-  
+
     /* height */
     --height-footer: 4.5rem;
   }
