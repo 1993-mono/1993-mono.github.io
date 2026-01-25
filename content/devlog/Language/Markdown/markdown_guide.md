@@ -215,20 +215,28 @@ Markdown은 텍스트 기반의 마크업 언어로, 간단한 문법으로 문�
 ## 링크
 
 ```markdown
-[링크 텍스트](https://example.com)
-[링크 텍스트](https://example.com "툴팁 텍스트")
+[Google](https://www.google.com)  
+[GitHub](https://github.com "GitHub 홈페이지")
 ```
 
 ### 실제 예시
-- [Google](https://www.google.com)
-- [GitHub](https://github.com "GitHub 홈페이지")
+[Google](https://www.google.com)  
+[GitHub](https://github.com "GitHub 홈페이지")
 
 ## 이미지
 
 ```markdown
-![이미지 대체 텍스트](이미지_경로.png)
-![이미지 대체 텍스트](이미지_경로.png "이미지 제목")
+![로컬 샘플 이미지](/images/markdown/sample.jpg)
+
+![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280)
+![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280 "온라인 샘플 이미지")
 ```
+
+### 실제 예시
+![로컬 샘플 이미지](/images/markdown/sample.jpg)
+
+![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280)
+![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280 "온라인 샘플 이미지")
 
 ---
 
@@ -242,88 +250,29 @@ Markdown은 텍스트 기반의 마크업 언어로, 간단한 문법으로 문�
 `console.log()` 함수를 사용합니다.
 ```
 
-### 실제 예시 `console.log()` 함수를 사용합니다.
+### 실제 예시
+`console.log()` 함수를 사용합니다.
 
 ## 코드 블록
 
-코드 블록은 백틱(`) 세 개로 감싸고 언어를 지정할 수 있습니다.
+코드 블록은 백틱(`) 세 개로 감쌉니다.
 
-```markdown
-```javascript
+```
 function greet(name) {
   return `Hello, ${name}!`;
 }
 
 console.log(greet("World"));
-```
 ```
 
 ### 실제 예시
 
-```javascript
+```
 function greet(name) {
   return `Hello, ${name}!`;
 }
 
 console.log(greet("World"));
-```
-
-## 다양한 언어 예시
-
-### Python
-
-```python
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
-
-print(fibonacci(10))
-```
-
-### HTML
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Hello World</title>
-</head>
-<body>
-    <h1>Hello, World!</h1>
-</body>
-</html>
-```
-
-### CSS
-
-```css
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.title {
-  font-size: 2rem;
-  color: #333;
-}
-```
-
-### JSON
-
-```json
-{
-  "name": "Markdown 가이드",
-  "version": "1.0.0",
-  "features": [
-    "제목",
-    "리스트",
-    "체크박스",
-    "코드 블록"
-  ]
-}
 ```
 
 ---

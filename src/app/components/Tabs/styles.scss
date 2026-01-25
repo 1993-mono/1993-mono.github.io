@@ -14,7 +14,7 @@
 
   .tab-indicator {
     border-radius: calc(var(--radius) - (#{$padding} * 0.5));
-    background-color: var(--background);
+    background-color: rgb(var(--background));
     box-shadow: var(--box-shadow);
     position: absolute;
     z-index: 1;
@@ -28,7 +28,7 @@
     align-items: center;
     padding: 0.375em 0.75em;
     font-size: var(--font-size-tab);
-    color: var(--color-gray-400);
+    color: rgb(var(--color-gray-400));
     font-weight: 600;
     position: relative;
     z-index: 2;
@@ -38,7 +38,7 @@
       display: block;
       padding-left: calc(1.25em + 1px);
       font-size: 0.875em;
-      color: var(--color-gray-400);
+      color: rgb(var(--color-gray-400));
       position: relative;
       transition: var(--transition-duration-base);
 
@@ -58,25 +58,25 @@
 
     &:hover,
     &:focus-visible {
-      color: var(--foreground);
+      color: rgb(var(--foreground));
 
       .count {
-        color: var(--foreground);
+        color: rgb(var(--foreground));
 
         &::before {
-          background-color: var(--foreground);
+          background-color: rgb(var(--foreground));
         }
       }
     }
 
     &.active {
-      color: var(--foreground);
+      color: rgb(var(--foreground));
 
       .count {
-        color: var(--foreground);
+        color: rgb(var(--foreground));
 
         &::before {
-          background-color: var(--foreground);
+          background-color: rgb(var(--foreground));
         }
       }
     }

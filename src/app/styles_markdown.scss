@@ -1,5 +1,5 @@
 .markdown-content {
-  color: var(--foreground);
+  color: rgb(var(--foreground));
   line-height: 1.75;
 
 
@@ -28,6 +28,10 @@
   >h2:first-child,
   >h3:first-child {
     margin-top: 0;
+  }
+
+  *:has(+h1, +h2, +h3):not(h1, h2, h3, hr) {
+    margin-bottom: 1.75em !important;
   }
 
 
@@ -103,6 +107,7 @@
     }
   }
 
+
   // 체크박스 (Task Lists)
   .contains-task-list {
     list-style: none;
@@ -129,8 +134,8 @@
           width: 1em;
           height: 1em;
           border-radius: 0.25em;
-          border: 1px solid var(--foreground);
-          background-color: var(--background);
+          border: 1px solid rgb(var(--foreground));
+          background-color: rgb(var(--background));
           position: absolute;
           left: -1.5rem;
           top: 0.3em;
@@ -138,14 +143,14 @@
         }
 
         &:checked+label>span[aria-hidden="true"] {
-          background-color: var(--foreground);
+          background-color: rgb(var(--foreground));
 
           &::before,
           &::after {
             content: "";
             width: 200%;
             height: 1px;
-            background-color: var(--background);
+            background-color: rgb(var(--background));
             position: absolute;
             left: 50%;
             top: 50%;
@@ -163,6 +168,7 @@
       }
     }
   }
+
 
   // 강조 (Emphasis)
   strong,
@@ -185,63 +191,62 @@
     background: linear-gradient(transparent 30%, #fff9c4 30%);
   }
 
+
   // 링크 (Links)
   a {
-    color: var(--foreground);
+    color: rgb(var(--foreground));
     text-decoration: underline;
-    text-decoration-color: var(--color-tab);
+    text-decoration-color: rgba(var(--foreground), 0.25);
     text-underline-offset: 0.25em;
     transition: var(--transition-duration-base);
 
     &:hover {
-      text-decoration-color: var(--foreground);
+      text-decoration-color: rgb(var(--foreground));
     }
   }
 
+
   // 이미지 (Images)
+  p:has(>img) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
   img {
     max-width: 100%;
     height: auto;
     border-radius: var(--radius);
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
     box-shadow: var(--box-shadow);
   }
+
 
   // 코드 블록 (Code Blocks)
   code {
     font-family: "Consolas", "Monaco", "Courier New", monospace;
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
 
   // 인라인 코드
-  :not(pre)>code {
-    background-color: var(--color-background-gray);
-    padding: 0.2em 0.4em;
+  :not(pre) code {
     border-radius: 0.25em;
-    color: var(--foreground);
     border: 1px solid var(--color-border-gray);
+    background-color: var(--color-background-gray);
+    padding: 0.25em 0.5em;
+    color: rgb(var(--foreground));
   }
 
   // 코드 블록
   pre {
-    background-color: var(--color-background-gray);
-    border: 1px solid var(--color-border-gray);
     border-radius: var(--radius);
-    padding: 1.25em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    overflow-x: auto;
-    line-height: 1.6;
-
-    code {
-      background: none;
-      padding: 0;
-      border: none;
-      color: var(--foreground);
-      font-size: 0.9em;
-    }
+    border: 1px solid var(--color-border-gray);
+    background-color: var(--color-background-gray);
+    padding: 0.75em 1em;
+    line-height: 1.25;
+    margin: 1em 0;
   }
+
 
   // 인용문 (Blockquotes)
   blockquote {
@@ -313,7 +318,7 @@
   // 수평선 (Horizontal Rules)
   hr {
     border-top: 2px dashed var(--color-border-gray);
-    margin: 2em 0;
+    margin: 3em 0;
   }
 
   // 각주 (Footnotes)

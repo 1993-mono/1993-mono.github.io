@@ -57,7 +57,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    color: var(--color-gray-500);
+    color: rgb(var(--color-gray-500));
     text-align: center;
     line-height: 1.75;
   }
@@ -177,7 +177,7 @@
         height: var(--height-footer);
         padding: 0 var(--spacing-container-x);
         font-size: var(--font-size-footer);
-        color: var(--color-gray-500);
+        color: rgb(var(--color-gray-500));
         text-align: center;
       }
     }
@@ -325,7 +325,7 @@
       background-color: var(--color-background-gray);
       padding: 0 var(--spacing-container-x);
       font-size: var(--font-size-footer);
-      color: var(--color-gray-500);
+      color: rgb(var(--color-gray-500));
       text-align: center;
 
       p br {
