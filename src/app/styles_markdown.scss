@@ -250,12 +250,8 @@
 
   // 인용문 (Blockquotes)
   blockquote {
-    border-left: 4px solid var(--color-tab);
-    padding-left: 1.25em;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    color: var(--color-information);
-    font-style: italic;
+    border-left: 4px solid rgb(var(--color-gray-900));
+    padding-left: 1em;
 
     p {
       margin-top: 0.5em;
@@ -272,9 +268,11 @@
 
     // 중첩 인용문
     blockquote {
-      margin-top: 0.75em;
-      margin-bottom: 0.75em;
-      border-left-color: var(--color-border-gray);
+      border-left-color: rgb(var(--color-gray-400));
+
+      blockquote {
+        border-left-color: rgb(var(--color-gray-300));
+      }
     }
   }
 
