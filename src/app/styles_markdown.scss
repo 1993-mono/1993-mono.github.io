@@ -9,7 +9,7 @@
   h3 {
     font-weight: 700;
     line-height: 1.375;
-    margin: 0.75em 0 0.5em;
+    margin: calc(var(--spacing-markdown-text) * 1.5) 0 var(--spacing-markdown-text);
   }
 
   h1 {
@@ -31,13 +31,13 @@
   }
 
   *:has(+h1, +h2, +h3):not(h1, h2, h3, hr) {
-    margin-bottom: 1.75em !important;
+    margin-bottom: calc(var(--spacing-markdown-box-margin) * 1.75) !important;
   }
 
 
   // 단락 (Paragraphs)
   p {
-    margin: 0.5em 0;
+    margin: var(--spacing-markdown-text) 0;
   }
 
 
@@ -46,7 +46,7 @@
   ol {
     width: 100%;
     padding-left: 1.5em;
-    margin: 0.5em 0;
+    margin: var(--spacing-markdown-text) 0;
   }
 
   ul {
@@ -54,7 +54,7 @@
 
     ul {
       list-style-type: circle;
-      margin: 0.25em 0;
+      margin: calc(var(--spacing-markdown-text) * 0.5) 0;
 
       ul {
         list-style-type: square;
@@ -79,7 +79,7 @@
 
     ol {
       list-style-type: lower-alpha;
-      margin: 0.25em 0;
+      margin: calc(var(--spacing-markdown-text) * 0.5) 0;
 
       ol {
         list-style-type: lower-roman;
@@ -100,10 +100,10 @@
   }
 
   li {
-    margin: 0.25em 0;
+    margin: calc(var(--spacing-markdown-text) * 0.5) 0;
 
     p {
-      margin: 0.25em 0;
+      margin: calc(var(--spacing-markdown-text) * 0.5) 0;
     }
   }
 
@@ -210,8 +210,8 @@
   p:has(>img) {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem 0;
+    gap: var(--spacing-markdown-box-margin);
+    margin: var(--spacing-markdown-box-margin) 0;
   }
 
   img {
@@ -230,10 +230,10 @@
 
   // 인라인 코드
   :not(pre) code {
-    border-radius: 0.25em;
+    border-radius: var(--spacing-markdown-inlineBox-borderRadius);
     border: 1px solid var(--color-border-gray);
     background-color: var(--color-background-gray);
-    padding: 0.25em 0.5em;
+    padding: var(--spacing-markdown-inlineBox-padding);
     color: rgb(var(--foreground));
   }
 
@@ -242,21 +242,18 @@
     border-radius: var(--radius);
     border: 1px solid var(--color-border-gray);
     background-color: var(--color-background-gray);
-    padding: 0.75em 1em;
+    padding: var(--spacing-markdown-box-padding);
     line-height: 1.25;
-    margin: 1em 0;
+    margin: var(--spacing-markdown-box-margin) 0;
   }
 
 
   // 인용문 (Blockquotes)
   blockquote {
     border-left: 4px solid rgb(var(--color-gray-900));
-    padding-left: 1em;
+    padding-left: calc(var(--spacing-markdown-text) * 2);
 
     p {
-      margin-top: 0.5em;
-      margin-bottom: 0.5em;
-
       &:first-child {
         margin-top: 0;
       }
@@ -276,48 +273,60 @@
     }
   }
 
+
   // 표 (Tables)
   table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-    border: 1px solid var(--color-border-gray);
-    border-radius: var(--radius);
+    border-top: 2px solid rgb(var(--color-gray-900));
+    font-size: var(--font-size-markdown-table);
+    margin: var(--spacing-markdown-box-margin) 0;
     overflow: hidden;
+    border-collapse: collapse;
+    table-layout: fixed;
   }
 
   thead {
     background-color: var(--color-background-gray);
   }
 
-  th {
-    padding: 0.75em 1em;
-    text-align: left;
-    font-weight: 600;
-    border-bottom: 2px solid var(--color-border-gray);
+  tbody tr:hover {
+    background-color: var(--color-background-gray);
   }
 
+  th,
   td {
-    padding: 0.75em 1em;
     border-bottom: 1px solid var(--color-border-gray);
-  }
+    padding: var(--spacing-markdown-box-padding);
+    text-align: left;
 
-  tbody tr {
-    &:last-child td {
-      border-bottom: none;
+    &:not(:last-child) {
+      border-right: 1px dashed var(--color-border-gray);
     }
 
-    &:hover {
-      background-color: var(--color-background-gray);
+    &[align="left"] {
+      text-align: left;
+    }
+
+    &[align="center"] {
+      text-align: center;
+    }
+
+    &[align="right"] {
+      text-align: right;
     }
   }
+
+  th {
+    font-weight: 600;
+  }
+
 
   // 수평선 (Horizontal Rules)
   hr {
     border-top: 2px dashed var(--color-border-gray);
     margin: 3em 0;
   }
+
 
   // 각주 (Footnotes)
   [id^="fn"] {

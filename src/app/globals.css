@@ -50,7 +50,11 @@
   --spacing-main: calc(var(--spacing) * 7.5);
   --spacing-box-to-box: 1rem;
   --spacing-category-to-category: 1em;
-
+  --spacing-markdown-text: 0.5em;
+  --spacing-markdown-box-padding: calc(var(--spacing-markdown-text) * 1.5) calc(var(--spacing-markdown-text) * 2);
+  --spacing-markdown-box-margin: 1rem;
+  --spacing-markdown-inlineBox-borderRadius: calc(var(--spacing-markdown-text) * 0.5);
+  --spacing-markdown-inlineBox-padding: calc(var(--spacing-markdown-text) * 0.5) var(--spacing-markdown-text);
   /* height */
   --height-header: 7.5rem;
   --height-footer: 7.5rem;
@@ -75,6 +79,7 @@
   --font-size-markdown-h1: var(--text-3xl);
   --font-size-markdown-h2: var(--text-2xl);
   --font-size-markdown-h3: var(--text-xl);
+  --font-size-markdown-table: var(--text-sm);
   --font-size-footer: var(--text-sm);
 
   /* transition */
