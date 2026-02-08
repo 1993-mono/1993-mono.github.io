@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node scripts/dev-with-watcher.js",
+    "dev:next": "node scripts/generate-devlog-index.js && next dev",
+    "build": "node scripts/generate-devlog-index.js && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "devlog:index": "node scripts/generate-devlog-index.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

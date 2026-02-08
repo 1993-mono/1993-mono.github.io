@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import { markdownToHtmlCustom } from './markdown';
+import { markdownToHtmlCustom, type TocItem } from './markdown';
 
 const devlogDirectory = path.join(process.cwd(), 'content/devlog');
+const indexPath = path.join(process.cwd(), '.devlog-index.json');
 
 export interface DevlogPost {
   slug: string;
@@ -11,7 +12,32 @@ export interface DevlogPost {
   date: string;
   content: string;
   htmlContent?: string;
+  headings?: TocItem[];
   folder?: string;
+}
+
+// 인덱스 파일 구조
+interface DevlogIndexEntry {
+  slug: string;
+  title: string;
+  date: string;
+  folder?: string;
+}
+
+interface DevlogIndex {
+  entries: DevlogIndexEntry[];
+  folders: string[];
+  subFoldersMap: Record<string, string[]>;
+}
+
+// 인덱스 파일 읽기 (없으면 null)
+function getDevlogIndex(): DevlogIndex | null {
+  try {
+    const data = fs.readFileSync(indexPath, 'utf8');
+    return JSON.parse(data) as DevlogIndex;
+  } catch {
+    return null;
+  }
 }
 
 // 날짜를 문자열로 변환하는 헬퍼 함수
@@ -63,19 +89,20 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    // 마크다운을 HTML로 변환 (체크박스는 커스텀 태그로 변환)
-    const htmlContent = await markdownToHtmlCustom(content);
+    // 마크다운을 HTML로 변환 (체크박스는 커스텀 태그로 변환, 제목에 id 부여)
+    const { html, headings } = await markdownToHtmlCustom(content);
 
     // 폴더 정보 추출
     const relativePath = path.relative(devlogDirectory, fullPath);
-    const folder = path.dirname(relativePath) !== '.' ? path.dirname(relativePath) : undefined;
+    const folder = path.dirname(relativePath) !== '.' ? path.dirname(relativePath).replace(/\\/g, '/') : undefined;
 
     return {
       slug,
       title: data.title || '',
       date: formatDate(data.date),
       content,
-      htmlContent,
+      htmlContent: html,
+      headings,
       folder,
     };
   } catch {
@@ -85,6 +112,11 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
 
 // 모든 slug 목록 가져오기
 export function getAllDevlogSlugs(): string[] {
+  const index = getDevlogIndex();
+  if (index) {
+    return index.entries.map((e) => e.slug);
+  }
+
   const markdownFiles = getAllMarkdownFiles(devlogDirectory);
   return markdownFiles.map((file) => {
     const relativePath = path.relative(devlogDirectory, file.path);
@@ -92,7 +124,7 @@ export function getAllDevlogSlugs(): string[] {
   });
 }
 
-// 재귀적으로 폴더 내 모든 .md 파일 찾기
+// 재귀적으로 폴더 내 모든 .md 파일 찾기 (인덱스 없을 때 폴백)
 function getAllMarkdownFiles(dir: string, baseDir: string = devlogDirectory): Array<{ path: string; folder: string }> {
   const files: Array<{ path: string; folder: string }> = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -114,6 +146,11 @@ function getAllMarkdownFiles(dir: string, baseDir: string = devlogDirectory): Ar
 
 // 1차 탭용 폴더 목록 가져오기 (content/devlog 하위 폴더들)
 export function getDevlogFolders(): string[] {
+  const index = getDevlogIndex();
+  if (index) {
+    return index.folders;
+  }
+
   const items = fs.readdirSync(devlogDirectory, { withFileTypes: true });
   return items
     .filter((item) => item.isDirectory())
@@ -123,8 +160,15 @@ export function getDevlogFolders(): string[] {
 
 // 특정 폴더의 하위 폴더 목록 가져오기
 export function getSubFolders(parentFolder: string | null): string[] {
+  const index = getDevlogIndex();
+  if (index) {
+    if (parentFolder === null) {
+      return index.folders;
+    }
+    return index.subFoldersMap[parentFolder] || [];
+  }
+
   if (parentFolder === null) {
-    // 전체 선택 시: 모든 1차 폴더 반환
     return getDevlogFolders();
   }
 
@@ -142,21 +186,35 @@ export function getSubFolders(parentFolder: string | null): string[] {
 
 // 특정 폴더의 포스트 가져오기
 export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
-  // 항상 devlogDirectory 전체에서 검색하고 필터링
+  const index = getDevlogIndex();
+  if (index) {
+    let entries = index.entries;
+    if (folder !== null) {
+      const folderNorm = folder.replace(/\\/g, '/');
+      entries = entries.filter((e) => {
+        const postFolder = (e.folder || '').replace(/\\/g, '/');
+        return postFolder === folderNorm || postFolder.startsWith(folderNorm + '/');
+      });
+    }
+    return entries.map((e) => ({
+      slug: e.slug,
+      title: e.title,
+      date: e.date,
+      content: '', // 목록용이라 content 불필요
+      folder: e.folder,
+    }));
+  }
+
+  // 인덱스 없을 때 기존 방식 (파일 스캔)
   const markdownFiles = getAllMarkdownFiles(devlogDirectory);
 
   const allPostsData = markdownFiles
     .filter((file) => {
       if (folder === null) {
-        // 전체 선택 시: 모든 파일
         return true;
       }
-
-      // folder가 "Next.js" 또는 "Next.js/하위폴더" 형식일 수 있음
       const folderNormalized = folder.replace(/\//g, path.sep);
       const fileFolderNormalized = file.folder.replace(/\//g, path.sep);
-
-      // 정확히 일치하거나 하위 폴더인 경우
       return fileFolderNormalized === folderNormalized ||
         fileFolderNormalized.startsWith(folderNormalized + path.sep);
     })
@@ -173,17 +231,14 @@ export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
         title: data.title || '',
         date: formatDate(data.date),
         content,
-        folder: file.folder || undefined,
+        folder: file.folder ? file.folder.replace(/\\/g, '/') : undefined,
       };
     });
 
-  // 날짜순으로 정렬 (최신순)
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
+    if (a.date < b.date) return 1;
+    if (a.date > b.date) return -1;
+    return 0;
   });
 }
 

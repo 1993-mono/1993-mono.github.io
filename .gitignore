@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# devlog 인덱스 (빌드 시 자동 생성)
+.devlog-index.json

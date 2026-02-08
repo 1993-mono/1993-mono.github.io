@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getAllDevlogSlugs, getDevlogPost } from '@/lib/devlog';
 import Breadcrumb from '@/app/components/Breadcrumb';
+import TableOfContents from '../components/TableOfContents';
 
 interface PageProps {
   params: Promise<{
@@ -46,10 +47,17 @@ export default async function DevlogPost({ params }: PageProps) {
           <h1 className="title">{post.title}</h1>
           <p className="date">{post.date}</p>
         </div>
-        <div
-          className="markdown-content"
-          dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}
-        />
+        <div className="post-body">
+          <div
+            className="markdown-content"
+            dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}
+          />
+          {post.headings && post.headings.length > 0 && (
+            <aside className="post-aside">
+              <TableOfContents items={post.headings} />
+            </aside>
+          )}
+        </div>
       </article>
     </>
   );
