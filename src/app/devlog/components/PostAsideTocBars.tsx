@@ -17,17 +17,17 @@ export default function PostAsideTocBars({ items }: PostAsideTocBarsProps) {
 
   return (
     <nav className="post-aside-toc-bars" aria-label="목차">
-      <ul className="post-aside-toc-barslist">
+      <ul className="post-aside-toc-bars-list">
         {items.map((item) => (
           <li
             key={item.id}
-            className="post-aside-toc-barsitem"
+            className="post-aside-toc-bars-item"
             data-depth={item.depth}
           >
             <a
               href={`#${item.id}`}
               onClick={(e) => handleClick(e, item.id)}
-              className="post-aside-toc-barslink"
+              className="post-aside-toc-bars-link"
               aria-label={item.text}
             ></a>
           </li>
