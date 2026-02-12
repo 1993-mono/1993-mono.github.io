@@ -11,8 +11,8 @@ const todoFilePath = path.join(process.cwd(), 'content/todo/todos.md');
 export async function getTodoHtmlContent(): Promise<string> {
   try {
     const fileContents = fs.readFileSync(todoFilePath, 'utf8');
-    const htmlContent = await markdownToHtmlCustom(fileContents);
-    return htmlContent;
+    const { html } = await markdownToHtmlCustom(fileContents);
+    return html;
   } catch (error) {
     console.error('할 일 파일을 읽는 중 오류가 발생했습니다:', error);
     return '';
