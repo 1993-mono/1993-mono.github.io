@@ -2,11 +2,11 @@
 
 import type { TocItem } from '@/lib/markdown';
 
-interface TableOfContentsProps {
+interface PostAsideTocBarsProps {
   items: TocItem[];
 }
 
-export default function TableOfContents({ items }: TableOfContentsProps) {
+export default function PostAsideTocBars({ items }: PostAsideTocBarsProps) {
   if (items.length === 0) return null;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -16,22 +16,20 @@ export default function TableOfContents({ items }: TableOfContentsProps) {
   };
 
   return (
-    <nav className="table-of-contents" aria-label="목차">
-      <h2 className="toc-title">목차</h2>
-      <ul className="toc-list">
+    <nav className="post-aside-toc-bars" aria-label="목차">
+      <ul className="post-aside-toc-barslist">
         {items.map((item) => (
           <li
             key={item.id}
-            className="toc-item"
+            className="post-aside-toc-barsitem"
             data-depth={item.depth}
           >
             <a
               href={`#${item.id}`}
               onClick={(e) => handleClick(e, item.id)}
-              className="toc-link"
-            >
-              {item.text}
-            </a>
+              className="post-aside-toc-barslink"
+              aria-label={item.text}
+            ></a>
           </li>
         ))}
       </ul>

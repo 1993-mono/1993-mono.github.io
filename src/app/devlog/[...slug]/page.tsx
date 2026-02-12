@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getAllDevlogSlugs, getDevlogPost } from '@/lib/devlog';
 import Breadcrumb from '@/app/components/Breadcrumb';
-import TableOfContents from '../components/TableOfContents';
+import PostAside from '../components/PostAside';
 
 interface PageProps {
   params: Promise<{
@@ -53,9 +53,7 @@ export default async function DevlogPost({ params }: PageProps) {
             dangerouslySetInnerHTML={{ __html: post.htmlContent || '' }}
           />
           {post.headings && post.headings.length > 0 && (
-            <aside className="post-aside">
-              <TableOfContents items={post.headings} />
-            </aside>
+            <PostAside items={post.headings} />
           )}
         </div>
       </article>
