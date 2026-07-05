@@ -9,7 +9,7 @@ import rehypeStringify from 'rehype-stringify';
 import { visit } from 'unist-util-visit';
 import type { Root, Element, ElementContent } from 'hast';
 
-/** 목차 항목 타입 */
+/** Table of contents item type */
 export interface TocItem {
   id: string;
   text: string;
@@ -17,7 +17,7 @@ export interface TocItem {
 }
 
 /**
- * 제목 텍스트에서 slug 생성 (앵커용 id)
+ * Generate a slug from heading text (anchor id)
  */
 function toSlug(text: string): string {
   return String(text)
@@ -28,7 +28,7 @@ function toSlug(text: string): string {
 }
 
 /**
- * 제목에 id 부여 및 목차 추출 rehype 플러그인
+ * Rehype plugin that assigns heading ids and extracts a table of contents
  */
 function rehypeHeadingIdAndToc() {
   return (tree: Root, file: { data?: Record<string, unknown> }) => {
@@ -60,9 +60,9 @@ function rehypeHeadingIdAndToc() {
 }
 
 /**
- * 마크다운을 HTML로 변환하는 공통 함수
- * @param markdown - 변환할 마크다운 문자열
- * @returns HTML 문자열
+ * Shared helper to convert markdown to HTML
+ * @param markdown - Markdown string to convert
+ * @returns HTML string
  */
 export async function markdownToHtml(markdown: string): Promise<string> {
   const processedContent = await remark().use(html).process(markdown);
@@ -70,14 +70,14 @@ export async function markdownToHtml(markdown: string): Promise<string> {
 }
 
 /**
- * 체크박스에 explicit linking (for/id)을 적용하는 rehype 플러그인
+ * Rehype plugin that applies explicit linking (for/id) to checkboxes
  */
 function rehypeCheckboxLabel() {
   return (tree: Root) => {
     let checkboxCounter = 0;
 
     visit(tree, 'element', (node, index, parent) => {
-      // input[type="checkbox"] 태그를 찾아서 id 부여 및 label 생성
+      // Find input[type="checkbox"] tags and assign ids plus labels
       if (
         node.tagName === 'input' &&
         node.properties &&
@@ -89,7 +89,7 @@ function rehypeCheckboxLabel() {
       ) {
         const checkboxIndex = parent.children.indexOf(node as ElementContent);
 
-        // 체크박스에 고유한 id 부여
+        // Assign a unique id to the checkbox
         checkboxCounter++;
         const checkboxId = `checkbox-${checkboxCounter}`;
 
@@ -98,21 +98,21 @@ function rehypeCheckboxLabel() {
         }
         node.properties.id = checkboxId;
 
-        // 체크박스 다음의 텍스트와 인라인 요소들을 수집
+        // Collect text and inline elements after the checkbox
         const textNodes: ElementContent[] = [];
         let i = checkboxIndex + 1;
 
         while (i < parent.children.length) {
           const sibling = parent.children[i];
           if (sibling.type === 'text') {
-            // 텍스트 노드는 그대로 사용
+            // Keep text nodes as-is
             textNodes.push(sibling);
             i++;
           } else if (
             sibling.type === 'element' &&
             ['strong', 'em', 'code', 'a'].includes(sibling.tagName)
           ) {
-            // 이미 태그로 감싸진 인라인 요소는 그대로 사용
+            // Keep already wrapped inline elements as-is
             textNodes.push(sibling);
             i++;
           } else {
@@ -120,9 +120,9 @@ function rehypeCheckboxLabel() {
           }
         }
 
-        // label 생성 (explicit linking)
+        // Create label (explicit linking)
         if (textNodes.length > 0) {
-          // 텍스트 앞에 span[aria-hidden="true"] 추가
+          // Add span[aria-hidden="true"] before the text
           const hiddenSpan: Element = {
             type: 'element',
             tagName: 'span',
@@ -141,8 +141,8 @@ function rehypeCheckboxLabel() {
             children: [hiddenSpan, ...textNodes]
           };
 
-          // 체크박스와 label을 형제 노드로 배치
-          // 기존 텍스트 노드들을 제거하고 label로 교체
+          // Place checkbox and label as sibling nodes
+          // Remove existing text nodes and replace them with the label
           parent.children.splice(checkboxIndex + 1, textNodes.length, labelNode);
         }
       }
@@ -151,10 +151,10 @@ function rehypeCheckboxLabel() {
 }
 
 /**
- * 마크다운을 HTML로 변환 (체크박스는 explicit linking 방식으로 변환)
- * 제목(h1~h3)에 id 부여 및 목차 추출
- * @param markdown - 변환할 마크다운 문자열
- * @returns HTML 문자열과 목차 배열
+ * Convert markdown to HTML (checkboxes use explicit linking)
+ * Assign ids to headings (h1-h3) and extract a table of contents
+ * @param markdown - Markdown string to convert
+ * @returns HTML string and table of contents array
  */
 export async function markdownToHtmlCustom(markdown: string): Promise<{
   html: string;
@@ -162,11 +162,11 @@ export async function markdownToHtmlCustom(markdown: string): Promise<{
 }> {
   const file = await unified()
     .use(remarkParse)
-    .use(remarkGfm) // GitHub Flavored Markdown 지원 (체크박스 포함)
-    .use(remarkRehype, { allowDangerousHtml: true }) // HTML 태그 허용
-    .use(rehypeRaw) // HTML 태그를 파싱
-    .use(rehypeCheckboxLabel) // 체크박스를 label로 감싸기
-    .use(rehypeHeadingIdAndToc) // 제목에 id 부여 및 목차 추출
+    .use(remarkGfm) // GitHub Flavored Markdown support (includes checkboxes)
+    .use(remarkRehype, { allowDangerousHtml: true }) // Allow HTML tags
+    .use(rehypeRaw) // Parse HTML tags
+    .use(rehypeCheckboxLabel) // Wrap checkboxes in labels
+    .use(rehypeHeadingIdAndToc) // Assign heading ids and extract table of contents
     .use(rehypeStringify)
     .process(markdown);
 

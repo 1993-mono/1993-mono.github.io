@@ -1,7 +1,7 @@
 /**
- * dev 서버 + content/devlog 파일 감시
- * - 시작 시: 인덱스 갱신 후 Next.js dev 실행
- * - 과정 중: content/devlog 변경 시 인덱스 자동 갱신
+ * Dev server + content/devlog file watcher
+ * - On start: refresh index, then run Next.js dev
+ * - While running: auto-refresh index when content/devlog changes
  */
 
 const { spawn, spawnSync } = require('child_process');
@@ -10,7 +10,7 @@ const path = require('path');
 const devlogDir = path.join(process.cwd(), 'content/devlog');
 const indexScript = path.join(process.cwd(), 'scripts/generate-devlog-index.js');
 
-// 인덱스 갱신 실행 (비동기 - watch용)
+// Run index refresh asynchronously (for watch mode)
 function runIndexGenerator() {
   const child = spawn('node', [indexScript], {
     stdio: 'inherit',
@@ -19,23 +19,23 @@ function runIndexGenerator() {
   });
   child.on('close', (code) => {
     if (code !== 0) {
-      console.error('[devlog] 인덱스 갱신 실패');
+      console.error('[devlog] Failed to refresh index');
     }
   });
 }
 
-// 1. 시작 시 인덱스 갱신 (동기 - 완료 후 dev 시작)
-console.log('[devlog] 인덱스 갱신 중...');
+// 1. Refresh index on startup (sync - dev starts after completion)
+console.log('[devlog] Refreshing index...');
 const result = spawnSync('node', [indexScript], {
   stdio: 'inherit',
   shell: true,
   cwd: process.cwd(),
 });
 if (result.status !== 0) {
-  console.error('[devlog] 인덱스 갱신 실패');
+  console.error('[devlog] Failed to refresh index');
 }
 
-// 2. Next.js dev 서버 시작
+// 2. Start Next.js dev server
 const nextDev = spawn('npx', ['next', 'dev'], {
   stdio: 'inherit',
   shell: true,
@@ -43,12 +43,12 @@ const nextDev = spawn('npx', ['next', 'dev'], {
   env: { ...process.env },
 });
 
-// 3. content/devlog 감시 (fs.watch recursive - Node 18+ 지원)
+// 3. Watch content/devlog (fs.watch recursive - Node 18+)
 let watchDebounce = null;
 function scheduleIndexUpdate() {
   if (watchDebounce) clearTimeout(watchDebounce);
   watchDebounce = setTimeout(() => {
-    console.log('[devlog] content/devlog 변경 감지, 인덱스 갱신 중...');
+    console.log('[devlog] content/devlog changed, refreshing index...');
     runIndexGenerator();
     watchDebounce = null;
   }, 300);
@@ -60,13 +60,13 @@ try {
     fs.watch(devlogDir, { recursive: true }, () => {
       scheduleIndexUpdate();
     });
-    console.log('[devlog] content/devlog 파일 감시 시작');
+    console.log('[devlog] Watching content/devlog');
   }
 } catch (err) {
-  console.warn('[devlog] 파일 감시 설정 실패:', err.message);
+  console.warn('[devlog] Failed to set up file watcher:', err.message);
 }
 
-// Next.js 프로세스 종료 시 해당 스크립트도 종료
+// Exit this script when the Next.js process exits
 nextDev.on('close', (code) => {
   process.exit(code ?? 0);
 });

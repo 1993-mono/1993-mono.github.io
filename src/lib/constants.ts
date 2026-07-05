@@ -1,22 +1,22 @@
-// 사이트 공통 상수
+// Site-wide constants
 export const SITE_NAME = 'DevFolio';
 
-// 메뉴 정보
+// Navigation menu
 export const MENU = {
   HOME: {
-    name: '인사말',
-    description: '포트폴리오 + 개발 기록',
+    name: 'About',
+    description: 'Portfolio + dev journal',
   },
   PORTFOLIO: {
-    name: '포트폴리오',
-    description: '포트폴리오 작품들을 모아놓은 갤러리',
+    name: 'Portfolio',
+    description: 'A gallery of portfolio projects',
   },
   DEVLOG: {
-    name: '개발 기록',
-    description: '개발 과정에서 배운 것들과 기록들',
+    name: 'Dev Log',
+    description: 'Notes and learnings from building software',
   },
   TODO: {
-    name: '할 일',
-    description: '앞으로 할 작업들을 체크할 수 있는 목록',
+    name: 'Tasks',
+    description: 'A checklist of upcoming work',
   },
 } as const;

@@ -40,5 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# devlog 인덱스 (빌드 시 자동 생성)
+# devlog index (auto-generated at build time)
 .devlog-index.json

@@ -10,13 +10,13 @@ export default function Devlog() {
   const folders = getDevlogFolders();
   const allPosts = getDevlogPostsByFolder(null);
 
-  // 각 폴더의 포스트 개수 계산
+  // Compute post count per folder
   const folderPostCounts: Record<string, number> = {};
   folders.forEach((folder) => {
     folderPostCounts[folder] = getPostCount(folder);
   });
 
-  // 각 폴더의 하위 폴더 목록 계산
+  // Compute subfolder lists per folder
   const subFoldersMap: Record<string, string[]> = {};
   folders.forEach((folder) => {
     const subFolders = getSubFolders(folder);
@@ -25,14 +25,14 @@ export default function Devlog() {
     }
   });
 
-  // 전체 선택 시의 하위 폴더들도 계산 (중첩 폴더 포함)
+  // Also compute subfolders when "All" is selected (includes nested folders)
   const allSubFolders = getSubFolders(null);
   allSubFolders.forEach((folder) => {
     const subFolders = getSubFolders(folder);
     if (subFolders.length > 0) {
       const folderPath = folder;
       subFoldersMap[folderPath] = subFolders;
-      // 하위 폴더의 포스트 개수도 계산
+      // Compute post counts for nested subfolders
       subFolders.forEach((subFolder) => {
         const fullPath = `${folder}/${subFolder}`;
         folderPostCounts[fullPath] = getPostCount(fullPath);

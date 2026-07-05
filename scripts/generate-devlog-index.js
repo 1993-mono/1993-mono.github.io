@@ -1,6 +1,6 @@
 /**
- * devlog 인덱스 생성 스크립트
- * content/devlog 폴더를 스캔하여 .devlog-index.json 생성
+ * Devlog index generator
+ * Scans content/devlog and writes .devlog-index.json
  */
 
 const fs = require('fs');
@@ -10,7 +10,7 @@ const matter = require('gray-matter');
 const devlogDir = path.join(process.cwd(), 'content/devlog');
 const indexPath = path.join(process.cwd(), '.devlog-index.json');
 
-// 날짜를 문자열로 변환
+// Convert a date value to a string
 function formatDate(date) {
   if (!date) return '';
   if (date instanceof Date) {
@@ -20,7 +20,7 @@ function formatDate(date) {
   return String(date);
 }
 
-// 재귀적으로 .md 파일 수집
+// Recursively collect .md files
 function collectMarkdownFiles(dir, baseDir = devlogDir) {
   const result = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -39,7 +39,7 @@ function collectMarkdownFiles(dir, baseDir = devlogDir) {
   return result;
 }
 
-// 1차 폴더 목록 (content/devlog 직속 하위)
+// Top-level folders (direct children of content/devlog)
 function getTopFolders() {
   const items = fs.readdirSync(devlogDir, { withFileTypes: true });
   return items
@@ -48,7 +48,7 @@ function getTopFolders() {
     .sort();
 }
 
-// 특정 폴더의 직속 하위 폴더 목록 (devlog.ts getSubFolders와 동일)
+// Direct subfolders for a folder (matches devlog.ts getSubFolders)
 function getSubFoldersOf(parentFolder) {
   const folderPath = parentFolder
     ? path.join(devlogDir, parentFolder)
@@ -63,7 +63,7 @@ function getSubFoldersOf(parentFolder) {
     .sort();
 }
 
-// 부모 폴더 → 하위 폴더 맵 생성 (재귀적으로 모든 폴더 탐색)
+// Build parent folder -> subfolder map (recursively traverse all folders)
 function getSubFoldersMap(folders) {
   const map = {};
   function collect(parentFolder) {
@@ -84,7 +84,7 @@ function getSubFoldersMap(folders) {
 
 function generate() {
   if (!fs.existsSync(devlogDir)) {
-    console.warn('content/devlog 폴더가 없습니다.');
+    console.warn('content/devlog folder not found.');
     fs.writeFileSync(indexPath, JSON.stringify({ entries: [], folders: [], subFoldersMap: {} }, null, 2));
     return;
   }
@@ -110,7 +110,7 @@ function generate() {
     };
   });
 
-  // 날짜순 정렬 (최신순)
+  // Sort by date (newest first)
   entries.sort((a, b) => {
     if (a.date < b.date) return 1;
     if (a.date > b.date) return -1;
@@ -125,7 +125,7 @@ function generate() {
   };
 
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
-  console.log(`devlog 인덱스 갱신 완료: ${entries.length}개 포스트`);
+  console.log(`Devlog index updated: ${entries.length} posts`);
 }
 
 generate();

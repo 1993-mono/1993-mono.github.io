@@ -1,18 +1,18 @@
 ---
-title: 01. 자바스크립트 시작하기
+title: 01. Getting Started with JavaScript
 date: 2026-01-11
 ---
 
-이것은 첫 번째 개발 기록입니다.
+This is the first dev log entry.
 
-마크다운 문법을 사용할 수 있습니다:
+You can use Markdown syntax:
 
-- 리스트 항목 1
-- 리스트 항목 2
+- List item 1
+- List item 2
 
-**굵은 글씨**와 *기울임*도 사용할 수 있습니다.
+You can also use **bold** and *italic* text.
 
-코드 블록도 가능합니다:
+Code blocks work too:
 
 ```javascript
 console.log("Hello, World!");

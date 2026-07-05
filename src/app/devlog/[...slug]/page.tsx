@@ -26,7 +26,7 @@ export default async function DevlogPost({ params }: PageProps) {
   }
 
   const breadcrumbItems = [
-    { children: '개발 기록' },
+    { children: 'Dev Log' },
     ...(Array.isArray(slug) && slug.length > 1
       ? slug.slice(0, -1).map((part) => ({
         children: part,

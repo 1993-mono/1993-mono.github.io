@@ -16,7 +16,7 @@ export interface DevlogPost {
   folder?: string;
 }
 
-// 인덱스 파일 구조
+// Index file structure
 interface DevlogIndexEntry {
   slug: string;
   title: string;
@@ -30,7 +30,7 @@ interface DevlogIndex {
   subFoldersMap: Record<string, string[]>;
 }
 
-// 인덱스 파일 읽기 (없으면 null)
+// Read index file (returns null if missing)
 function getDevlogIndex(): DevlogIndex | null {
   try {
     const data = fs.readFileSync(indexPath, 'utf8');
@@ -40,11 +40,11 @@ function getDevlogIndex(): DevlogIndex | null {
   }
 }
 
-// 날짜를 문자열로 변환하는 헬퍼 함수
+// Helper to convert a date value to a string
 function formatDate(date: unknown): string {
   if (!date) return '';
   if (date instanceof Date) {
-    return date.toISOString().split('T')[0]; // YYYY-MM-DD 형식
+    return date.toISOString().split('T')[0]; // YYYY-MM-DD format
   }
   if (typeof date === 'string') {
     return date;
@@ -52,7 +52,7 @@ function formatDate(date: unknown): string {
   return String(date);
 }
 
-// 모든 devlog 포스트의 메타데이터 가져오기
+// Fetch metadata for all devlog posts
 export function getAllDevlogPosts(): DevlogPost[] {
   const fileNames = fs.readdirSync(devlogDirectory);
   const allPostsData = fileNames
@@ -71,7 +71,7 @@ export function getAllDevlogPosts(): DevlogPost[] {
       };
     });
 
-  // 날짜순으로 정렬 (최신순)
+  // Sort by date (newest first)
   return allPostsData.sort((a, b) => {
     if (a.date < b.date) {
       return 1;
@@ -81,18 +81,18 @@ export function getAllDevlogPosts(): DevlogPost[] {
   });
 }
 
-// 특정 slug의 포스트 데이터 가져오기
+// Fetch post data for a specific slug
 export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
   try {
-    // slug가 폴더 경로를 포함할 수 있음 (예: "Next.js/next-first-post")
+    // slug may include a folder path (e.g. "Next.js/next-first-post")
     const fullPath = path.join(devlogDirectory, `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
-    // 마크다운을 HTML로 변환 (체크박스는 커스텀 태그로 변환, 제목에 id 부여)
+    // Convert markdown to HTML (custom checkbox tags, heading ids)
     const { html, headings } = await markdownToHtmlCustom(content);
 
-    // 폴더 정보 추출
+    // Extract folder info
     const relativePath = path.relative(devlogDirectory, fullPath);
     const folder = path.dirname(relativePath) !== '.' ? path.dirname(relativePath).replace(/\\/g, '/') : undefined;
 
@@ -110,7 +110,7 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
   }
 }
 
-// 모든 slug 목록 가져오기
+// Fetch all slug values
 export function getAllDevlogSlugs(): string[] {
   const index = getDevlogIndex();
   if (index) {
@@ -124,7 +124,7 @@ export function getAllDevlogSlugs(): string[] {
   });
 }
 
-// 재귀적으로 폴더 내 모든 .md 파일 찾기 (인덱스 없을 때 폴백)
+// Recursively find all .md files in a folder (fallback when index is missing)
 function getAllMarkdownFiles(dir: string, baseDir: string = devlogDirectory): Array<{ path: string; folder: string }> {
   const files: Array<{ path: string; folder: string }> = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
@@ -144,7 +144,7 @@ function getAllMarkdownFiles(dir: string, baseDir: string = devlogDirectory): Ar
   return files;
 }
 
-// 1차 탭용 폴더 목록 가져오기 (content/devlog 하위 폴더들)
+// Fetch top-level folders for primary tabs (direct children of content/devlog)
 export function getDevlogFolders(): string[] {
   const index = getDevlogIndex();
   if (index) {
@@ -158,7 +158,7 @@ export function getDevlogFolders(): string[] {
     .sort();
 }
 
-// 특정 폴더의 하위 폴더 목록 가져오기
+// Fetch subfolders for a given folder
 export function getSubFolders(parentFolder: string | null): string[] {
   const index = getDevlogIndex();
   if (index) {
@@ -184,7 +184,7 @@ export function getSubFolders(parentFolder: string | null): string[] {
     .sort();
 }
 
-// 특정 폴더의 포스트 가져오기
+// Fetch posts for a given folder
 export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
   const index = getDevlogIndex();
   if (index) {
@@ -200,12 +200,12 @@ export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
       slug: e.slug,
       title: e.title,
       date: e.date,
-      content: '', // 목록용이라 content 불필요
+      content: '', // Not needed for list views
       folder: e.folder,
     }));
   }
 
-  // 인덱스 없을 때 기존 방식 (파일 스캔)
+  // Fallback to file scan when index is missing
   const markdownFiles = getAllMarkdownFiles(devlogDirectory);
 
   const allPostsData = markdownFiles
@@ -242,7 +242,7 @@ export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
   });
 }
 
-// 특정 폴더의 포스트 개수 가져오기
+// Fetch post count for a given folder
 export function getPostCount(folder: string | null): number {
   return getDevlogPostsByFolder(folder).length;
 }

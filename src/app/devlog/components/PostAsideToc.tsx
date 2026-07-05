@@ -16,7 +16,7 @@ export default function PostAsideToc({ items }: PostAsideTocProps) {
   };
 
   return (
-    <nav className="post-aside-toc" aria-label="목차">
+    <nav className="post-aside-toc" aria-label="Table of contents">
       <ul className="post-aside-toc-list">
         {items.map((item) => (
           <li

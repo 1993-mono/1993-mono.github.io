@@ -1,50 +1,50 @@
 ---
-title: AI 비서, Openclaw
+title: Openclaw, the AI Assistant
 date: 2026-02-05
 ---
 
-오픈소스 커뮤니티에서 최근 가장 주목받는 AI 에이전트 <strong>Openclaw(오픈클로)</strong>가 소개됐다.
+The open-source community recently introduced <strong>Openclaw</strong>, one of the most talked-about AI agents.
 
-기존 챗봇과 달리 사용자의 컴퓨터를 직접 제어하며 업무를 수행하는 도구로, 반복 업무 자동화와 퍼스널 AI 에이전트 도입을 검토 중인 조직의 관심이 높다.
+Unlike traditional chatbots, it can directly control a user's computer and handle tasks, which has drawn strong interest from teams exploring workflow automation and personal AI agents.
 
-[Openclaw 소개 영상 보기](https://www.youtube.com/watch?v=M-S2ctyAeaY)
-
----
-
-## 핵심 기능 및 특징
-
-<strong>자율 업무 수행</strong>이 가장 큰 차별점이다. 브라우저 사용, 파일 조작, 터미널 명령 등 사용자가 컴퓨터로 수행하는 대부분의 작업을 AI가 대신 처리한다. [00:28]
-
-<strong>기억 및 학습</strong> 기능을 통해 사용자 성향을 마크다운 파일로 저장해 영구 기억하며, 새로운 프로그램 사용법(스킬)을 학습시켜 지속적으로 업그레이드할 수 있다. [01:21]
-
-<strong>스케줄링(Cron)</strong>을 지원해 매일 아침 특정 업무를 자동 수행하도록 예약 설정이 가능하다. [01:35]
+[Watch the Openclaw intro video](https://www.youtube.com/watch?v=M-S2ctyAeaY)
 
 ---
 
-## 업무용 메신저 연동
+## Key Features
 
-웹 사이트 접속 없이 평소 사용하는 메신저를 통해 AI에 업무 지시를 내릴 수 있다. [00:58]
+<strong>Autonomous task execution</strong> is the biggest differentiator. The AI can handle most tasks a user would perform on a computer, including browsing, file operations, and terminal commands. [00:28]
 
-- <strong>텔레그램 (Telegram)</strong>: 연동이 가장 쉽고 빠르다. 봇 토큰 발급만으로 개인 또는 팀 채팅방에 AI 비서를 초대해 명령을 내릴 수 있다.
+Through <strong>memory and learning</strong>, it stores user preferences in Markdown files for long-term recall and can learn new skills to keep improving over time. [01:21]
 
-- <strong>구글챗 (Google Chat)</strong>: 구글 워크스페이스를 사용하는 팀에 적합하다. 업무용 채팅방에 에이전트를 추가해 실시간 협업이 가능하다.
-
-- <strong>디스코드 (Discord)</strong>: 공식 영상에서 시연된 채널로, 설정 가이드가 잘 갖춰져 있어 초기 도입 시 참고하기 좋다. [03:34]
+It also supports <strong>scheduling (Cron)</strong>, so recurring tasks can run automatically at set times, such as every morning. [01:35]
 
 ---
 
-## 도입 시 고려사항 (보안 및 비용)
+## Messenger Integrations
 
-AI가 컴퓨터 제어권을 갖기 때문에 <strong>보안 관리</strong>가 중요하다. 중요한 파일 유출 방지를 위해 <strong>도커(Docker)</strong>나 별도의 독립된 PC에서 구동하는 것을 권장한다. [04:50]
+You can assign tasks to the AI through everyday messengers without visiting a website. [00:58]
 
-<strong>운영 비용</strong> 측면에서는 고성능 모델(Claude, GPT 등) 사용 시 API 토큰 비용이 발생한다. 비용 절감을 위해 로컬 LLM 환경을 구축하는 사례도 있다. [05:18]
+- <strong>Telegram</strong>: The easiest and fastest integration. With a bot token, you can invite the AI assistant into a personal or team chat and send commands there.
 
----
+- <strong>Google Chat</strong>: A good fit for teams using Google Workspace. Add the agent to a work chat room for real-time collaboration.
 
-## 설치 방법
-
-Node.js 설치 후 터미널에서 npm 명령어로 설치할 수 있으며, `openclaw onboard` 명령어로 초기 설정을 진행한다. [02:49]
+- <strong>Discord</strong>: Demonstrated in the official video, with solid setup guides that make it a useful reference for early adoption. [03:34]
 
 ---
 
-보안 이슈에 대한 검토가 아직 필요한 상황이지만, 반복적인 단순 업무나 복잡한 데이터 처리를 자동화하는 퍼스널 AI 에이전트 도입을 고려 중이라면 참고할 만한 자료로 평가된다.
+## Adoption Considerations (Security and Cost)
+
+Because the AI can control a computer, <strong>security management</strong> matters. Running it inside <strong>Docker</strong> or on a separate dedicated machine is recommended to reduce the risk of sensitive file exposure. [04:50]
+
+On the <strong>operating cost</strong> side, high-performance models such as Claude and GPT can incur API token charges. Some teams reduce cost by running local LLM setups instead. [05:18]
+
+---
+
+## Installation
+
+After installing Node.js, you can install it via npm in the terminal and run `openclaw onboard` for initial setup. [02:49]
+
+---
+
+Security concerns still need further review, but for teams considering a personal AI agent to automate repetitive work or complex data processing, Openclaw is worth evaluating as a reference.

@@ -2,8 +2,8 @@ export default function Portfolio() {
   return (
     <>
       <div className="no-data">
-        아직은 이곳에 담긴 작품이 없어요 :^(<br />
-        앞으로 찬찬히 채워나갈 예정이에요 :^)
+        No projects here yet :^(<br />
+        I&apos;ll fill this in over time :^)
       </div>
     </>
   );

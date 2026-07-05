@@ -18,12 +18,12 @@ interface BreadcrumbProps {
 export default function Breadcrumb({
   backLink,
   items,
-  ariaLabel = '페이지 경로',
+  ariaLabel = 'Breadcrumb',
 }: BreadcrumbProps) {
   const defaultBackLinkChildren = (
     <>
       <span className="icn-container"><ArrowLeftIcon className="icn" /></span>
-      <span className="txt">목록으로 돌아가기</span>
+      <span className="txt">Back to list</span>
     </>
   );
 

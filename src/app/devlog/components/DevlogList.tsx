@@ -72,10 +72,10 @@ export default function DevlogList({
 
   return (
     <>
-      {/* 탭 목록 */}
+      {/* Tab list */}
       {folders.length > 0 && (
         <>
-          {/* 1차 탭 */}
+          {/* Primary tabs */}
           <Tabs
             items={[
               { label: 'All', value: null, count: getPostCount(null) },
@@ -87,10 +87,10 @@ export default function DevlogList({
             ]}
             selectedValue={selectedPrimaryTab}
             onTabClick={handlePrimaryTabClick}
-            ariaLabel="1차 탭"
+            ariaLabel="Primary tabs"
           />
 
-          {/* 2차 탭 */}
+          {/* Secondary tabs */}
           <AnimatePresence mode="popLayout">
             {selectedPrimaryTab !== null && secondaryTabs.length > 0 && (
               <motion.div
@@ -114,7 +114,7 @@ export default function DevlogList({
                   ]}
                   selectedValue={selectedSecondaryTab}
                   onTabClick={handleSecondaryTabClick}
-                  ariaLabel="2차 탭"
+                  ariaLabel="Secondary tabs"
                 />
               </motion.div>
             )}
@@ -122,7 +122,7 @@ export default function DevlogList({
         </>
       )}
 
-      {/* 포스트 목록 */}
+      {/* Post list */}
       <motion.div
         className="posts-list"
         layout
@@ -131,7 +131,7 @@ export default function DevlogList({
         }}
       >
         {filteredPosts.length === 0 ? (
-          <p className="no-data">아직은 작성된 글이 없어요 :^(</p>
+          <p className="no-data">No posts yet :^(</p>
         ) : (
           <ul>
             {filteredPosts.map((post: DevlogPost) => {

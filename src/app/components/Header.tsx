@@ -96,7 +96,7 @@ export default function Header() {
     <header>
       <h1 className="logo"><Link href="/">{SITE_NAME}</Link></h1>
       {mode === "mobile" && (
-        <button type="button" className="menu-button" aria-label="메뉴 열기" onClick={handleMenuButtonClick}><Bars3Icon /></button>
+        <button type="button" className="menu-button" aria-label="Open menu" onClick={handleMenuButtonClick}><Bars3Icon /></button>
       )}
       {mode === "pc" ? (
         <nav>
@@ -112,7 +112,7 @@ export default function Header() {
               transition={{ type: "tween", duration: 0.3, ease: "easeInOut" }}
             >
               <div className="nav-title">
-                <button type="button" className="menu-button" aria-label="메뉴 닫기" onClick={handleMenuButtonClick}><XMarkIcon /></button>
+                <button type="button" className="menu-button" aria-label="Close menu" onClick={handleMenuButtonClick}><XMarkIcon /></button>
               </div>
               <NavMenu />
             </motion.nav>

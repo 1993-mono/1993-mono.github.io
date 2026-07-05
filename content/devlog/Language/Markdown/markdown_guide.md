@@ -1,267 +1,267 @@
 ---
-title: Markdown 가이드
+title: Markdown Guide
 date: 2026-01-20
 ---
 
-Markdown은 텍스트 기반의 마크업 언어로, 간단한 문법으로 문서를 작성할 수 있게 해줍니다.
+Markdown is a text-based markup language that lets you write documents with simple syntax.
 
 ---
 
-# 제목 (Headings)
+# Headings
 
-제목은 `#` 기호를 사용하여 작성합니다. `#`의 개수에 따라 제목의 크기가 결정됩니다.
+Headings are written using the `#` symbol. The number of `#` characters determines the heading size.
 
 ```markdown
-# 제목 1 (가장 큰 제목)
-## 제목 2
-### 제목 3 (가장 작은 제목)
+# Heading 1 (largest heading)
+## Heading 2
+### Heading 3 (smallest heading)
 ```
 
-### 실제 예시
-# 제목 1
-## 제목 2
-### 제목 3
+### Usage
+# Heading 1
+## Heading 2
+### Heading 3
 
 ---
 
-# 줄바꿈 (Line Breaks)
+# Line Breaks
 
-마크다운에서 줄바꿈을 하는 방법은 여러 가지가 있습니다.
+There are several ways to create line breaks in Markdown.
 
-## 단락 구분 (Paragraph Break)
+## Paragraph Break
 
-빈 줄 하나를 추가하면 새로운 단락으로 구분됩니다.
-
-```markdown
-첫 번째 단락입니다.
-
-두 번째 단락입니다.
-```
-
-### 실제 예시
-
-첫 번째 단락입니다.
-
-두 번째 단락입니다.
-
-## 단순 줄바꿈 (Line Break)
-
-같은 단락 내에서 줄바꿈을 하려면 줄 끝에 공백 2개를 추가하고 엔터를 누릅니다.
+Adding a blank line creates a new paragraph.
 
 ```markdown
-첫 번째 줄  
-두 번째 줄
+This is the first paragraph.
+
+This is the second paragraph.
 ```
 
-### 실제 예시
+### Usage
 
-첫 번째 줄  
-두 번째 줄
+This is the first paragraph.
+
+This is the second paragraph.
+
+## Line Break
+
+To break a line within the same paragraph, add two spaces at the end of the line and press Enter.
+
+```markdown
+First line  
+Second line
+```
+
+### Usage
+
+First line  
+Second line
 
 ---
 
-# 리스트 (Lists)
+# Lists
 
-## 순서 없는 리스트 (Unordered List)
+## Unordered List
 
-순서 없는 리스트는 `-`, `*`, 또는 `+` 기호를 사용합니다.
+Unordered lists use `-`, `*`, or `+`.
 
-리스트 항목 내에서 여러 줄을 입력하려면
+To enter multiple lines within a list item:
 
-1. 공백 2개 추가
-2. 줄바꿈
-3. 들여쓰기 4칸
-
-```markdown
-- 첫 번째 항목  
-    이 항목의 두 번째 줄입니다.  
-    세 번째 줄도 같은 항목입니다.
-- 두 번째 항목
-
-    여러 줄로 설명을 작성할 수 있습니다.
-
-    각 줄은 들여쓰기 4칸으로 시작합니다.
-- 세 번째 항목
-    - 하위 항목 1  
-        하위 항목의 두 번째 줄입니다.
-    - 하위 항목 2
-```
-
-### 실제 예시
-- 첫 번째 항목  
-    이 항목의 두 번째 줄입니다.  
-    세 번째 줄도 같은 항목입니다.
-- 두 번째 항목
-
-    여러 줄로 설명을 작성할 수 있습니다.
-
-    각 줄은 들여쓰기 4칸으로 시작합니다.
-- 세 번째 항목
-    - 하위 항목 1  
-        하위 항목의 두 번째 줄입니다.
-    - 하위 항목 2
-
-## 순서 있는 리스트 (Ordered List)
-
-순서 있는 리스트는 숫자와 점을 사용합니다.
-
-순서 있는 리스트에서도 항목 내 여러 줄을 입력할 수 있습니다.
+1. Add two spaces
+2. Line break
+3. Indent 4 spaces
 
 ```markdown
-1. 첫 번째 항목  
-    이 항목의 두 번째 줄입니다.  
-    세 번째 줄도 같은 항목입니다.
-2. 두 번째 항목
+- First item  
+    This is the second line of this item.  
+    The third line is also part of the same item.
+- Second item
 
-    여러 줄로 설명을 작성할 수 있습니다.
+    You can write a description across multiple lines.
 
-    각 줄은 들여쓰기 4칸 이상으로 시작합니다.
-3. 세 번째 항목
-    1. 하위 항목 1  
-        하위 항목의 두 번째 줄입니다.
-    2. 하위 항목 2
+    Each line starts with a 4-space indent.
+- Third item
+    - Sub-item 1  
+        This is the second line of the sub-item.
+    - Sub-item 2
 ```
 
-### 실제 예시
-1. 첫 번째 항목  
-    이 항목의 두 번째 줄입니다.  
-    세 번째 줄도 같은 항목입니다.
-2. 두 번째 항목
+### Usage
+- First item  
+    This is the second line of this item.  
+    The third line is also part of the same item.
+- Second item
 
-    여러 줄로 설명을 작성할 수 있습니다.
+    You can write a description across multiple lines.
 
-    각 줄은 들여쓰기 4칸 이상으로 시작합니다.
-3. 세 번째 항목
-    1. 하위 항목 1  
-        하위 항목의 두 번째 줄입니다.
-    2. 하위 항목 2
+    Each line starts with a 4-space indent.
+- Third item
+    - Sub-item 1  
+        This is the second line of the sub-item.
+    - Sub-item 2
+
+## Ordered List
+
+Ordered lists use numbers followed by a period.
+
+You can also enter multiple lines within an ordered list item.
+
+```markdown
+1. First item  
+    This is the second line of this item.  
+    The third line is also part of the same item.
+2. Second item
+
+    You can write a description across multiple lines.
+
+    Each line starts with an indent of 4 or more spaces.
+3. Third item
+    1. Sub-item 1  
+        This is the second line of the sub-item.
+    2. Sub-item 2
+```
+
+### Usage
+1. First item  
+    This is the second line of this item.  
+    The third line is also part of the same item.
+2. Second item
+
+    You can write a description across multiple lines.
+
+    Each line starts with an indent of 4 or more spaces.
+3. Third item
+    1. Sub-item 1  
+        This is the second line of the sub-item.
+    2. Sub-item 2
 
 ---
 
-# 체크박스 (Checkboxes)
+# Checkboxes
 
-체크박스는 작업 목록을 만들 때 유용합니다.
+Checkboxes are useful for creating task lists.
 
-체크박스 항목 내에서도 여러 줄을 입력할 수 있습니다.
+You can also enter multiple lines within a checkbox item.
 
 ```markdown
-- [ ] 작업 1  
-    이 작업에 대한 상세 설명입니다.  
-    여러 줄로 작성할 수 있습니다.
-- [x] 완료된 작업
+- [ ] Task 1  
+    Detailed description of this task.  
+    You can write across multiple lines.
+- [x] Completed task
 
-    완료된 작업의 설명입니다.
+    Description of the completed task.
 
-    추가 정보를 여러 줄로 작성할 수 있습니다.
-- [ ] 작업 3
-    - [x] 하위 작업 1  
-        하위 작업의 상세 설명입니다.
-    - [ ] 하위 작업 2
+    You can add additional information across multiple lines.
+- [ ] Task 3
+    - [x] Sub-task 1  
+        Detailed description of the sub-task.
+    - [ ] Sub-task 2
 ```
 
-### 실제 예시
-- [ ] 작업 1  
-    이 작업에 대한 상세 설명입니다.  
-    여러 줄로 작성할 수 있습니다.
-- [x] 완료된 작업
+### Usage
+- [ ] Task 1  
+    Detailed description of this task.  
+    You can write across multiple lines.
+- [x] Completed task
 
-    완료된 작업의 설명입니다.
+    Description of the completed task.
 
-    추가 정보를 여러 줄로 작성할 수 있습니다.
-- [ ] 작업 3
-    - [x] 하위 작업 1  
-        하위 작업의 상세 설명입니다.
-    - [ ] 하위 작업 2
+    You can add additional information across multiple lines.
+- [ ] Task 3
+    - [x] Sub-task 1  
+        Detailed description of the sub-task.
+    - [ ] Sub-task 2
 
 ---
 
-# 강조 (Emphasis)
+# Emphasis
 
-텍스트를 강조하는 여러 방법이 있습니다.
+There are several ways to emphasize text.
 
-굵은 글씨는 `<strong>` 태그, 기울임은 `<em>` 태그, 취소선은 `<del>` 또는 `<s>` 태그로 쓸 수 있습니다.
+Bold text can use the `<strong>` tag, italic text can use the `<em>` tag, and strikethrough can use the `<del>` or `<s>` tag.
 
-`<strong>`은 굵게 강조할 때, `<em>`은 기울임 강조(emphasis)할 때, `<del>`은 삭제된 내용이라는 의미를 가질 때, `<s>`는 단순히 취소선 스타일만 적용할 때 사용합니다.
+Use `<strong>` for bold emphasis, `<em>` for italic emphasis, `<del>` to indicate deleted content, and `<s>` when you only want the strikethrough style.
 
-`**`, `*`, `~~` 등의 기호는 환경에 따라 적용되지 않을 수 있으므로, `<strong>`, `<em>`, `<del>`, `<s>` 같은 태그 사용을 권장합니다.
-
-```markdown
-<strong>굵은 글씨</strong> 또는 **굵은 글씨** 또는 __굵은 글씨__  
-<em>기울임</em> 또는 *기울임* 또는 _기울임_  
-<strong><em>굵고 기울임</em></strong> 또는 ***굵고 기울임*** 또는 ___굵고 기울임___  
-<del>취소선</del> 또는 <s>취소선</s> 또는 ~~취소선~~
-```
-
-### 실제 예시
-<strong>굵은 글씨</strong> 또는 **굵은 글씨** 또는 __굵은 글씨__  
-<em>기울임</em> 또는 *기울임* 또는 _기울임_  
-<strong><em>굵고 기울임</em></strong> 또는 ***굵고 기울임*** 또는 ___굵고 기울임___  
-<del>취소선</del> 또는 ~~취소선~~
-
-## Mark 태그
-
-`<mark>` 태그는 HTML 태그로, 텍스트를 하이라이트(강조 표시)하는 데 사용됩니다. 기본적으로 노란색 배경으로 표시되며, 검색 결과나 중요한 부분을 강조할 때 유용합니다.
+Symbols like `**`, `*`, and `~~` may not render in every environment, so using tags such as `<strong>`, `<em>`, `<del>`, and `<s>` is recommended.
 
 ```markdown
-이 문장에서 <mark>이 부분</mark>이 하이라이트됩니다.  
-<mark>여러 단어를 하이라이트</mark>할 수 있으며, <mark>아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주 긴 문장</mark>도 하이라이트할 수 있습니다.  
-<mark>**굵은 글씨와 하이라이트를 함께 사용**</mark>할 수 있습니다.
+<strong>bold text</strong> or **bold text** or __bold text__  
+<em>italic</em> or *italic* or _italic_  
+<strong><em>bold and italic</em></strong> or ***bold and italic*** or ___bold and italic___  
+<del>strikethrough</del> or <s>strikethrough</s> or ~~strikethrough~~
 ```
 
-### 실제 예시
+### Usage
+<strong>bold text</strong> or **bold text** or __bold text__  
+<em>italic</em> or *italic* or _italic_  
+<strong><em>bold and italic</em></strong> or ***bold and italic*** or ___bold and italic___  
+<del>strikethrough</del> or ~~strikethrough~~
 
-이 문장에서 <mark>이 부분</mark>이 하이라이트됩니다.  
-<mark>여러 단어를 하이라이트</mark>할 수 있으며, <mark>아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주아주 긴 문장</mark>도 하이라이트할 수 있습니다.  
-<mark>**굵은 글씨와 하이라이트를 함께 사용**</mark>할 수 있습니다.
+## Mark Tag
+
+The `<mark>` tag is an HTML tag used to highlight (emphasize) text. By default it displays with a yellow background and is useful for search results or emphasizing important sections.
+
+```markdown
+In this sentence, <mark>this part</mark> is highlighted.  
+You can <mark>highlight multiple words</mark>, and you can also highlight <mark>veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery a long sentence</mark>.  
+You can <mark>**combine bold text and highlighting**</mark>.
+```
+
+### Usage
+
+In this sentence, <mark>this part</mark> is highlighted.  
+You can <mark>highlight multiple words</mark>, and you can also highlight <mark>veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery a long sentence</mark>.  
+You can <mark>**combine bold text and highlighting**</mark>.
 
 ---
 
-# 링크와 이미지
+# Links and Images
 
-## 링크
+## Links
 
 ```markdown
 [Google](https://www.google.com)  
-[GitHub](https://github.com "GitHub 홈페이지")
+[GitHub](https://github.com "GitHub homepage")
 ```
 
-### 실제 예시
+### Usage
 [Google](https://www.google.com)  
-[GitHub](https://github.com "GitHub 홈페이지")
+[GitHub](https://github.com "GitHub homepage")
 
-## 이미지
+## Images
 
 ```markdown
-![로컬 샘플 이미지](/images/markdown/sample.jpg)
+![Local sample image](/images/markdown/sample.jpg)
 
-![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280)
-![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280 "온라인 샘플 이미지")
+![Online sample image](https://picsum.photos/seed/markdown-guide/500/280)
+![Online sample image](https://picsum.photos/seed/markdown-guide/500/280 "Online sample image")
 ```
 
-### 실제 예시
-![로컬 샘플 이미지](/images/markdown/sample.jpg)
+### Usage
+![Local sample image](/images/markdown/sample.jpg)
 
-![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280)
-![온라인 샘플 이미지](https://picsum.photos/seed/markdown-guide/500/280 "온라인 샘플 이미지")
+![Online sample image](https://picsum.photos/seed/markdown-guide/500/280)
+![Online sample image](https://picsum.photos/seed/markdown-guide/500/280 "Online sample image")
 
 ---
 
-# 코드 블록
+# Code Blocks
 
-## 인라인 코드
+## Inline Code
 
-인라인 코드는 백틱(`) 하나로 감쌉니다.
+Inline code is wrapped in a single backtick (`).
 
 ```markdown
-`console.log()` 함수를 사용합니다.
+Use the `console.log()` function.
 ```
 
-### 실제 예시
-`console.log()` 함수를 사용합니다.
+### Usage
+Use the `console.log()` function.
 
-## 코드 블록
+## Code Block
 
-코드 블록은 백틱(`) 세 개로 감쌉니다.
+Code blocks are wrapped in three backticks (`).
 
 ```
 function greet(name) {
@@ -271,7 +271,7 @@ function greet(name) {
 console.log(greet("World"));
 ```
 
-### 실제 예시
+### Usage
 
 ```
 function greet(name) {
@@ -283,92 +283,92 @@ console.log(greet("World"));
 
 ---
 
-# 인용문
+# Blockquotes
 
-인용문은 `>` 기호를 사용합니다.
-
-```markdown
-> 이것은 인용문입니다.  
-> 여러 줄로 작성할 수 있습니다.
-```
-
-### 실제 예시
-
-> 이것은 인용문입니다.  
-> 여러 줄로 작성할 수 있습니다.
-
-## 중첩 인용문
+Blockquotes use the `>` symbol.
 
 ```markdown
-> 첫 번째 레벨 인용문  
-> 첫 번째 레벨 인용문 두 번째 줄
-> 
-> 첫 번째 레벨 다른 p 태그
-> > 두 번째 레벨 인용문
-> > > 세 번째 레벨 인용문
+> This is a blockquote.  
+> You can write it across multiple lines.
 ```
 
-### 실제 예시
+### Usage
 
-> 첫 번째 레벨 인용문  
-> 첫 번째 레벨 인용문 두 번째 줄
+> This is a blockquote.  
+> You can write it across multiple lines.
+
+## Nested Blockquotes
+
+```markdown
+> First-level blockquote  
+> Second line of first-level blockquote
 > 
-> 첫 번째 레벨 다른 p 태그
-> > 두 번째 레벨 인용문
-> > > 세 번째 레벨 인용문
+> Another p tag at first level
+> > Second-level blockquote
+> > > Third-level blockquote
+```
+
+### Usage
+
+> First-level blockquote  
+> Second line of first-level blockquote
+> 
+> Another p tag at first level
+> > Second-level blockquote
+> > > Third-level blockquote
 
 ---
 
-# 표 (Tables)
+# Tables
 
-표는 파이프(`|`)와 하이픈(`-`)을 사용하여 작성합니다.  
-하이픈은 최소 3개 이상이면 됩니다.  
-들여쓰기와 같이 4개 사용하면 기억하기 쉽습니다.
-
-```markdown
-| 헤더 1 | 헤더 2 | 헤더 3 |
-|----|----|----|
-| 셀 1 | 셀 2 | 셀 3 |
-| 셀 4 | 셀 5 | 셀 6 |
-```
-
-### 실제 예시
-
-| 헤더 1 | 헤더 2 | 헤더 3 |
-|----|----|----|
-| 셀 1 | 셀 2 | 셀 3 |
-| 셀 4 | 셀 5 | 셀 6 |
-
-## 정렬된 표
+Tables are written using pipes (`|`) and hyphens (`-`).  
+A minimum of three hyphens is enough.  
+Using four, like indentation, makes them easier to remember.
 
 ```markdown
-| 왼쪽 정렬 | 가운데 정렬 | 오른쪽 정렬 |
-|:----|:----:|----:|
-| 왼쪽 | 가운데 | 오른쪽 |
-| 데이터 1 | 데이터 2 | 데이터 3 |
+| Header 1 | Header 2 | Header 3 |
+|----|----|----|
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 4 | Cell 5 | Cell 6 |
 ```
 
-### 실제 예시
+### Usage
 
-| 왼쪽 정렬 | 가운데 정렬 | 오른쪽 정렬 |
+| Header 1 | Header 2 | Header 3 |
+|----|----|----|
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 4 | Cell 5 | Cell 6 |
+
+## Aligned Tables
+
+```markdown
+| Left align | Center align | Right align |
 |:----|:----:|----:|
-| 왼쪽 | 가운데 | 오른쪽 |
-| 데이터 1 | 데이터 2 | 데이터 3 |
+| Left | Center | Right |
+| Data 1 | Data 2 | Data 3 |
+```
 
-## 표준 마크다운 표의 한계
+### Usage
 
-표준 마크다운 표 문법(파이프와 하이픈)으로는 아래 두 가지를 표현할 수 없습니다.
+| Left align | Center align | Right align |
+|:----|:----:|----:|
+| Left | Center | Right |
+| Data 1 | Data 2 | Data 3 |
 
-- **셀 병합(colspan / rowspan)**  
-  가로·세로로 여러 칸을 합치는 문법이 없습니다. 필요하면 HTML `<table>`에 `colspan`, `rowspan`을 사용해야 합니다.
-- **tbody 안의 th(행 제목)**  
-  첫 줄만 헤더로 인식할 뿐, `<thead>`/`<tbody>` 구분이나 각 데이터 행마다 행 제목(`<th scope="row">`)을 두는 문법은 없습니다. 이 경우에도 HTML 표를 직접 작성해야 합니다.
+## Limitations of Standard Markdown Tables
+
+Standard Markdown table syntax (pipes and hyphens) cannot express the following two features:
+
+- **Cell merging (colspan / rowspan)**  
+  There is no syntax for merging cells horizontally or vertically. When needed, use `colspan` and `rowspan` on an HTML `<table>`.
+- **th inside tbody (row headers)**  
+  Only the first row is recognized as a header. There is no syntax for separating `<thead>`/`<tbody>` or adding a row header (`<th scope="row">`) to each data row. In these cases, you must write the HTML table directly.
 
 ---
 
-# 수평선
+# Horizontal Rules
 
-수평선은 `---`, `***`, 또는 `___`를 사용합니다.
+Horizontal rules use `---`, `***`, or `___`.
 
 ```markdown
 ---
@@ -376,55 +376,55 @@ console.log(greet("World"));
 ___
 ```
 
-### 실제 예시
+### Usage
 
 ---
 
-# Markdown 확장 문법
+# Markdown Extensions
 
-표준 Markdown에 추가된 확장 기능들입니다. 다양한 Markdown 파서에서 지원하는 추가 기능들을 살펴보겠습니다.
+These are extension features added to standard Markdown. Let's look at additional features supported by various Markdown parsers.
 
-## 각주 (Footnotes)
+## Footnotes
 
-각주를 사용하여 참고 정보를 추가할 수 있습니다.
-
-```markdown
-이것은 각주가 있는 문장입니다.[^1]
-
-[^1]: 이것은 각주 내용입니다.
-```
-
-### 실제 예시
-
-이것은 각주가 있는 문장입니다.[^1]
-
-[^1]: 이것은 각주 내용입니다.
-
-## 정의 리스트 (Definition Lists)
-
-용어와 그 정의를 나열할 때 사용합니다.
+You can add reference information using footnotes.
 
 ```markdown
-용어 1
-: 정의 1
+This is a sentence with a footnote.[^1]
 
-용어 2
-: 정의 2-1
-: 정의 2-2
+[^1]: This is the footnote content.
 ```
 
-### 실제 예시
+### Usage
 
-용어 1
-: 정의 1
+This is a sentence with a footnote.[^1]
 
-용어 2
-: 정의 2-1
-: 정의 2-2
+[^1]: This is the footnote content.
 
-## 삽입 코드 (Fenced Code Blocks)
+## Definition Lists
 
-코드 블록에 파일명이나 언어를 명시할 수 있습니다.
+Used to list terms and their definitions.
+
+```markdown
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2-1
+: Definition 2-2
+```
+
+### Usage
+
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2-1
+: Definition 2-2
+
+## Fenced Code Blocks
+
+You can specify a filename or language for code blocks.
 
 ```markdown
 ```javascript:src/app.js
@@ -434,118 +434,118 @@ function hello() {
 ```
 ```
 
-## 이모지 (Emoji)
+## Emoji
 
-일부 Markdown 파서에서는 이모지 단축어를 지원합니다.
+Some Markdown parsers support emoji shortcuts.
 
 ```markdown
 :smile: :heart: :thumbsup: :rocket:
 ```
 
-### 실제 예시 :smile: :heart: :thumbsup: :rocket:
+### Usage :smile: :heart: :thumbsup: :rocket:
 
-## 수학식 (Math)
+## Math
 
-LaTeX 형식의 수학식을 지원하는 확장 기능입니다.
+An extension feature that supports LaTeX-style math expressions.
 
 ```markdown
-인라인 수식: $E = mc^2$
+Inline math: $E = mc^2$
 
-블록 수식:
+Block math:
 $$
 \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
 $$
 ```
 
-### 실제 예시
+### Usage
 
-인라인 수식: $E = mc^2$
+Inline math: $E = mc^2$
 
-블록 수식:
+Block math:
 $$
 \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
 $$
 
-## 하이라이트
+## Highlight
 
-텍스트를 하이라이트할 수 있습니다.
+You can highlight text.
 
 ```markdown
-==하이라이트된 텍스트==
+==highlighted text==
 ```
 
-### 실제 예시 ==하이라이트된 텍스트==
+### Usage ==highlighted text==
 
 ---
 
 # GitHub Flavored Markdown (GFM)
 
-GitHub Flavored Markdown은 GitHub에서 사용하는 Markdown 확장 버전입니다. 표준 Markdown에 추가된 기능들을 살펴보겠습니다.
+GitHub Flavored Markdown is the extended version of Markdown used on GitHub. Let's look at the features added to standard Markdown.
 
-## 자동 링크 (Autolinks)
+## Autolinks
 
-URL과 이메일 주소가 자동으로 링크로 변환됩니다.
+URLs and email addresses are automatically converted to links.
 
 ```markdown
 https://github.com
 user@example.com
 ```
 
-### 실제 예시
+### Usage
 - https://github.com
 - user@example.com
 
-## 이슈 및 PR 링크
+## Issue and PR Links
 
-GitHub 이슈와 Pull Request에 자동으로 링크됩니다.
-
-```markdown
-이슈 #123을 참고하세요.
-PR #456을 확인해주세요.
-```
-
-### 실제 예시
-- 이슈 #123을 참고하세요.
-- PR #456을 확인해주세요.
-
-## 취소선 (Strikethrough)
-
-텍스트에 취소선을 그을 수 있습니다.
+GitHub issues and Pull Requests are automatically linked.
 
 ```markdown
-~~취소된 텍스트~~
+See issue #123.
+Please check PR #456.
 ```
 
-### 실제 예시 ~~취소된 텍스트~~
+### Usage
+- See issue #123.
+- Please check PR #456.
 
-## 이모지
+## Strikethrough
 
-GitHub에서는 이모지를 직접 사용할 수 있습니다.
+You can add strikethrough to text.
+
+```markdown
+~~struck-through text~~
+```
+
+### Usage ~~struck-through text~~
+
+## Emoji
+
+On GitHub, you can use emojis directly.
 
 ```markdown
 :smile: :heart: :thumbsup: :rocket: :tada:
 ```
 
-### 실제 예시 :smile: :heart: :thumbsup: :rocket: :tada:
+### Usage :smile: :heart: :thumbsup: :rocket: :tada:
 
-## 인용문 내 코드 블록
+## Code Blocks in Blockquotes
 
-인용문 안에 코드 블록을 넣을 수 있습니다.
+You can place code blocks inside blockquotes.
 
 ```markdown
-> 코드 예시:
+> Code example:
 > ```javascript
 > console.log("Hello");
 > ```
 ```
 
-### 실제 예시
+### Usage
 
-> 코드 예시:
+> Code example:
 > ```javascript
 > console.log("Hello");
 > ```
 
 ---
 
-**참고:** 이 문서는 Markdown 문법을 설명하기 위해 작성되었으며, 실제로 Markdown으로 작성되었습니다!
+**Note:** This document was written to explain Markdown syntax, and it was actually written in Markdown!

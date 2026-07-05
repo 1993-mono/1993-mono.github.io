@@ -3,7 +3,7 @@
   line-height: 1.75;
 
 
-  // 제목 (Headings)
+  // Headings
   h1,
   h2,
   h3 {
@@ -35,13 +35,13 @@
   }
 
 
-  // 단락 (Paragraphs)
+  // Paragraphs
   p {
     margin: var(--spacing-markdown-text) 0;
   }
 
 
-  // 리스트 (Lists)
+  // Lists
   ul,
   ol {
     width: 100%;
@@ -108,7 +108,7 @@
   }
 
 
-  // 체크박스 (Task Lists)
+  // Task lists (checkboxes)
   .contains-task-list {
     list-style: none;
 
@@ -170,7 +170,7 @@
   }
 
 
-  // 강조 (Emphasis)
+  // Emphasis
   strong,
   b {
     font-weight: 700;
@@ -192,7 +192,7 @@
   }
 
 
-  // 링크 (Links)
+  // Links
   a {
     color: rgb(var(--foreground));
     text-decoration: underline;
@@ -206,7 +206,7 @@
   }
 
 
-  // 이미지 (Images)
+  // Images
   p:has(>img) {
     display: flex;
     flex-wrap: wrap;
@@ -222,13 +222,13 @@
   }
 
 
-  // 코드 블록 (Code Blocks)
+  // Code blocks
   code {
     font-family: "Consolas", "Monaco", "Courier New", monospace;
     font-size: 0.75em;
   }
 
-  // 인라인 코드
+  // Inline code
   :not(pre) code {
     border-radius: var(--spacing-markdown-inlineBox-borderRadius);
     border: 1px solid var(--color-border-gray);
@@ -237,7 +237,7 @@
     color: rgb(var(--foreground));
   }
 
-  // 코드 블록
+  // Fenced code block
   pre {
     border-radius: var(--radius);
     border: 1px solid var(--color-border-gray);
@@ -248,7 +248,7 @@
   }
 
 
-  // 인용문 (Blockquotes)
+  // Blockquotes
   blockquote {
     border-left: 4px solid rgb(var(--color-gray-900));
     padding-left: calc(var(--spacing-markdown-text) * 2);
@@ -263,7 +263,7 @@
       }
     }
 
-    // 중첩 인용문
+    // Nested blockquotes
     blockquote {
       border-left-color: rgb(var(--color-gray-400));
 
@@ -274,7 +274,7 @@
   }
 
 
-  // 표 (Tables)
+  // Tables
   table {
     width: 100%;
     border-top: 2px solid rgb(var(--color-gray-900));
@@ -321,20 +321,20 @@
   }
 
 
-  // 수평선 (Horizontal Rules)
+  // Horizontal rules
   hr {
     border-top: 2px dashed var(--color-border-gray);
     margin: 3em 0;
   }
 
 
-  // 각주 (Footnotes)
+  // Footnotes
   [id^="fn"] {
     font-size: 0.9em;
     color: var(--color-information);
   }
 
-  // 정의 리스트 (Definition Lists)
+  // Definition lists
   dl {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -356,7 +356,7 @@
     color: var(--color-information);
   }
 
-  // 수평선 스타일 변형
+  // Horizontal rule style variants
   hr:has(+ hr),
   hr+hr {
     border-top-width: 1px;
