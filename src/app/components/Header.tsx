@@ -69,15 +69,15 @@ function NavMenu() {
       </li>
       <li>
         <Link
-          href="/todo"
-          className={pathname.startsWith("/todo") ? "active" : ""}
+          href="/roadmap"
+          className={pathname.startsWith("/roadmap") ? "active" : ""}
           onClick={resetTabs}
         >
           <span className="icn-container">
             <CheckCircleIconOutline className="icn default" />
             <CheckCircleIconSolid className="icn hover" />
           </span>
-          <span className="txt">{MENU.TODO.name}</span>
+          <span className="txt">{MENU.ROADMAP.name}</span>
         </Link>
       </li>
     </ul>

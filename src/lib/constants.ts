@@ -15,8 +15,8 @@ export const MENU = {
     name: 'Dev Log',
     description: 'Notes and learnings from building software',
   },
-  TODO: {
-    name: 'Tasks',
-    description: 'A checklist of upcoming work',
+  ROADMAP: {
+    name: 'Roadmap',
+    description: 'Plans and progress for this site and learning',
   },
 } as const;
