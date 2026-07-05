@@ -14,7 +14,6 @@ const indexScript = path.join(process.cwd(), 'scripts/generate-devlog-index.js')
 function runIndexGenerator() {
   const child = spawn('node', [indexScript], {
     stdio: 'inherit',
-    shell: true,
     cwd: process.cwd(),
   });
   child.on('close', (code) => {
@@ -28,17 +27,15 @@ function runIndexGenerator() {
 console.log('[devlog] Refreshing index...');
 const result = spawnSync('node', [indexScript], {
   stdio: 'inherit',
-  shell: true,
   cwd: process.cwd(),
 });
 if (result.status !== 0) {
   console.error('[devlog] Failed to refresh index');
 }
 
-// 2. Start Next.js dev server
-const nextDev = spawn('npx', ['next', 'dev'], {
+// 2. Start Next.js dev server (webpack: Turbopack 내부 오류 우회)
+const nextDev = spawn('yarn', ['next', 'dev', '--webpack'], {
   stdio: 'inherit',
-  shell: true,
   cwd: process.cwd(),
   env: { ...process.env },
 });
