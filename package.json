@@ -2,6 +2,7 @@
   "name": "1993-mono.github.io",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "yarn@4.14.1",
   "scripts": {
     "dev": "node scripts/dev-with-watcher.js",
     "dev:next": "node scripts/generate-devlog-index.js && next dev --webpack",
