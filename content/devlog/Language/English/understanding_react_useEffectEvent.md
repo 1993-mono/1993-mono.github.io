@@ -349,3 +349,270 @@ This term appears again because it is central to React examples. Declarations ar
   - **common footgun**: a frequent way developers accidentally hurt themselves
   - **avoid footguns**: design or code in a way that reduces misuse risk
   - **API footgun**: an API that is easy to misuse despite being valid
+
+## passage
+A **passage** is a piece of text meant to be read, studied, or interpreted. In language learning, it usually means a reading selection rather than a single word or sentence. In this document, **Passage** names the source article you are studying, while **Vocabulary** collects terms from that article.
+
+- **Example**
+  > "Read the passage first, then check unfamiliar words in the vocabulary section."
+- **Related expressions**
+  - **reading passage**: near-synonym — a text selected for reading practice
+  - **excerpt**: near-synonym — a short extract from a longer work
+  - **text**: near-synonym — a written work or passage
+  - **passage of time**: different sense — the progression of time, not a reading text
+- **Common collocations**
+  - **reading passage**: a passage used in reading comprehension
+  - **passage from**: an extracted portion of a longer text
+  - **source passage**: the original text being studied or translated
+
+## bottom line
+**Bottom line** is the final, most important conclusion after a longer explanation. It comes from accounting, where the "bottom line" of a financial statement shows net profit. In everyday and technical writing, it signals "here is what actually matters."
+
+- **Example**
+  > "Bottom line: use `useEffectEvent` when you need the latest values without retriggering the effect."
+- **Related expressions**
+  - **in short**: near-synonym — briefly stated
+  - **to sum up**: near-synonym — to give a brief summary
+  - **the takeaway**: near-synonym — the key lesson or conclusion
+  - **TL;DR**: near-synonym — a very short summary (more casual)
+- **Common collocations**
+  - **bottom line is**: introduces the core conclusion
+  - **the bottom line**: the most important point to remember
+  - **bottom line:**: used as a label before a one-line conclusion
+
+## under the hood
+**Under the hood** describes what happens internally, beneath the visible surface of a system. The phrase comes from cars: the engine sits under the hood, while the driver only sees the controls. In software writing, it contrasts public usage with internal implementation or runtime behavior.
+
+- **Example**
+  > "Under the hood, `useEffectEvent` keeps a stable reference while still reading the latest values."
+- **Related expressions**
+  - **behind the scenes**: near-synonym — happening out of view
+  - **internally**: near-synonym — inside the system or process
+  - **at a lower level**: related — at the implementation or runtime layer
+  - **on the surface**: contrast — what is visible or obvious from the API
+- **Common collocations**
+  - **under the hood**: describes internal behavior beneath the public interface
+  - **look under the hood**: examine how something works internally
+  - **what happens under the hood**: the hidden mechanism behind visible behavior
+
+## caveats
+A **caveat** is a warning, condition, or limitation that readers should keep in mind. The word comes from Latin meaning "let him beware." In technical writing, **caveats** usually introduce restrictions, edge cases, or important conditions after a generally positive explanation.
+
+- **Example**
+  > "Caveats: this hook must be declared before the effect that uses it."
+- **Related expressions**
+  - **warning**: near-synonym — a stronger alert about risk or danger
+  - **limitation**: near-synonym — a boundary on what something can do
+  - **catch**: near-synonym — a hidden drawback or trap
+  - **note**: near-synonym — a lighter remark or reminder
+- **Common collocations**
+  - **important caveats**: significant conditions readers should not miss
+  - **with the caveat that**: introduces a condition attached to a claim
+  - **caveats and limitations**: a section listing restrictions and boundaries
+
+## enforce
+To **enforce** means to make a rule, constraint, or policy actually apply in practice, not just state it in theory. In software writing, enforcement often happens through runtime checks, linters, type systems, or APIs that reject invalid usage.
+
+- **Example**
+  > "React enforces the Rules of Hooks, so invalid hook calls fail at runtime."
+- **Related expressions**
+  - **apply**: near-synonym — to put a rule or policy into effect
+  - **impose**: near-synonym — to force a rule or restriction on someone
+  - **require**: related — to make something necessary
+  - **ensure**: contrast — to make an outcome happen, without necessarily punishing violations
+  - **suggest**: contrast — to recommend without forcing compliance
+- **Common collocations**
+  - **enforce a rule**: make a rule actually apply
+  - **enforce constraints**: apply limits so they cannot be ignored
+  - **enforce order**: require a specific sequence to be followed
+
+## suppress
+To **suppress** means to prevent something from appearing, spreading, or taking effect. In software writing, it often describes hiding warnings, blocking output, or stopping a reaction from surfacing, rather than removing the underlying cause.
+
+- **Example**
+  > "We suppressed the lint warning with a comment for this line."
+- **Related expressions**
+  - **hide**: near-synonym — to keep something out of view
+  - **block**: near-synonym — to stop something from passing through
+  - **disable**: related — to turn a feature off entirely
+  - **ignore**: contrast — to pay no attention without actively stopping output
+  - **remove**: contrast — to eliminate the source itself
+- **Common collocations**
+  - **suppress a warning**: prevent a warning from being shown
+  - **suppress an error**: stop an error from surfacing
+  - **suppress output**: prevent output from appearing
+
+---
+
+# Grammar
+
+## Source sentence
+
+> So when a subscription calls the onMessage it captured on render 1, it still reads the current callback with current values.
+
+**Meaning:** Even when a subscription calls the `onMessage` captured during render 1, `useEffectEvent` still reads the latest callback with the latest values.
+
+## Sentence structure
+
+```
+So [when-clause], [main clause]
+```
+
+| Part | Role |
+|------|------|
+| **So** | discourse marker — connects this sentence to the previous explanation |
+| **when a subscription calls ...** | adverbial clause of time — "when ~ happens" |
+| **it still reads ...** | main clause — states what still happens |
+
+## When-clause breakdown
+
+**when a subscription calls the onMessage (that) it captured on render 1**
+
+```
+when
+  a subscription              ← subject
+  calls                       ← verb
+  the onMessage               ← object
+    (that) it captured on render 1   ← relative clause modifying onMessage
+```
+
+### the onMessage (that) it captured on render 1
+
+This is an **object relative clause** with **that** omitted.
+
+Expanded form:
+
+> the onMessage **that** it captured on render 1
+
+Underlying sentence:
+
+> it captured **the onMessage** on render 1
+
+- **it** = the subscription (or the effect closure)
+- **captured** = verb
+- **the onMessage** = object → relative pronoun position
+- **on render 1** = at the time of the first render
+
+## Main clause breakdown
+
+**it still reads the current callback with current values**
+
+| Element | Meaning |
+|---------|---------|
+| **it** | `useEffectEvent` (or its stable reference mechanism) |
+| **still** | even so; contrary to expectation |
+| **reads** | accesses / refers to internally |
+| **the current callback** | the latest version of the callback |
+| **with current values** | carrying the latest values (prepositional phrase modifying callback) |
+
+## Key grammar points
+
+1. **So** — introduces a result or follow-up conclusion.
+2. **when-clause** — sets the timing or condition.
+3. **Omitted that** — common in object relative clauses.
+4. **capture** — in closure contexts, "to hold onto a value or function from a specific render."
+5. **on render 1** — "during / at the time of render 1."
+6. **still** — emphasizes that the outcome does not change even under the condition above.
+7. **with current values** — prepositional phrase describing the callback.
+
+## Why this contrast matters (React context)
+
+A normal effect callback may read **stale values** from an older render. `useEffectEvent` keeps a **stable reference**, so even if the subscription still calls the `onMessage` captured on render 1, execution still sees the **current callback with current values**.
+
+---
+
+## Relative clauses
+
+A **relative clause** modifies a noun (the **antecedent**) and is introduced by a relative pronoun such as **who**, **which**, **that**, or **whose**.
+
+Relative clauses are classified by the role the relative pronoun plays inside the clause.
+
+### Subject relative clause
+
+The relative pronoun is the **subject** of the clause.
+
+> the developer **who wrote this hook**
+
+Expanded:
+
+> the developer = subject, who wrote this hook
+
+- **who / which / that** is usually **not omitted**
+- Example: The callback **that runs on every message** is stable.
+
+### Object relative clause
+
+The relative pronoun is the **object** of the clause.
+
+> the onMessage **(that) it captured on render 1**
+
+Expanded:
+
+> it captured **the onMessage** on render 1
+
+- **that / which / whom** is often **omitted**, especially **that**
+- If the clause already has a subject (`it`), the relative pronoun is likely an object
+
+### Possessive relative clause
+
+The relative pronoun shows **possession**.
+
+> the component **whose state is stale**
+
+Expanded:
+
+> the component's state is stale
+
+- **whose** is followed by a noun: **whose state**, **whose values**
+- For things, formal style may use **of which**: the API, **the behavior of which** is tricky
+
+## Relative clause comparison
+
+| Type | Pronoun role | Omission | Example |
+|------|--------------|----------|---------|
+| **Subject** | subject | rarely omitted | the dev **who built it** |
+| **Object** | object | often omitted | the hook **(that) I use** |
+| **Possessive** | possession | not omitted | the file **whose name is long** |
+
+## How to identify the type
+
+Turn the relative clause into a standalone sentence:
+
+- **Subject:** That **runs** on every message. → subject relative clause
+- **Object:** The subscription calls **that**. → object relative clause
+- **Possessive:** **Its** state is stale. → possessive relative clause
+
+## Relative clauses are adjective clauses
+
+A relative clause is a type of **adjective clause** because it **modifies a noun**.
+
+- **Adjective:** a **red** car
+- **Adjective clause:** a car **that is red**
+
+| Clause type | Function | Example |
+|-------------|----------|---------|
+| **Noun clause** | acts as a noun | I know **that he left**. |
+| **Adverb clause** | acts as an adverb | I left **when he called**. |
+| **Adjective clause** | modifies a noun | The hook **that we use** is stable. |
+
+A relative clause modifies a noun from **after** the noun, so it is also called a **relative adjective clause**.
+
+### that-clause vs relative that
+
+Do not confuse these two uses of **that**:
+
+| | Function | Example |
+|---|----------|---------|
+| **Relative that (adjective clause)** | modifies a noun | The fact **that he left** surprised me. |
+| **That-clause (noun clause)** | acts as a noun | I know **that he left**. |
+
+If **that** modifies a preceding noun, it is a relative pronoun (adjective clause). If **that** fills a noun position in the larger sentence, it is a noun clause.
+
+## Examples from this topic
+
+| Fragment | Type | Expanded |
+|----------|------|----------|
+| the callback **that runs on mount** | subject | The callback runs on mount. |
+| the values **(that) the effect reads** | object | The effect reads the values. |
+| the hook **whose API is stable** | possessive | The hook's API is stable. |
+| the onMessage **it captured on render 1** | object (that omitted) | It captured the onMessage on render 1. |
