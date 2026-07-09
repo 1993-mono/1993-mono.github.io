@@ -1,0 +1,41 @@
+---
+description: Keep PROJECT_WIKI.md and public roadmap in sync
+globs: PROJECT_WIKI.md,content/roadmap/roadmap.md
+alwaysApply: false
+---
+
+# Project Wiki ↔ Roadmap Sync
+
+## File roles
+
+| File | Role |
+|------|------|
+| `PROJECT_WIKI.md` | Source of truth — direction, context, full checklists |
+| `content/roadmap/roadmap.md` | Public summary — concise checklists only (rendered at `/roadmap`) |
+
+## When editing either file
+
+1. **Plan or complete a task** → update `PROJECT_WIKI.md` first (Checklists + Current State)
+2. **Sync to roadmap** → copy the matching checklist section to `content/roadmap/roadmap.md`
+3. **Keep roadmap scannable** — no long rationale, architecture notes, or internal-only items
+4. **Mark `[x]` in both** when a public-facing item is done
+
+## What stays wiki-only (do NOT add to roadmap)
+
+- Infrastructure & DX (README, deployment, SEO)
+- Notes for AI Assistants, English Learning Strategy, Architecture
+- Done / in-progress narrative in Current State
+
+## Section mapping
+
+Wiki checklist section → Roadmap heading (same name):
+
+- `Dev Log — Technical` → `# Dev Log — Technical`
+- `Dev Log — English` → `# Dev Log — English`
+- `Portfolio`, `About`, `Responsive`, `Dark Mode` → same headings
+
+## Before finishing a task that touches planning
+
+- [ ] Wiki checklist reflects the change
+- [ ] Roadmap has the matching public items
+- [ ] Wiki `Current State` updated if milestone-level progress changed

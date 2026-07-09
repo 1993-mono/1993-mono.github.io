@@ -1,4 +1,4 @@
-# Dev Log
+# Dev Log — Technical
 
 - [ ] Javascript
 - [ ] React
@@ -6,35 +6,39 @@
 - [ ] Typescript
 - [ ] React Native
 
+# Dev Log — English
+
+- [x] Create English dev log category
+- [ ] Write first post: technical reading notes in English
+- [ ] Practice commit message / PR description patterns
+- [ ] Summarize interview Q&A in English
+
 # Portfolio
 
 - [ ] Implement gallery layout
 - [ ] Design project cards
 - [ ] Add filtering (optional)
+- [ ] Add first real project entry
 
 # About
 
 - [ ] Build page layout
 - [ ] Add visual elements
+- [ ] Write recruiter-friendly bio (English)
 
 # Responsive
 
 - [ ] Optimize mobile layout
-
-  - Layout adjustments are needed to improve the experience on mobile screens.
-  - Fix needed: the mobile menu should close automatically when a menu link is clicked.
-
+  - Layout adjustments for small screens
+  - Fix: mobile menu should close when a nav link is clicked
 - [ ] Support tablet viewport
-  - Implement an intermediate layout for tablet screen sizes.
+  - Intermediate layout between mobile and desktop
 
 # Dark Mode
 
 - [ ] Define dark mode color palette
-
-  - Define the dark mode palette and manage it with CSS variables.
-
+  - CSS variables for theme tokens
 - [ ] Implement dark mode toggle
-  - Allow users to turn dark mode on and off.
   - Detect system preference
   - Manual toggle button
   - Persist user preference
