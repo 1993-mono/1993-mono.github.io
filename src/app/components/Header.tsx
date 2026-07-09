@@ -22,9 +22,14 @@ import { useDevlogStore } from "@/stores/devlog";
 import { SITE_NAME, MENU } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
-function NavMenu() {
+function NavMenu({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
   const resetTabs = useDevlogStore((state) => state.resetTabs);
+
+  const handleLinkClick = () => {
+    resetTabs();
+    onNavigate?.();
+  };
 
   return (
     <ul className="depth-1">
@@ -32,7 +37,7 @@ function NavMenu() {
         <Link
           href="/"
           className={pathname === "/" ? "active" : ""}
-          onClick={resetTabs}
+          onClick={handleLinkClick}
         >
           <span className="icn-container">
             <HandRaisedIconOutline className="icn default" />
@@ -45,7 +50,7 @@ function NavMenu() {
         <Link
           href="/portfolio"
           className={pathname.startsWith("/portfolio") ? "active" : ""}
-          onClick={resetTabs}
+          onClick={handleLinkClick}
         >
           <span className="icn-container">
             <BriefcaseIconOutline className="icn default" />
@@ -58,7 +63,7 @@ function NavMenu() {
         <Link
           href="/devlog"
           className={pathname.startsWith("/devlog") ? "active" : ""}
-          onClick={resetTabs}
+          onClick={handleLinkClick}
         >
           <span className="icn-container">
             <DocumentTextIconOutline className="icn default" />
@@ -71,7 +76,7 @@ function NavMenu() {
         <Link
           href="/roadmap"
           className={pathname.startsWith("/roadmap") ? "active" : ""}
-          onClick={resetTabs}
+          onClick={handleLinkClick}
         >
           <span className="icn-container">
             <CheckCircleIconOutline className="icn default" />
@@ -114,7 +119,7 @@ export default function Header() {
               <div className="nav-title">
                 <button type="button" className="menu-button" aria-label="Close menu" onClick={handleMenuButtonClick}><XMarkIcon /></button>
               </div>
-              <NavMenu />
+              <NavMenu onNavigate={() => setIsMenuOpen(false)} />
             </motion.nav>
           )}
         </AnimatePresence>

@@ -60,6 +60,9 @@
     color: rgb(var(--color-gray-500));
     text-align: center;
     line-height: 1.75;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
   }
 
 
@@ -223,6 +226,7 @@
         position: fixed;
         right: 0;
         top: 0;
+        z-index: 1;
 
         .nav-title {
           display: flex;
@@ -314,6 +318,7 @@
     main {
       min-height: calc(100vh - var(--height-header) - var(--height-footer));
       padding: var(--spacing-container-x);
+      position: relative;
     }
 
     footer {
@@ -357,6 +362,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 
