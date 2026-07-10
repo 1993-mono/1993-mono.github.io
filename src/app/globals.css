@@ -86,16 +86,6 @@
   --transition-duration-base: 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-
-  :root {
-
-    /* theme */
-    --background: 10, 10, 10;
-    --foreground: 237, 237, 237;
-  }
-}
-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
