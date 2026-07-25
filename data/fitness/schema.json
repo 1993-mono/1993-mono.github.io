@@ -1,16 +1,22 @@
 {
-  "description": "운동 리스트(workouts)와 일자 리뷰(reviews)는 date·workout id로 상호 참조한다.",
+  "description": "운동 리스트·일자 리뷰·목표·루틴·데이로그는 date / id 로 상호 참조한다. 목표·루틴은 effectiveFrom~effectiveTo 로 변경 이력을 남긴다.",
   "files": {
     "profile.json": "고정 프로필 (키, 출생연도, 타임존)",
     "body-weight.jsonl": "일별 체중 (한 줄 = 하루)",
     "workouts.jsonl": "운동 세션 리스트 — 그래프/통계용 (한 줄 = 세션 1회)",
-    "reviews/YYYY-MM-DD.json": "해당 일자 AI 리뷰 — UI에서 날짜 클릭 시 사용"
+    "goals.jsonl": "목표 버전 이력 (effectiveFrom/To, 바뀐 날짜 표시용)",
+    "routines.jsonl": "주간 루틴 버전 이력 (effectiveFrom/To)",
+    "day-log.jsonl": "달력용 일별 상태 (trained | rest_unlogged | rest_planned 등)",
+    "reviews/YYYY-MM-DD.json": "해당 일자 AI 리뷰 — 날짜 클릭 시 사용"
   },
   "links": {
-    "workout.date": "YYYY-MM-DD — reviews/<date>.json 과 조인",
-    "workout.id": "세션 식별자 — reviews[].workoutIds[] 와 조인",
-    "review.date": "YYYY-MM-DD — workouts.date / body-weight.date 와 조인",
-    "review.workoutIds": "그날 세션 id 배열 (시간순)"
+    "workout.date": "YYYY-MM-DD — reviews / day-log / body-weight 와 조인",
+    "workout.id": "세션 식별자 — reviews.workoutIds[] · day-log.workoutIds[] 와 조인",
+    "review.goalId": "goals.id (해당일 effective 목표)",
+    "review.routineId": "routines.id (해당일 effective 루틴)",
+    "day-log.date": "YYYY-MM-DD",
+    "goal.effectiveFrom / effectiveTo": "적용 구간. effectiveTo=null 이면 현재 유효",
+    "routine.effectiveFrom / effectiveTo": "동일"
   },
   "profile": {
     "heightCm": "number — 고정 키(cm)",
@@ -21,48 +27,51 @@
     "date": "YYYY-MM-DD",
     "weightKg": "number"
   },
+  "goal": {
+    "id": "string",
+    "effectiveFrom": "YYYY-MM-DD — 이 목표가 적용되기 시작한 날 (변경일 표시)",
+    "effectiveTo": "YYYY-MM-DD | null — 종료일(미포함 또는 포함은 룰 따름). null=현재",
+    "supersedesId": "이전 goal id | null",
+    "title": "string",
+    "target": "distanceKm, timeSec, timeLabel, level 등",
+    "principles": "string[]",
+    "milestones": "단계 목표 배열",
+    "changedAt": "YYYY-MM-DD — UI에 ‘바뀐 날짜’로 표시"
+  },
+  "routine": {
+    "id": "string",
+    "effectiveFrom": "YYYY-MM-DD",
+    "effectiveTo": "YYYY-MM-DD | null",
+    "supersedesId": "이전 routine id | null",
+    "days": "mon..sun 각 plan/label/detail",
+    "changedAt": "YYYY-MM-DD"
+  },
+  "dayLog": {
+    "date": "YYYY-MM-DD",
+    "status": "trained | rest_unlogged | rest_planned | skipped_planned",
+    "planned": "그날 루틴 plan slug",
+    "workoutIds": "string[]",
+    "adherence": "aligned | partial | missed_or_rest | off_plan",
+    "note": "rest_unlogged = 기록 없음 → 쉰 날로 간주"
+  },
   "workout": {
-    "id": "string — 시작 시각 기준 식별자 (reviews.workoutIds와 동일)",
-    "date": "YYYY-MM-DD — 일자 리뷰와 조인 키",
+    "id": "string",
+    "date": "YYYY-MM-DD",
     "startedAt": "ISO 8601 with offset",
-    "activity": "run | walk | soccer | outdoor_cycling | ...",
-    "source": "기록 출처 앱",
+    "activity": "run | walk | soccer | outdoor_cycling | home_training | futsal | ...",
+    "source": "기록 출처",
     "distanceKm": "number | optional",
-    "durationSec": "number — 운동 시간(초)",
-    "totalDurationSec": "number | optional — 일시정지 포함 총 시간",
-    "avgPaceSecPerKm": "number | optional — 초/km (달리기)",
-    "avgSpeedKmh": "number | optional",
-    "avgHeartRateBpm": "number | optional",
-    "maxHeartRateBpm": "number | optional",
-    "caloriesKcal": "number | optional — 운동 칼로리",
-    "totalCaloriesKcal": "number | optional",
-    "avgCadenceSpm": "number | optional",
-    "steps": "number | optional",
-    "locationHint": "string | optional",
-    "bodyWeightKg": "number — 해당일 체중 스냅샷",
-    "heightCm": "number — 기록 시점 스냅샷",
-    "birthYear": "number — 기록 시점 스냅샷"
+    "durationSec": "number",
+    "bodyWeightKg": "number | null",
+    "heightCm": "number",
+    "birthYear": "number"
   },
   "dayReview": {
     "date": "YYYY-MM-DD",
-    "workoutIds": "string[] — workouts.id 참조 (시간순)",
-    "bodyWeightKg": "number | null — 그날 체중",
-    "profileSnapshot": {
-      "heightCm": "number",
-      "birthYear": "number",
-      "ageYearsApprox": "number — 생일 미상 시 연도 차이 근사",
-      "bmi": "number — weightKg / (heightM^2), 소수 1자리"
-    },
-    "totals": "그날 세션 합산 (distanceKm, durationSec, caloriesKcal 등)",
-    "review": {
-      "headline": "한 줄 요약",
-      "body": "프로필(키·나이·체중)을 반영한 본문 리뷰",
-      "highlights": "string[]",
-      "cautions": "string[]",
-      "suggestions": "string[]"
-    },
-    "reviewedAt": "ISO 8601",
-    "reviewer": "ai",
-    "disclaimer": "의료 진단 아님 고지"
+    "workoutIds": "string[]",
+    "goalId": "string",
+    "routineId": "string",
+    "planContext": "계획 vs 실제, nearbyRestDays 포함",
+    "review": "headline, body, highlights, cautions, suggestions, vsGoal, vsRoutine"
   }
 }
