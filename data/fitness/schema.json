@@ -36,6 +36,7 @@
     "target": "distanceKm, timeSec, timeLabel, level 등",
     "principles": "string[]",
     "milestones": "단계 목표 배열",
+    "changeReason": "string | null — 왜 바꿨는지 (최초 버전은 null)",
     "changedAt": "YYYY-MM-DD — UI에 ‘바뀐 날짜’로 표시"
   },
   "routine": {
@@ -44,8 +45,10 @@
     "effectiveTo": "YYYY-MM-DD | null",
     "supersedesId": "이전 routine id | null",
     "days": "mon..sun 각 plan/label/detail",
+    "changeReason": "string | null — 왜 바꿨는지 (최초 버전은 null)",
     "changedAt": "YYYY-MM-DD"
   },
+
   "dayLog": {
     "date": "YYYY-MM-DD",
     "status": "trained | rest_unlogged | rest_planned | skipped_planned",
