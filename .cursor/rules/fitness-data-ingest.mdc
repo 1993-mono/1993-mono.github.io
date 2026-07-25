@@ -1,0 +1,120 @@
+---
+description: 운동 자료 업로드 시 세션·데이로그·목표/루틴 기준 일자 리뷰를 함께 생성·연결
+globs: data/fitness/**/*
+alwaysApply: false
+---
+
+# Fitness Data Ingest & Day Review
+
+사용자가 운동 자료(스크린샷, 표, 메모 등)를 주면 **서비스 UI를 만들지 말고** 데이터화 + 일자 리뷰까지 수행한다.
+리뷰는 반드시 **그때 유효한 목표·루틴**을 기준으로 쓰고, **기록 없는 날은 쉰 날**로 간주한다.
+
+## 파일 구조 (상호 참조)
+
+| 파일 | 역할 | 조인 키 |
+|------|------|---------|
+| `data/fitness/workouts.jsonl` | 세션 리스트 (그래프/통계) | `id`, `date` |
+| `data/fitness/day-log.jsonl` | 달력·출석 (운동/휴식) | `date` |
+| `data/fitness/reviews/YYYY-MM-DD.json` | 날짜 클릭 시 AI 리뷰 | `date`, `workoutIds[]` |
+| `data/fitness/goals.jsonl` | 목표 버전 이력 | `id`, `effectiveFrom`/`To` |
+| `data/fitness/routines.jsonl` | 루틴 버전 이력 | `id`, `effectiveFrom`/`To` |
+| `data/fitness/body-weight.jsonl` | 일별 체중 | `date` |
+| `data/fitness/profile.json` | 키·출생연도 | — |
+| `data/fitness/schema.json` | 필드 설명 | — |
+
+- 세션 ↔ 리뷰: `workout.date` === `review.date`, `workout.id` ∈ `review.workoutIds`
+- 리뷰 → 목표/루틴: `review.goalId` / `review.routineId`
+- 데이로그 ↔ 세션: `day-log.workoutIds`
+- 목표/루틴 변경 시 **기존 줄을 덮어쓰지 말고** 새 버전 append + 이전 줄 `effectiveTo` 설정
+
+## 목표·루틴 (변경 가능, 바뀐 날짜 표시)
+
+- `effectiveFrom`: 적용 시작일 (= UI에 보여줄 “바뀐 날짜” / `changedAt`과 동일하게 유지)
+- `effectiveTo`: `null` = 현재 유효. 변경 시 이전 버전을 그날 날짜로 닫고 새 `id` 행 추가
+- `supersedesId`: 직전 버전 id
+- 어떤 날짜 D에 유효한 버전: `effectiveFrom <= D` 이고 (`effectiveTo == null` 또는 `D <= effectiveTo`)
+- 사용자가 목표/루틴을 바꾸면: 데이터 갱신 + **영향 받는 최근 일자 리뷰를 새 기준 톤으로 재작성할지 확인** (과거 리뷰는 당시 goalId/routineId를 유지하는 것이 기본)
+
+### 목표·루틴 이력에 남길 것
+
+- 각 버전 행에 `changeReason` (최초 버전은 `null`) — **왜 바꿨는지** 한두 문장
+- `changedAt` / `effectiveFrom` — UI에 “바뀐 날짜”로 표시
+- 리뷰 `planContext.historyNote`에도 최근 변경 사유를 짧게 인용
+
+### 현재 기본값
+
+- **목표** (`goal-5k-intermediate-v1`, 2026-07-23~): 5km · **28:00** (평균 5'36\"/km) · 93년생 레크 중급 · 부상 없이 연속 달리기  
+  - 마일스톤: 5km 연속 완주 → 30:00 → 28:00
+- **루틴 v0** (2026-07-23만): 화·목·토 → 런-워크-런 / 일 → 풋살 (월·수·금 당시 미기재)
+- **루틴 v1** (2026-07-24~ , 현재):  
+  - 월·수·금 → 홈트  
+  - 화 → 10분 달리기 + 10분 걷기 + 10분 달리기  
+  - 목 → 30분 연속 달리기  
+  - 토·일 → 하루는 완전 휴식, 하루는 풋살  
+  - **변경 사유**: Gemini 피드백 — 기존 루틴은 피로 해소가 어렵다고 판단
+
+
+## 기록 없는 날 = 쉰 날
+
+- `workouts.jsonl`에 세션이 없는 날짜는 `day-log`에 `status: "rest_unlogged"` 로 넣는다.
+- 범위: **현재 유효 목표의 `effectiveFrom`** ~ **가장 최근 세션/기록일** 사이 캘린더 일자 (타임존 `Asia/Seoul`).
+- 계획상 휴식(`rest_or_futsal`에서 휴식으로 확정, 또는 명시적 휴식)이면 `rest_planned`를 쓸 수 있다.
+- 홈트·러닝 예정일이었는데 기록만 없으면: `rest_unlogged` + `adherence: missed_or_rest` (쉰 날로 간주하되, 계획 대비 공백임을 리뷰에 명시).
+- 일자 리뷰의 `planContext.nearbyRestDays`에 **직전/전후 관련 휴식일**을 넣어 맥락으로 쓴다.
+- 미래 서비스 리스트에는 세션뿐 아니라 `day-log`의 휴식일도 표시할 수 있게 데이터를 유지한다.
+
+## 자료가 오면 할 일 (필수 순서)
+
+1. **유효 목표·루틴 로드** — 세션 날짜 기준으로 `goals.jsonl` / `routines.jsonl`에서 effective 버전 선택.
+2. **프로필·체중** — `profile.json` + 해당일 체중 (없으면 null, 리뷰에 미기록 명시).
+3. **세션 append** — `workouts.jsonl` (필수: `id`, `date`, `startedAt`, `activity`, 메트릭, 스냅샷 필드).
+4. **체중 upsert** — `body-weight.jsonl` (날짜당 1줄).
+5. **데이로그 upsert** — 해당일 `trained` + `workoutIds` + 계획 대비 `adherence`.  
+   동시에 목표 시작일~최근일 구간의 **빈 날짜를 `rest_unlogged`로 채운다** (이미 있으면 유지·갱신).
+6. **일자 리뷰 생성/갱신** — `reviews/YYYY-MM-DD.json`. 같은 날 세션이 추가되면 그날 전체를 다시 읽어 통째로 갱신.  
+   **반드시** 목표·루틴·휴식일·키/나이/체중을 반영 (`vsGoal`, `vsRoutine`, `planContext`).
+7. **스키마 동기화** — 새 필드 시 `schema.json` 업데이트.
+8. **커밋** — 데이터 + 리뷰 (+ 룰 변경 시 룰)를 한글 메시지로. 요청 없으면 UI 코드 금지.
+
+## 세션 `id` / `date` 규칙
+
+- `startedAt`: `Asia/Seoul` (`+09:00`)
+- `date`: 로컬 `YYYY-MM-DD`
+- `id`: `{date}T{HH:mm}` (충돌 시 `-2` 접미사)
+- `activity` slug: `run` | `walk` | `soccer` | `futsal` | `outdoor_cycling` | `home_training` | …
+- 페이스 `M'SS"/km` → `avgPaceSecPerKm` (초). 시간은 `durationSec`
+
+## 일자 리뷰 작성 규칙
+
+- **언어**: 한국어 (영어 요청 시 영어)
+- **기준 우선순위**: (1) 유효 목표 (2) 유효 루틴 vs 실제 (3) 주변 휴식일/`rest_unlogged` (4) 키·나이·체중·BMI (5) 세션 숫자
+- **구성**: `headline`, `body`, `highlights[]`, `cautions[]`, `suggestions[]`, `vsGoal`, `vsRoutine`
+- **톤**: 구체적 숫자 + 계획 대비 정렬/이탈. 의료 진단 금지. `disclaimer` 유지
+- **심박**: 추정 최대심박과 비교, 손목 센서 오차 여지 언급
+- 홈트만 하고 스크린샷이 없으면 사용자 메모만으로 `home_training` 세션을 만들 수 있다 (확인 후).
+
+## 목표/루틴 변경 요청이 오면
+
+1. 이전 행 `effectiveTo` = 전일 (새 버전이 변경일부터면 전일로 닫기)
+2. 새 행 append (`effectiveFrom`/`changedAt` = 변경일, `supersedesId` = 이전 id, **`changeReason` 필수**)
+3. 변경일 이후 `day-log`·리뷰의 `routineId`/`goalId`가 새 버전을 가리키는지 확인. 필요 시 재작성
+4. Cursor 룰의 “현재 기본값”·이력 섹션 갱신
+5. 커밋 메시지에 변경 요지·사유 포함
+
+
+## 하지 말 것
+
+- 요청 없이 Next.js 페이지·차트 UI·API 구현
+- 리뷰만 만들고 workouts/day-log를 빼먹기 (또는 그 반대)
+- 목표/루틴을 이력 없이 덮어쓰기
+- 빈 날짜를 무시하고 리뷰하기
+- 기존 세션 줄을 사용자 확인 없이 삭제
+
+## 완료 체크
+
+- [ ] 세션이 `workouts.jsonl`에 있음 (`date`/`id`)
+- [ ] `day-log`에 해당일 + 구간 내 무기록일(`rest_unlogged`) 반영
+- [ ] `reviews/YYYY-MM-DD.json`의 `workoutIds`·`goalId`·`routineId` 일치
+- [ ] 리뷰가 목표·루틴·휴식일·프로필을 반영
+- [ ] 목표/루틴 변경 시 `effectiveFrom`/`To`·룰 섹션 갱신
+- [ ] 커밋까지 완료

@@ -1,0 +1,60 @@
+{
+  "date": "2026-07-23",
+  "workoutIds": [
+    "2026-07-23T21:57",
+    "2026-07-23T22:10",
+    "2026-07-23T22:20"
+  ],
+  "goalId": "goal-5k-intermediate-v1",
+  "routineId": "routine-v0",
+  "bodyWeightKg": 79.0,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": 26.4
+  },
+  "planContext": {
+    "goalSummary": "5km 28:00(중급·레크) · 부상 없이 연속 달리기",
+    "goalEffectiveFrom": "2026-07-23",
+    "routineSummary": "v0 — 화·목·토 런-워크-런 / 일 풋살",
+    "routineEffectiveFrom": "2026-07-23",
+    "routineEffectiveTo": "2026-07-23",
+    "planned": "run_walk_run",
+    "plannedLabel": "10분 달리기 + 10분 걷기 + 10분 달리기",
+    "actualSummary": "run_walk_run",
+    "adherence": "aligned",
+    "nearbyRestDays": [],
+    "historyNote": "이 루틴은 다음날(7/24)부터 v1로 교체됨. 사유: 피로 해소 부족(Gemini 피드백)."
+  },
+  "totals": {
+    "sessionCount": 3,
+    "distanceKm": 4.57,
+    "durationSec": 2074,
+    "caloriesKcal": 334,
+    "steps": 5205
+  },
+  "review": {
+    "headline": "목표 시작일 · 당시 루틴(v0) 목요 런-워크-런에 맞게 수행한 날",
+    "body": "2026-07-23 목표는 ‘5km 28:00(레크 중급)·부상 없이 연속 달리기’로 잡혔고, 당일 유효 루틴은 v0(화·목·토 10분 달리기+10분 걷기+10분 달리기, 일 풋살)입니다. 실제 세션도 21:57 달리기(1.83km·6'34\"·심박 186) → 22:10 걷기(0.84km) → 22:20 달리기(1.90km·6'30\"·심박 191)로 계획과 잘 맞습니다(aligned). 키 173cm·체중 79kg(BMI≈26.4) 기준 총 4.57km·약 34분·334kcal로, v0 목요일 숙제는 이행했습니다. 다만 이 루틴은 주 3회 동일 자극+일요일 풋살 구조라 회복 여유가 얇다는 피드백을 받아, 바로 다음날부터 v1(홈트·목 연속 30분·주말 휴식/풋살)로 바뀝니다. 현재 단거리 페이스와 고심박을 보면, 바뀐 루틴의 ‘연속 30분’이 5km 완주·28:00으로 가는 데 더 직접적인 연습이 됩니다.",
+    "highlights": [
+      "당시 계획(목 런-워크-런)과 실제 구성이 일치",
+      "총 4.57km — 5km 체감 거리에 근접",
+      "목표·루틴 기록이 시작된 기준일"
+    ],
+    "cautions": [
+      "러닝 평균 심박 186–191은 추정 최대심박 근처 — v0처럼 비슷한 자극이 잦으면 피로가 누적되기 쉬움",
+      "연속 달리기 연습은 이 날 루틴에 없어 목표(연속 5km)와는 간접적"
+    ],
+    "suggestions": [
+      "7/24부터 적용된 v1 기준으로 다음 목요일은 쉬운 페이스 연속 30분에 집중",
+      "런-워크-런은 화요일에만 유지해 자극 종류를 나누기",
+      "5km 테스트는 연속 30분이 편해진 뒤"
+    ],
+    "vsGoal": "아직 5km 연속 기록 없음. 최장 연속 러닝 약 12분대·1.9km — 마일스톤 m1 이전.",
+    "vsRoutine": "routine-v0 목요 run_walk_run — aligned."
+  },
+  "reviewedAt": "2026-07-25T16:10:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
