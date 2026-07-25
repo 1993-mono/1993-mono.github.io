@@ -1,0 +1,33 @@
+{
+  "description": "운동·체중 기록 스키마. 세션은 workouts.jsonl 한 줄, 체중은 body-weight.jsonl 한 줄.",
+  "profile": {
+    "heightCm": "number — 고정 키(cm)",
+    "birthYear": "number — 출생 연도",
+    "timezone": "string — IANA 타임존"
+  },
+  "bodyWeight": {
+    "date": "YYYY-MM-DD",
+    "weightKg": "number"
+  },
+  "workout": {
+    "id": "string — 시작 시각 기준 식별자",
+    "startedAt": "ISO 8601 with offset",
+    "activity": "run | walk | soccer | outdoor_cycling | ...",
+    "source": "기록 출처 앱",
+    "distanceKm": "number | optional",
+    "durationSec": "number — 운동 시간(초)",
+    "totalDurationSec": "number | optional — 일시정지 포함 총 시간",
+    "avgPaceSecPerKm": "number | optional — 초/km (달리기)",
+    "avgSpeedKmh": "number | optional",
+    "avgHeartRateBpm": "number | optional",
+    "maxHeartRateBpm": "number | optional",
+    "caloriesKcal": "number | optional — 운동 칼로리",
+    "totalCaloriesKcal": "number | optional",
+    "avgCadenceSpm": "number | optional",
+    "steps": "number | optional",
+    "locationHint": "string | optional",
+    "bodyWeightKg": "number — 해당일 체중 스냅샷",
+    "heightCm": "number — 기록 시점 스냅샷",
+    "birthYear": "number — 기록 시점 스냅샷"
+  }
+}
