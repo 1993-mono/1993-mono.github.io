@@ -1,16 +1,16 @@
 {
-  "description": "운동 리스트·일자 리뷰·목표·루틴·데이로그는 date / id 로 상호 참조한다. 목표·루틴은 effectiveFrom~effectiveTo 로 변경 이력을 남긴다.",
+  "description": "운동 수행·일자 리뷰·목표·루틴은 date / id 로 상호 참조한다. 목표·루틴은 effectiveFrom~effectiveTo 로 버전 이력을 남긴다. 스트레칭 전용 DB는 두지 않는다(목표 유연성 문구에만 언급).",
   "files": {
     "profile.json": "고정 프로필 (키, 출생연도, 타임존)",
-    "body-weight.jsonl": "일별 체중 (한 줄 = 하루)",
-    "workouts.jsonl": "운동 세션 리스트 — 그래프/통계용 (한 줄 = 세션 1회)",
-    "goals.jsonl": "목표 버전 이력 (effectiveFrom/To, 바뀐 날짜 표시용)",
-    "routines.jsonl": "주간 루틴 버전 이력 (effectiveFrom/To)",
-    "day-log.jsonl": "달력용 일별 상태 (trained | rest_unlogged | rest_planned 등)",
-    "reviews/YYYY-MM-DD.json": "해당 일자 AI 리뷰 — 날짜 클릭 시 사용"
+    "body-metrics.jsonl": "바디 측정 이력 — 측정일 + 몸무게·체성분(추후 필드)",
+    "workouts.jsonl": "운동 수행 DB — 한 줄 = 세션 1회 (완전 휴식일은 남기지 않음)",
+    "goals.jsonl": "목표 버전 이력 (유연성 고정 + 기능성 버전업)",
+    "routines.jsonl": "주간 루틴 버전 이력",
+    "day-log.jsonl": "달력·미수행 판별용 (기록 없음 = 수행 안 함). 수행 DB가 아님",
+    "reviews/YYYY-MM-DD.json": "해당 일자 AI 리뷰 — 목표·루틴·미수행 공백을 전제로"
   },
   "links": {
-    "workout.date": "YYYY-MM-DD — reviews / day-log / body-weight 와 조인",
+    "workout.date": "YYYY-MM-DD — reviews / day-log / body-metrics 와 조인",
     "workout.id": "세션 식별자 — reviews.workoutIds[] · day-log.workoutIds[] 와 조인",
     "review.goalId": "goals.id (해당일 effective 목표)",
     "review.routineId": "routines.id (해당일 effective 루틴)",
@@ -23,58 +23,65 @@
     "birthYear": "number — 출생 연도",
     "timezone": "string — IANA 타임존"
   },
-  "bodyWeight": {
-    "date": "YYYY-MM-DD",
-    "weightKg": "number"
+  "bodyMetrics": {
+    "date": "YYYY-MM-DD — 측정일(measuredAt 역할)",
+    "weightKg": "number | optional — 몸무게",
+    "bodyFatPercent": "number | optional — 체지방률 (추후)",
+    "skeletalMuscleKg": "number | optional — 골격근량 (추후)",
+    "visceralFatLevel": "number | optional — 내장지방 레벨 (추후)"
   },
   "goal": {
     "id": "string",
-    "effectiveFrom": "YYYY-MM-DD — 이 목표가 적용되기 시작한 날 (변경일 표시)",
-    "effectiveTo": "YYYY-MM-DD | null — 종료일(미포함 또는 포함은 룰 따름). null=현재",
+    "effectiveFrom": "YYYY-MM-DD",
+    "effectiveTo": "YYYY-MM-DD | null",
     "supersedesId": "이전 goal id | null",
-    "title": "string",
-    "target": "distanceKm, timeSec, timeLabel, level 등",
-    "principles": "string[]",
-    "milestones": "단계 목표 배열",
-    "changeReason": "string | null — 왜 바꿨는지 (최초 버전은 null)",
-    "changedAt": "YYYY-MM-DD — UI에 ‘바뀐 날짜’로 표시"
+    "title": "버전 제목",
+    "content.flexibility": "평생 고정 블록 — summary/detail (스트레칭 지속 언급 포함), fixed=true",
+    "content.functional": "버전업 대상 — summary, target, principles, milestones 등",
+    "changeReason": "string | null — 버전업 이유 (최초는 null)",
+    "changedAt": "YYYY-MM-DD"
   },
   "routine": {
     "id": "string",
     "effectiveFrom": "YYYY-MM-DD",
     "effectiveTo": "YYYY-MM-DD | null",
     "supersedesId": "이전 routine id | null",
-    "days": "mon..sun 각 plan/label/detail",
-    "changeReason": "string | null — 왜 바꿨는지 (최초 버전은 null)",
+    "title": "버전 제목",
+    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec 등)",
+    "changeReason": "string | null — 버전업 이유",
     "changedAt": "YYYY-MM-DD"
   },
-
+  "workout": {
+    "id": "string — {date}T{HH:mm}",
+    "date": "YYYY-MM-DD",
+    "startedAt": "ISO 8601 with offset — 날짜/시간",
+    "activity": "run | walk | soccer | futsal | outdoor_cycling | home_training | ...",
+    "content": "string | optional — 수행 요약 한 덩어리 (홈트는 세트 상세 없이 시간·심박 등)",
+    "durationSec": "number | optional",
+    "avgHeartRateBpm": "number | optional",
+    "source": "기록 출처",
+    "metrics": "activity별 숫자 필드 (distanceKm, avgPaceSecPerKm 등) — 있을 때만",
+    "bodyWeightKg": "number | null — 당시 스냅샷",
+    "heightCm": "number",
+    "birthYear": "number",
+    "note": "완전 휴식일은 이 파일에 행을 만들지 않음. 기록 없는 날 = 수행 안 한 날."
+  },
   "dayLog": {
     "date": "YYYY-MM-DD",
     "status": "trained | rest_unlogged | rest_planned | skipped_planned",
     "planned": "그날 루틴 plan slug",
+    "routineId": "routines.id",
+    "goalId": "goals.id",
     "workoutIds": "string[]",
     "adherence": "aligned | partial | missed_or_rest | off_plan",
-    "note": "rest_unlogged = 기록 없음 → 쉰 날로 간주"
-  },
-  "workout": {
-    "id": "string",
-    "date": "YYYY-MM-DD",
-    "startedAt": "ISO 8601 with offset",
-    "activity": "run | walk | soccer | outdoor_cycling | home_training | futsal | ...",
-    "source": "기록 출처",
-    "distanceKm": "number | optional",
-    "durationSec": "number",
-    "bodyWeightKg": "number | null",
-    "heightCm": "number",
-    "birthYear": "number"
+    "note": "rest_unlogged = 기록 없음 → 수행 안 한 날. 리뷰에서 공백·복귀 강도 판단에 사용"
   },
   "dayReview": {
     "date": "YYYY-MM-DD",
     "workoutIds": "string[]",
-    "goalId": "string",
-    "routineId": "string",
-    "planContext": "계획 vs 실제, nearbyRestDays 포함",
-    "review": "headline, body, highlights, cautions, suggestions, vsGoal, vsRoutine"
+    "goalId": "string — 목표 버전",
+    "routineId": "string — 루틴 버전",
+    "planContext": "계획 vs 실제, nearbyRestDays / daysSinceLastWorkout 포함",
+    "review": "headline, body, highlights, cautions, suggestions, vsGoal, vsRoutine — 미수행 공백도 체크"
   }
 }
