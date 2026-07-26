@@ -1,5 +1,6 @@
 {
   "heightCm": 173,
   "birthYear": 1993,
-  "timezone": "Asia/Seoul"
+  "timezone": "Asia/Seoul",
+  "notes": "키·출생연도는 고정. 몸무게·체성분은 body-metrics.jsonl 측정 이력으로 관리."
 }
