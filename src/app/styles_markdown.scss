@@ -7,21 +7,42 @@
   h1,
   h2,
   h3 {
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
     line-height: 1.375;
-    margin: calc(var(--spacing-markdown-text) * 1.5) 0 var(--spacing-markdown-text);
+    margin: calc(var(--spacing-markdown-text) * 2.5) 0 var(--spacing-markdown-text);
+
+    &::before {
+      order: 1;
+      flex: 1;
+      border-bottom: 1px dashed rgb(var(--foreground));
+    }
   }
 
   h1 {
     font-size: var(--font-size-markdown-h1);
+    font-weight: 900;
   }
 
   h2 {
     font-size: var(--font-size-markdown-h2);
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      opacity: 0.5;
+    }
   }
 
   h3 {
     font-size: var(--font-size-markdown-h3);
+    font-weight: 500;
+
+    &::before {
+      content: "";
+      opacity: 0.125;
+    }
   }
 
   >h1:first-child,
@@ -324,8 +345,8 @@
 
   // Horizontal rules
   hr {
-    border-top: 2px dashed var(--color-border-gray);
-    margin: 3em 0;
+    border-top: 1px solid rgb(var(--foreground));
+    margin: 3em calc(var(--spacing-container-x) * -1);
   }
 
 
