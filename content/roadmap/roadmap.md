@@ -22,7 +22,13 @@
 - [ ] Add visual elements
 - [ ] Write recruiter-friendly bio (English)
 
-# Layout
+# UI
+
+## Anchors
+
+- [x] Improve heading id scheme in markdown pipeline
+- [ ] Add heading anchor links in posts
+    - Click an anchor to jump to that heading
 
 ## Responsive
 

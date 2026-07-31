@@ -34,10 +34,11 @@ Roadmap groups sections under two `#` headings; wiki uses flat `### Group — Se
 - Wiki `Menu — Log` → roadmap `## Log` under `# Menu`
 - Wiki `Menu — Portfolio` → roadmap `## Portfolio` under `# Menu`
 - Wiki `Menu — About` → roadmap `## About` under `# Menu`
-- Wiki `Layout — Responsive` → roadmap `## Responsive` under `# Layout`
-- Wiki `Layout — Dark Mode` → roadmap `## Dark Mode` under `# Layout`
+- Wiki `UI — Anchors` → roadmap `## Anchors` under `# UI`
+- Wiki `UI — Responsive` → roadmap `## Responsive` under `# UI`
+- Wiki `UI — Dark Mode` → roadmap `## Dark Mode` under `# UI`
 
-**Roadmap structure**: `# Menu` (Log, Portfolio, About) → `# Layout` (Responsive, Dark Mode).
+**Roadmap structure**: `# Menu` (Log, Portfolio, About) → `# UI` (Anchors, Responsive, Dark Mode).
 
 ## Before finishing a task that touches planning
 

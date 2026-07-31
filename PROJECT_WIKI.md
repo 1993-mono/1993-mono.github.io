@@ -151,10 +151,11 @@ practice/
 > **Roadmap sync**: Copy checklist sections below into `content/roadmap/roadmap.md` for the public site.  
 > Keep roadmap concise — details and rationale stay here.
 
-> **Grouping**: mirrors the public roadmap — `# Menu` (Log, Portfolio, About) and `# Layout` (Responsive, Dark Mode).
+> **Grouping**: mirrors the public roadmap — `# Menu` (Log, Portfolio, About) and `# UI` (Anchors, Responsive, Dark Mode).
 
 ### Menu — Log
 
+- [x] Markdown
 - [ ] Javascript
 - [ ] React
 - [ ] Next.js
@@ -174,7 +175,18 @@ practice/
 - [ ] Add visual elements
 - [ ] Write recruiter-friendly bio (English)
 
-### Layout — Responsive
+### UI — Anchors
+
+- [x] Improve heading id scheme in markdown pipeline (`src/lib/markdown.ts`)
+  - Position-based ids: `heading-01-02-03` = h1/h2/h3 counters (00 = level not present)
+  - No dependency on heading text — collisions are structurally impossible
+  - TOC labels now include text from inline elements (code, strong, links)
+  - Ids are for anchors only — style headings via element/class selectors, not ids
+- [ ] Add heading anchor links in posts
+  - Click an anchor to jump to that heading
+  - Consider `scroll-margin-top` for the fixed mobile header
+
+### UI — Responsive
 
 - [ ] Optimize mobile layout
   - Layout adjustments for small screens
@@ -182,7 +194,7 @@ practice/
 - [ ] Support tablet viewport
   - Intermediate layout between mobile and desktop
 
-### Layout — Dark Mode
+### UI — Dark Mode
 
 - [ ] Define dark mode color palette
   - CSS variables for theme tokens
@@ -263,3 +275,4 @@ When working on this project:
 | 2026-07-31 | Marked first English reading note done. Documented `data/fitness/` and `practice/` folders. Added Korean-first / batch-translate study-note flow. |
 | 2026-07-31 | Roadmap restructure: renamed `Dev Log — Technical` → `Log`, moved `English` checklist to wiki-only, reordered sections (frame first: Responsive, Dark Mode → then Portfolio, About). |
 | 2026-07-31 | Roadmap regrouped by maintainer into `# Menu` / `# Layout`. Renamed site menu `Dev Log` → `Log` and route `/devlog` → `/log`. Unified all internal names: `content/log`, `src/lib/log.ts`, `src/stores/log.ts`, `LogList`, `generate-log-index.js`, `.log-index.json`. |
+| 2026-07-31 | Renamed roadmap group `# Layout` → `# UI`, moved `Anchors` to the top of the group. Replaced text-based heading slugs with position-based ids (`heading-01-02-03`) in `src/lib/markdown.ts`. |

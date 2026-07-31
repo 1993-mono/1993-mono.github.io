@@ -17,35 +17,40 @@ export interface TocItem {
 }
 
 /**
- * Generate a slug from heading text (anchor id)
+ * Collect all text inside a node, including nested inline elements
+ * (code, strong, links) — used for table of contents labels
  */
-function toSlug(text: string): string {
-  return String(text)
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\p{L}\p{N}-]/gu, '');
+function getNodeText(node: Element | ElementContent): string {
+  if (node.type === 'text') return node.value;
+  if (node.type === 'element') {
+    return (node.children || []).map(getNodeText).join('');
+  }
+  return '';
 }
 
 /**
  * Rehype plugin that assigns heading ids and extracts a table of contents
+ * - Ids are position-based: heading-01-02-03 = h1/h2/h3 counters in document
+ *   order, zero-padded (00 = level not present)
+ * - Deeper counters reset when a higher-level heading appears,
+ *   so the id mirrors the document outline and never collides
+ * - Ids are for anchors only — do not target them in styles
  */
 function rehypeHeadingIdAndToc() {
   return (tree: Root, file: { data?: Record<string, unknown> }) => {
     const headings: TocItem[] = [];
-    const slugCount: Record<string, number> = {};
+    const counters = [0, 0, 0]; // h1, h2, h3
 
     visit(tree, 'element', (node) => {
       if (['h1', 'h2', 'h3'].includes(node.tagName)) {
-        const text = (node.children || [])
-          .filter((c): c is { type: 'text'; value: string } => c.type === 'text')
-          .map((c) => c.value)
-          .join('');
         const depth = parseInt(node.tagName.charAt(1), 10);
-        let baseSlug = toSlug(text);
-        if (!baseSlug) baseSlug = `heading-${depth}`;
-        const count = (slugCount[baseSlug] = (slugCount[baseSlug] ?? 0) + 1);
-        const id = count > 1 ? `${baseSlug}-${count - 1}` : baseSlug;
+        counters[depth - 1] += 1;
+        for (let i = depth; i < counters.length; i += 1) {
+          counters[i] = 0;
+        }
+
+        const id = `heading-${counters.map((n) => String(n).padStart(2, '0')).join('-')}`;
+        const text = getNodeText(node).trim();
 
         if (!node.properties) node.properties = {};
         node.properties.id = id;
