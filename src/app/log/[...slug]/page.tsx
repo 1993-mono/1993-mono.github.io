@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getAllDevlogSlugs, getDevlogPost } from '@/lib/devlog';
+import { getAllLogSlugs, getLogPost } from '@/lib/log';
 import Breadcrumb from '@/app/components/Breadcrumb';
 import PostAside from '../components/PostAside';
 
@@ -10,23 +10,23 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const slugs = getAllDevlogSlugs();
+  const slugs = getAllLogSlugs();
   return slugs.map((slug) => ({
     slug: slug.split('/'),
   }));
 }
 
-export default async function DevlogPost({ params }: PageProps) {
+export default async function LogPost({ params }: PageProps) {
   const { slug } = await params;
   const slugString = Array.isArray(slug) ? slug.join('/') : slug;
-  const post = await getDevlogPost(slugString);
+  const post = await getLogPost(slugString);
 
   if (!post) {
     notFound();
   }
 
   const breadcrumbItems = [
-    { children: 'Dev Log' },
+    { children: 'Log' },
     ...(Array.isArray(slug) && slug.length > 1
       ? slug.slice(0, -1).map((part) => ({
         children: part,
@@ -38,7 +38,7 @@ export default async function DevlogPost({ params }: PageProps) {
     <>
       <Breadcrumb
         backLink={{
-          href: '/devlog',
+          href: '/log',
         }}
         items={breadcrumbItems}
       />

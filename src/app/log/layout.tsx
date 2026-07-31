@@ -3,14 +3,14 @@ import { SITE_NAME, MENU } from '@/lib/constants';
 import './styles.scss';
 
 export const metadata: Metadata = {
-  title: `${MENU.DEVLOG.name} | ${SITE_NAME}`,
-  description: MENU.DEVLOG.description,
+  title: `${MENU.LOG.name} | ${SITE_NAME}`,
+  description: MENU.LOG.description,
 };
 
-export default function DevlogLayout({
+export default function LogLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <main id="devlog">{children}</main>;
+  return <main id="log">{children}</main>;
 }

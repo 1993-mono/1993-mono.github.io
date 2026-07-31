@@ -99,6 +99,11 @@ body {
   line-height: 1.5;
 }
 
+::selection {
+  background: rgb(var(--foreground));
+  color: rgb(var(--background));
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

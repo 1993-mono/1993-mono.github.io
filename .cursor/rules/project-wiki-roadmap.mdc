@@ -22,17 +22,22 @@ alwaysApply: false
 
 ## What stays wiki-only (do NOT add to roadmap)
 
+- `English` checklist (managed personally by the maintainer)
 - Infrastructure & DX (README, deployment, SEO)
 - Notes for AI Assistants, English Learning Strategy, Architecture
 - Done / in-progress narrative in Current State
 
 ## Section mapping
 
-Wiki checklist section → Roadmap heading (same name):
+Roadmap groups sections under two `#` headings; wiki uses flat `### Group — Section` names:
 
-- `Dev Log — Technical` → `# Dev Log — Technical`
-- `Dev Log — English` → `# Dev Log — English`
-- `Portfolio`, `About`, `Responsive`, `Dark Mode` → same headings
+- Wiki `Menu — Log` → roadmap `## Log` under `# Menu`
+- Wiki `Menu — Portfolio` → roadmap `## Portfolio` under `# Menu`
+- Wiki `Menu — About` → roadmap `## About` under `# Menu`
+- Wiki `Layout — Responsive` → roadmap `## Responsive` under `# Layout`
+- Wiki `Layout — Dark Mode` → roadmap `## Dark Mode` under `# Layout`
+
+**Roadmap structure**: `# Menu` (Log, Portfolio, About) → `# Layout` (Responsive, Dark Mode).
 
 ## Before finishing a task that touches planning
 

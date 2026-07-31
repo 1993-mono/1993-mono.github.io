@@ -1,14 +1,14 @@
 import {
-  getDevlogFolders,
+  getLogFolders,
   getSubFolders,
-  getDevlogPostsByFolder,
+  getLogPostsByFolder,
   getPostCount,
-} from '@/lib/devlog';
-import DevlogList from './components/DevlogList';
+} from '@/lib/log';
+import LogList from './components/LogList';
 
-export default function Devlog() {
-  const folders = getDevlogFolders();
-  const allPosts = getDevlogPostsByFolder(null);
+export default function Log() {
+  const folders = getLogFolders();
+  const allPosts = getLogPostsByFolder(null);
 
   // Compute post count per folder
   const folderPostCounts: Record<string, number> = {};
@@ -41,7 +41,7 @@ export default function Devlog() {
   });
 
   return (
-    <DevlogList
+    <LogList
       folders={folders}
       allPosts={allPosts}
       folderPostCounts={folderPostCounts}

@@ -11,8 +11,8 @@ export const MENU = {
     name: 'Portfolio',
     description: 'A gallery of portfolio projects',
   },
-  DEVLOG: {
-    name: 'Dev Log',
+  LOG: {
+    name: 'Log',
     description: 'Notes and learnings from building software',
   },
   ROADMAP: {

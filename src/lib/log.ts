@@ -3,10 +3,10 @@ import path from 'path';
 import matter from 'gray-matter';
 import { markdownToHtmlCustom, type TocItem } from './markdown';
 
-const devlogDirectory = path.join(process.cwd(), 'content/devlog');
-const indexPath = path.join(process.cwd(), '.devlog-index.json');
+const logDirectory = path.join(process.cwd(), 'content/log');
+const indexPath = path.join(process.cwd(), '.log-index.json');
 
-export interface DevlogPost {
+export interface LogPost {
   slug: string;
   title: string;
   date: string;
@@ -17,24 +17,24 @@ export interface DevlogPost {
 }
 
 // Index file structure
-interface DevlogIndexEntry {
+interface LogIndexEntry {
   slug: string;
   title: string;
   date: string;
   folder?: string;
 }
 
-interface DevlogIndex {
-  entries: DevlogIndexEntry[];
+interface LogIndex {
+  entries: LogIndexEntry[];
   folders: string[];
   subFoldersMap: Record<string, string[]>;
 }
 
 // Read index file (returns null if missing)
-function getDevlogIndex(): DevlogIndex | null {
+function getLogIndex(): LogIndex | null {
   try {
     const data = fs.readFileSync(indexPath, 'utf8');
-    return JSON.parse(data) as DevlogIndex;
+    return JSON.parse(data) as LogIndex;
   } catch {
     return null;
   }
@@ -52,14 +52,14 @@ function formatDate(date: unknown): string {
   return String(date);
 }
 
-// Fetch metadata for all devlog posts
-export function getAllDevlogPosts(): DevlogPost[] {
-  const fileNames = fs.readdirSync(devlogDirectory);
+// Fetch metadata for all log posts
+export function getAllLogPosts(): LogPost[] {
+  const fileNames = fs.readdirSync(logDirectory);
   const allPostsData = fileNames
     .filter((fileName) => fileName.endsWith('.md'))
     .map((fileName) => {
       const slug = fileName.replace(/\.md$/, '');
-      const fullPath = path.join(devlogDirectory, fileName);
+      const fullPath = path.join(logDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
       const { data, content } = matter(fileContents);
 
@@ -82,10 +82,10 @@ export function getAllDevlogPosts(): DevlogPost[] {
 }
 
 // Fetch post data for a specific slug
-export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
+export async function getLogPost(slug: string): Promise<LogPost | null> {
   try {
     // slug may include a folder path (e.g. "Next.js/next-first-post")
-    const fullPath = path.join(devlogDirectory, `${slug}.md`);
+    const fullPath = path.join(logDirectory, `${slug}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
     const { data, content } = matter(fileContents);
 
@@ -93,7 +93,7 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
     const { html, headings } = await markdownToHtmlCustom(content);
 
     // Extract folder info
-    const relativePath = path.relative(devlogDirectory, fullPath);
+    const relativePath = path.relative(logDirectory, fullPath);
     const folder = path.dirname(relativePath) !== '.' ? path.dirname(relativePath).replace(/\\/g, '/') : undefined;
 
     return {
@@ -111,21 +111,21 @@ export async function getDevlogPost(slug: string): Promise<DevlogPost | null> {
 }
 
 // Fetch all slug values
-export function getAllDevlogSlugs(): string[] {
-  const index = getDevlogIndex();
+export function getAllLogSlugs(): string[] {
+  const index = getLogIndex();
   if (index) {
     return index.entries.map((e) => e.slug);
   }
 
-  const markdownFiles = getAllMarkdownFiles(devlogDirectory);
+  const markdownFiles = getAllMarkdownFiles(logDirectory);
   return markdownFiles.map((file) => {
-    const relativePath = path.relative(devlogDirectory, file.path);
+    const relativePath = path.relative(logDirectory, file.path);
     return relativePath.replace(/\.md$/, '').replace(/\\/g, '/');
   });
 }
 
 // Recursively find all .md files in a folder (fallback when index is missing)
-function getAllMarkdownFiles(dir: string, baseDir: string = devlogDirectory): Array<{ path: string; folder: string }> {
+function getAllMarkdownFiles(dir: string, baseDir: string = logDirectory): Array<{ path: string; folder: string }> {
   const files: Array<{ path: string; folder: string }> = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -144,14 +144,14 @@ function getAllMarkdownFiles(dir: string, baseDir: string = devlogDirectory): Ar
   return files;
 }
 
-// Fetch top-level folders for primary tabs (direct children of content/devlog)
-export function getDevlogFolders(): string[] {
-  const index = getDevlogIndex();
+// Fetch top-level folders for primary tabs (direct children of content/log)
+export function getLogFolders(): string[] {
+  const index = getLogIndex();
   if (index) {
     return index.folders;
   }
 
-  const items = fs.readdirSync(devlogDirectory, { withFileTypes: true });
+  const items = fs.readdirSync(logDirectory, { withFileTypes: true });
   return items
     .filter((item) => item.isDirectory())
     .map((item) => item.name)
@@ -160,7 +160,7 @@ export function getDevlogFolders(): string[] {
 
 // Fetch subfolders for a given folder
 export function getSubFolders(parentFolder: string | null): string[] {
-  const index = getDevlogIndex();
+  const index = getLogIndex();
   if (index) {
     if (parentFolder === null) {
       return index.folders;
@@ -169,10 +169,10 @@ export function getSubFolders(parentFolder: string | null): string[] {
   }
 
   if (parentFolder === null) {
-    return getDevlogFolders();
+    return getLogFolders();
   }
 
-  const folderPath = path.join(devlogDirectory, parentFolder);
+  const folderPath = path.join(logDirectory, parentFolder);
   if (!fs.existsSync(folderPath) || !fs.statSync(folderPath).isDirectory()) {
     return [];
   }
@@ -185,8 +185,8 @@ export function getSubFolders(parentFolder: string | null): string[] {
 }
 
 // Fetch posts for a given folder
-export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
-  const index = getDevlogIndex();
+export function getLogPostsByFolder(folder: string | null): LogPost[] {
+  const index = getLogIndex();
   if (index) {
     let entries = index.entries;
     if (folder !== null) {
@@ -206,7 +206,7 @@ export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
   }
 
   // Fallback to file scan when index is missing
-  const markdownFiles = getAllMarkdownFiles(devlogDirectory);
+  const markdownFiles = getAllMarkdownFiles(logDirectory);
 
   const allPostsData = markdownFiles
     .filter((file) => {
@@ -244,5 +244,5 @@ export function getDevlogPostsByFolder(folder: string | null): DevlogPost[] {
 
 // Fetch post count for a given folder
 export function getPostCount(folder: string | null): number {
-  return getDevlogPostsByFolder(folder).length;
+  return getLogPostsByFolder(folder).length;
 }

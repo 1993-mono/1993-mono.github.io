@@ -18,13 +18,13 @@ import {
   CheckCircleIcon as CheckCircleIconSolid,
 } from "@heroicons/react/24/solid";
 import { useResponsiveStore } from "@/stores/responsive";
-import { useDevlogStore } from "@/stores/devlog";
+import { useLogStore } from "@/stores/log";
 import { SITE_NAME, MENU } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
 function NavMenu({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
-  const resetTabs = useDevlogStore((state) => state.resetTabs);
+  const resetTabs = useLogStore((state) => state.resetTabs);
 
   const handleLinkClick = () => {
     resetTabs();
@@ -61,15 +61,15 @@ function NavMenu({ onNavigate }: { onNavigate?: () => void }) {
       </li>
       <li>
         <Link
-          href="/devlog"
-          className={pathname.startsWith("/devlog") ? "active" : ""}
+          href="/log"
+          className={pathname.startsWith("/log") ? "active" : ""}
           onClick={handleLinkClick}
         >
           <span className="icn-container">
             <DocumentTextIconOutline className="icn default" />
             <DocumentTextIconSolid className="icn hover" />
           </span>
-          <span className="txt">{MENU.DEVLOG.name}</span>
+          <span className="txt">{MENU.LOG.name}</span>
         </Link>
       </li>
       <li>

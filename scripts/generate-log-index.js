@@ -1,14 +1,14 @@
 /**
- * Devlog index generator
- * Scans content/devlog and writes .devlog-index.json
+ * Log index generator
+ * Scans content/log and writes .log-index.json
  */
 
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
 
-const devlogDir = path.join(process.cwd(), 'content/devlog');
-const indexPath = path.join(process.cwd(), '.devlog-index.json');
+const logDir = path.join(process.cwd(), 'content/log');
+const indexPath = path.join(process.cwd(), '.log-index.json');
 
 // Convert a date value to a string
 function formatDate(date) {
@@ -21,7 +21,7 @@ function formatDate(date) {
 }
 
 // Recursively collect .md files
-function collectMarkdownFiles(dir, baseDir = devlogDir) {
+function collectMarkdownFiles(dir, baseDir = logDir) {
   const result = [];
   const items = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -39,20 +39,20 @@ function collectMarkdownFiles(dir, baseDir = devlogDir) {
   return result;
 }
 
-// Top-level folders (direct children of content/devlog)
+// Top-level folders (direct children of content/log)
 function getTopFolders() {
-  const items = fs.readdirSync(devlogDir, { withFileTypes: true });
+  const items = fs.readdirSync(logDir, { withFileTypes: true });
   return items
     .filter((item) => item.isDirectory())
     .map((item) => item.name)
     .sort();
 }
 
-// Direct subfolders for a folder (matches devlog.ts getSubFolders)
+// Direct subfolders for a folder (matches log.ts getSubFolders)
 function getSubFoldersOf(parentFolder) {
   const folderPath = parentFolder
-    ? path.join(devlogDir, parentFolder)
-    : devlogDir;
+    ? path.join(logDir, parentFolder)
+    : logDir;
   if (!fs.existsSync(folderPath) || !fs.statSync(folderPath).isDirectory()) {
     return [];
   }
@@ -83,13 +83,13 @@ function getSubFoldersMap(folders) {
 }
 
 function generate() {
-  if (!fs.existsSync(devlogDir)) {
-    console.warn('content/devlog folder not found.');
+  if (!fs.existsSync(logDir)) {
+    console.warn('content/log folder not found.');
     fs.writeFileSync(indexPath, JSON.stringify({ entries: [], folders: [], subFoldersMap: {} }, null, 2));
     return;
   }
 
-  const files = collectMarkdownFiles(devlogDir);
+  const files = collectMarkdownFiles(logDir);
   const folders = getTopFolders();
   const subFoldersMap = getSubFoldersMap(folders);
 
@@ -125,7 +125,7 @@ function generate() {
   };
 
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
-  console.log(`Devlog index updated: ${entries.length} posts`);
+  console.log(`Log index updated: ${entries.length} posts`);
 }
 
 generate();

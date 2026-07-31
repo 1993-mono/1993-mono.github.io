@@ -5,11 +5,11 @@
   "packageManager": "yarn@4.14.1",
   "scripts": {
     "dev": "node scripts/dev-with-watcher.js",
-    "dev:next": "node scripts/generate-devlog-index.js && next dev --webpack",
-    "build": "node scripts/generate-devlog-index.js && next build",
+    "dev:next": "node scripts/generate-log-index.js && next dev --webpack",
+    "build": "node scripts/generate-log-index.js && next build",
     "start": "next start",
     "lint": "eslint",
-    "devlog:index": "node scripts/generate-devlog-index.js"
+    "log:index": "node scripts/generate-log-index.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

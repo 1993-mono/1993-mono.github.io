@@ -1,44 +1,42 @@
-# Dev Log — Technical
+# Menu
 
+## Log
+
+- [x] Markdown
 - [ ] Javascript
 - [ ] React
 - [ ] Next.js
 - [ ] Typescript
 - [ ] React Native
 
-# Dev Log — English
-
-- [x] Create English dev log category
-- [ ] Write first post: technical reading notes in English
-- [ ] Practice commit message / PR description patterns
-- [ ] Summarize interview Q&A in English
-
-# Portfolio
+## Portfolio
 
 - [ ] Implement gallery layout
 - [ ] Design project cards
 - [ ] Add filtering (optional)
 - [ ] Add first real project entry
 
-# About
+## About
 
 - [ ] Build page layout
 - [ ] Add visual elements
 - [ ] Write recruiter-friendly bio (English)
 
-# Responsive
+# Layout
+
+## Responsive
 
 - [ ] Optimize mobile layout
-  - Layout adjustments for small screens
-  - Fix: mobile menu should close when a nav link is clicked
+    - Layout adjustments for small screens
+    - Fix: mobile menu should close when a nav link is clicked
 - [ ] Support tablet viewport
-  - Intermediate layout between mobile and desktop
+    - Intermediate layout between mobile and desktop
 
-# Dark Mode
+## Dark Mode
 
 - [ ] Define dark mode color palette
-  - CSS variables for theme tokens
+    - CSS variables for theme tokens
 - [ ] Implement dark mode toggle
-  - Detect system preference
-  - Manual toggle button
-  - Persist user preference
+    - Detect system preference
+    - Manual toggle button
+    - Persist user preference

@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-interface DevlogStore {
+interface LogStore {
   selectedPrimaryTab: string | null;
   selectedSecondaryTab: string | null;
   setSelectedPrimaryTab: (tab: string | null) => void;
@@ -8,7 +8,7 @@ interface DevlogStore {
   resetTabs: () => void;
 }
 
-export const useDevlogStore = create<DevlogStore>((set) => ({
+export const useLogStore = create<LogStore>((set) => ({
   selectedPrimaryTab: null,
   selectedSecondaryTab: null,
   setSelectedPrimaryTab: (tab) => set({ selectedPrimaryTab: tab, selectedSecondaryTab: null }),

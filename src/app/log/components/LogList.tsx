@@ -3,24 +3,24 @@
 import { useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { DevlogPost } from '@/lib/devlog';
-import { useDevlogStore } from '@/stores/devlog';
+import type { LogPost } from '@/lib/log';
+import { useLogStore } from '@/stores/log';
 import Tabs from '@/app/components/Tabs';
 
-interface DevlogListProps {
+interface LogListProps {
   folders: string[];
-  allPosts: DevlogPost[];
+  allPosts: LogPost[];
   folderPostCounts: Record<string, number>;
   subFoldersMap: Record<string, string[]>;
 }
 
-export default function DevlogList({
+export default function LogList({
   folders,
   allPosts,
   folderPostCounts,
   subFoldersMap,
-}: DevlogListProps) {
-  const { selectedPrimaryTab, selectedSecondaryTab, setSelectedPrimaryTab, setSelectedSecondaryTab } = useDevlogStore();
+}: LogListProps) {
+  const { selectedPrimaryTab, selectedSecondaryTab, setSelectedPrimaryTab, setSelectedSecondaryTab } = useLogStore();
 
   const secondaryTabs = useMemo(() => {
     if (selectedPrimaryTab === null) {
@@ -134,7 +134,7 @@ export default function DevlogList({
           <p className="no-data">No posts yet :^(</p>
         ) : (
           <ul>
-            {filteredPosts.map((post: DevlogPost) => {
+            {filteredPosts.map((post: LogPost) => {
               let categoryPath: string[] = [];
 
               if (post.folder) {
@@ -173,7 +173,7 @@ export default function DevlogList({
                   }}
                 >
                   <Link
-                    href={`/devlog/${post.slug}`}
+                    href={`/log/${post.slug}`}
                     className="post-button"
                   >
                     <AnimatePresence mode="popLayout">

@@ -40,5 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# devlog index (auto-generated at build time)
-.devlog-index.json
+# log index (auto-generated at build time)
+.log-index.json
