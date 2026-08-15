@@ -1,0 +1,76 @@
+{
+  "date": "2026-08-15",
+  "workoutIds": [
+    "2026-08-15T20:00"
+  ],
+  "goalId": "goal-flexible-functional-v2",
+  "routineId": "routine-v4",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25"
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 부부 100일 바디웨이트 (스쿼트 100 · 푸쉬업 50 한 세트 + 매달리기 max)",
+    "goalEffectiveFrom": "2026-08-15",
+    "routineSummary": "v4 — 매일 부부 바디웨이트 (스쿼트·푸쉬업·매달리기), Day N 진행형 100일 챌린지",
+    "routineEffectiveFrom": "2026-08-15",
+    "planned": "couple_bodyweight_challenge",
+    "plannedLabel": "부부 바디웨이트 (스쿼트·푸쉬업·매달리기)",
+    "actualSummary": "home_training Day 1/100 — 스쿼트 10 · 푸쉬업 5 · 매달리기 22초",
+    "adherence": "aligned",
+    "challengeDay": 1,
+    "challengeDaysTotal": 100,
+    "daysSinceLastWorkout": 21,
+    "nearbyRestDays": [
+      {
+        "date": "2026-07-26",
+        "status": "rest_unlogged",
+        "plannedLabel": "완전 휴식 또는 풋살 2시간",
+        "note": "직후부터 8/14까지 연속 미기록 구간의 시작"
+      },
+      {
+        "date": "2026-08-14",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "챌린지 시작 전날 — 기록 없음(수행 안 함)"
+      }
+    ],
+    "historyNote": "7/25 이후 약 3주(21일) 공백. 8/15부터 목표 v2·루틴 v4(부부 100일)로 전환. Day 1 처방 10·5·max와 수행 일치."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "challengeDay": 1,
+    "squatReps": 10,
+    "pushupReps": 5,
+    "hangSec": 22
+  },
+  "review": {
+    "headline": "부부 100일 챌린지 Day 1 — 처방(10·5·22초) 정렬, 3주 공백 뒤라 초반 페이스 유지가 핵심",
+    "body": "이날부터 목표는 ‘부부 100일 바디웨이트’(스쿼트 100·푸쉬업 50 한 세트 + 매달리기 max), 루틴은 v4(매일 동일 3종·Day N 진행)로 맞춰졌습니다. Day 1 처방은 스쿼트 10 · 푸쉬업 5 · 매달리기 max 1회인데, 보고하신 수행(10·5·22초)과 정확히 맞습니다. 직전 수행은 7/25(풋살·자전거)로 daysSinceLastWorkout=21일입니다. 공백이 긴 만큼 Day 1~3은 ‘올려도 되는 날’이 아니라 습관 재장착 구간으로 보는 것이 안전합니다. 처방이 Day 10에 100·50까지 가파르게 올라가므로, 중간에 자세가 무너지거나 관절 통증이 있으면 그날은 처방 미달로 기록하고 다음 날 같은 횟수를 반복하는 쪽이 100일 완주에 유리합니다. 체중은 오늘 미기록(직전 7/25 78.5kg)입니다. 유연성 목표는 별도 DB 없이 스트레칭 지속으로 유지하면 됩니다.",
+    "highlights": [
+      "목표 v2·루틴 v4 전환 첫날 — Day 1 처방과 수행 일치",
+      "매달리기 22초로 max 기준선 확보",
+      "아내와 함께하는 형태로 동기·지속 가능성이 큼"
+    ],
+    "cautions": [
+      "7/25 이후 21일 공백 — 초반 며칠은 통증·폼을 횟수보다 우선",
+      "스쿼트·푸쉬업이 매일 +10·+5로 빠르게 늘어남 — Day 5 전후 폼 붕괴 주의",
+      "매달리기는 그립·어깨 부하가 커서 통증 시 당일 스킵 가능(횟수 강요 금지)"
+    ],
+    "suggestions": [
+      "Day 2(내일): 스쿼트 20 · 푸쉬업 10 · 매달리기 max 1회 — 공백 직후이므로 호흡·깊이만 일정하게",
+      "체중을 가끔이라도 남겨 BMI·회복 맥락을 리뷰에 반영할 수 있게 하기",
+      "처방 미달 날이 나와도 챌린지 Day는 이어가기 (중단보다 연속이 목표)"
+    ],
+    "vsGoal": "유연성: 스트레칭 지속은 생활 습관으로 유지. 기능성: Day 1/100 시작 — 스쿼트 10/100 · 푸쉬업 5/50 · 매달리기 기준 22초. 기존 5km 28:00은 챌린지 기간 보류.",
+    "vsRoutine": "routine-v4 토요 couple_bodyweight_challenge Day 1 — aligned (10·5·max 22초)."
+  },
+  "reviewedAt": "2026-08-15T21:00:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
