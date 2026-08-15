@@ -37,7 +37,8 @@
     "supersedesId": "이전 goal id | null",
     "title": "버전 제목",
     "content.flexibility": "평생 고정 블록 — summary/detail (스트레칭 지속 언급 포함), fixed=true",
-    "content.functional": "버전업 대상 — summary, target, principles, milestones 등",
+    "content.functional": "버전업 대상 — summary, target, strengthEnduranceChallenge, principles, milestones 등",
+    "content.functional.strengthEnduranceChallenge": "100일 맨몸운동 목표 — 기간, 동반자, 종목별 목표 수량·조건",
     "changeReason": "string | null — 버전업 이유 (최초는 null)",
     "changedAt": "YYYY-MM-DD"
   },
@@ -48,6 +49,8 @@
     "supersedesId": "이전 routine id | null",
     "title": "버전 제목",
     "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec 등)",
+    "challenge": "기간형 루틴 — durationDays, dayOne, finalDay, frequency, partner, progression",
+    "challenge.progression": "종목별 시작 수량·일일 증가량·목표 수량·목표 도달일·도달 후 방식",
     "changeReason": "string | null — 버전업 이유",
     "changedAt": "YYYY-MM-DD"
   },
