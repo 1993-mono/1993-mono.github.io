@@ -37,7 +37,8 @@
     "supersedesId": "이전 goal id | null",
     "title": "버전 제목",
     "content.flexibility": "평생 고정 블록 — summary/detail (스트레칭 지속 언급 포함), fixed=true",
-    "content.functional": "버전업 대상 — summary, target, principles, milestones 등",
+    "content.functional": "버전업 대상 — summary, target, principles, milestones 등 (5km 기록 또는 100일 바디웨이트 챌린지 등)",
+    "content.functional.retained": "optional — 이전 기능성 세부(예: 5km 28:00)를 주 목표에서 내릴 때 보관",
     "changeReason": "string | null — 버전업 이유 (최초는 null)",
     "changedAt": "YYYY-MM-DD"
   },
@@ -47,7 +48,9 @@
     "effectiveTo": "YYYY-MM-DD | null",
     "supersedesId": "이전 routine id | null",
     "title": "버전 제목",
-    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec 등)",
+    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec 등). plan slug 예: home_training | run_walk_run | continuous_run | rest_or_futsal | couple_bodyweight",
+    "challenge": "optional — 기간형 챌린지 (startDate/endDate/durationDays 등)",
+    "progression": "optional — 수행 회차 기준 증가 공식 (startReps/increment/capReps, hang max 등)",
     "changeReason": "string | null — 버전업 이유",
     "changedAt": "YYYY-MM-DD"
   },
