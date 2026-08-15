@@ -5,7 +5,7 @@
     "body-metrics.jsonl": "바디 측정 이력 — 측정일 + 몸무게·체성분(추후 필드)",
     "workouts.jsonl": "운동 수행 DB — 한 줄 = 세션 1회 (완전 휴식일은 남기지 않음)",
     "goals.jsonl": "목표 버전 이력 (유연성 고정 + 기능성 버전업)",
-    "routines.jsonl": "주간 루틴 버전 이력",
+    "routines.jsonl": "주간 또는 기간형 챌린지 루틴 버전 이력",
     "day-log.jsonl": "달력·미수행 판별용 (기록 없음 = 수행 안 함). 수행 DB가 아님",
     "reviews/YYYY-MM-DD.json": "해당 일자 AI 리뷰 — 목표·루틴·미수행 공백을 전제로"
   },
@@ -37,7 +37,8 @@
     "supersedesId": "이전 goal id | null",
     "title": "버전 제목",
     "content.flexibility": "평생 고정 블록 — summary/detail (스트레칭 지속 언급 포함), fixed=true",
-    "content.functional": "버전업 대상 — summary, target, principles, milestones 등",
+    "content.functional": "버전업 대상 — summary, target, principles, milestones, bodyweightChallenge 등",
+    "content.functional.bodyweightChallenge": "100일 맨몸운동 등 기간형 목표 — dayOneDate, targetDate, durationDays, frequency, targets, afterTarget",
     "changeReason": "string | null — 버전업 이유 (최초는 null)",
     "changedAt": "YYYY-MM-DD"
   },
@@ -47,7 +48,8 @@
     "effectiveTo": "YYYY-MM-DD | null",
     "supersedesId": "이전 routine id | null",
     "title": "버전 제목",
-    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec 등)",
+    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec | challengeRef 등)",
+    "challenge": "기간형 챌린지 설정 — dayOneDate, targetDate, durationDays, frequency, progression, afterTarget",
     "changeReason": "string | null — 버전업 이유",
     "changedAt": "YYYY-MM-DD"
   },
@@ -56,7 +58,7 @@
     "date": "YYYY-MM-DD",
     "startedAt": "ISO 8601 with offset — 날짜/시간",
     "activity": "run | walk | soccer | futsal | outdoor_cycling | home_training | ...",
-    "content": "string | optional — 수행 요약 한 덩어리 (홈트는 세트 상세 없이 시간·심박 등)",
+    "content": "string | optional — 수행 요약 한 덩어리 (홈트 챌린지는 종목별 총 횟수·최대 시간까지만 허용하고 세트별 로그는 두지 않음)",
     "durationSec": "number | optional",
     "avgHeartRateBpm": "number | optional",
     "source": "기록 출처",
