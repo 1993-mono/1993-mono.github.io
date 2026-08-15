@@ -1,0 +1,80 @@
+{
+  "date": "2026-08-15",
+  "workoutIds": [
+    "2026-08-15T22:03"
+  ],
+  "goalId": "goal-flexible-functional-v2",
+  "routineId": "routine-v4",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성은 스트레칭 지속, 기능성은 부부가 함께하는 100일 기초 근지구력",
+    "goalEffectiveFrom": "2026-08-15",
+    "routineSummary": "v4 — 매일 스쿼트 1세트 + 푸쉬업 1세트 + 매달리기 최대 1회",
+    "routineEffectiveFrom": "2026-08-15",
+    "challengeDay": 1,
+    "challengeEndDate": "2026-11-22",
+    "planned": "daily_couple_challenge",
+    "plannedLabel": "스쿼트 10회 + 푸쉬업 5회 + 매달리기 최대 1회",
+    "actualSummary": "스쿼트 10회 + 푸쉬업 5회 + 매달리기 22초",
+    "adherence": "aligned",
+    "daysSinceLastWorkout": 20,
+    "unloggedRange": {
+      "from": "2026-07-26",
+      "to": "2026-08-14",
+      "days": 20,
+      "status": "rest_unlogged"
+    },
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-14",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "기록 없음 → 계획 홈트 미이행"
+      },
+      {
+        "date": "2026-08-13",
+        "status": "rest_unlogged",
+        "plannedLabel": "30분 연속 달리기",
+        "note": "기록 없음 → 계획 연속 달리기 미이행"
+      }
+    ],
+    "historyNote": "7/25 이후 20일간 운동 기록이 없었고, 8/15부터 목표를 부부 100일 기초 근지구력으로, 루틴을 매일 스쿼트·푸쉬업·매달리기 3종으로 갱신했다."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "squatReps": 10,
+    "pushUpReps": 5,
+    "deadHangDurationSec": 22,
+    "deadHangAttempts": 1
+  },
+  "review": {
+    "headline": "부부 100일 운동 1일 차 완료 — 스쿼트 10회·푸쉬업 5회·매달리기 22초로 계획과 정확히 정렬",
+    "body": "결혼 전 아내와 함께했던 운동을 다시 이어가는 100일 도전의 첫날입니다. 오늘 계획한 스쿼트 10회, 푸쉬업 5회, 매달리기 최대 1회를 모두 수행했고 매달리기 기준 기록은 22초입니다. 2026-11-22까지 이어지는 새 목표와 routine-v4의 1일 차에 정확히 맞습니다. 다만 직전 기록인 7/25 이후 20일 동안 수행 기록이 없어 오랜 공백 뒤 복귀한 날입니다. 스쿼트는 매일 10회, 푸쉬업은 매일 5회씩 늘리면 10일 차에 각각 100회와 50회에 도달하므로 증가 속도가 빠릅니다. 정해진 숫자보다 한 번에 수행하는 자세의 품질을 우선하고, 자세가 무너지거나 관절에 불편감이 생기면 그날은 증가를 멈추는 편이 안전합니다. 오늘 몸무게는 미측정이라 BMI와 체중 변화는 평가하지 않았습니다. 유연성 목표는 별도 기록 없이 스트레칭을 꾸준히 이어갑니다.",
+    "highlights": [
+      "아내와 함께하는 100일 도전을 계획대로 시작",
+      "1일 차 스쿼트 10회·푸쉬업 5회 목표 달성",
+      "매달리기 최대 1회 기준 기록 22초 확보"
+    ],
+    "cautions": [
+      "20일의 미수행 공백 뒤 10일 동안 매일 선형 증가하므로 피로와 자세 변화를 확인",
+      "스쿼트 100회·푸쉬업 50회를 한 번에 수행하는 목표는 현재치보다 각각 10배이므로 숫자보다 올바른 자세를 우선",
+      "매달리기는 최대 시도라도 어깨·팔꿈치·손에 통증이나 저림이 생기면 즉시 중단"
+    ],
+    "suggestions": [
+      "2일 차 목표는 스쿼트 20회·푸쉬업 10회·매달리기 최대 1회",
+      "매일 같은 순서와 비슷한 시간대에 함께 수행해 100일 습관으로 고정",
+      "목표 횟수를 한 번에 채우기 어렵거나 자세가 무너지면 억지로 늘리지 말고 해당 단계 횟수를 유지"
+    ],
+    "vsGoal": "goal-flexible-functional-v2의 100일 도전 1/100일 완료. 스쿼트 10/100회, 푸쉬업 5/50회로 시작 기준을 달성했고 매달리기 기준 기록은 22초다.",
+    "vsRoutine": "routine-v4 1일 차의 스쿼트 10회·푸쉬업 5회·매달리기 최대 1회를 모두 수행해 aligned."
+  },
+  "reviewedAt": "2026-08-15T22:03:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
