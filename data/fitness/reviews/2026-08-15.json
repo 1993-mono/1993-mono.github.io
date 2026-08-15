@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-15",
+  "workoutIds": [
+    "2026-08-15T13:00"
+  ],
+  "goalId": "goal-100day-couple-challenge-v1",
+  "routineId": "routine-v4",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null
+  },
+  "planContext": {
+    "goalSummary": "유연한 몸 + 100일 커플 홈트 챌린지 — 스쿼트 100·푸시업 50·매달리기 max",
+    "goalEffectiveFrom": "2026-08-15",
+    "routineSummary": "v4 — 매일 스쿼트·푸시업·매달리기(1회 max). 스쿼트 +10/일→100, 푸시업 +5/일→50",
+    "routineEffectiveFrom": "2026-08-15",
+    "challengeDayNumber": 1,
+    "plannedTargets": {
+      "squat": 10,
+      "push_up": 5,
+      "hangingSec": 22
+    },
+    "planned": "daily_challenge",
+    "plannedLabel": "100일 챌린지 — 스쿼트 10·푸시업 5·매달리기 22초",
+    "actualSummary": "스쿼트 10·푸시업 5·매달리기 22초",
+    "adherence": "aligned",
+    "daysSinceLastWorkout": 21,
+    "nearbyRestDays": [
+      {
+        "date": "2026-07-26",
+        "status": "rest_unlogged",
+        "plannedLabel": "완전 휴식 또는 풋살 2시간",
+        "note": "7/25 이후 기록 공백 시작"
+      },
+      {
+        "date": "2026-08-14",
+        "status": "rest_unlogged",
+        "plannedLabel": "완전 휴식 또는 풋살 2시간",
+        "note": "챌린지 전날까지 공백 지속"
+      }
+    ],
+    "historyNote": "7/25 풋살·자전거 이후 21일간 미기록. 8/15부터 아내와 100일 챌린지(routine-v4) 시작."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "content": "스쿼트 10·푸시업 5·매달리기 22초"
+  },
+  "review": {
+    "headline": "100일 챌린지 Day1 완료 — 21일 공백 뒤 가벼운 3종으로 깔끔하게 재시작",
+    "body": "오늘부터 목표는 ‘유연한 몸(고정) + 100일 커플 홈트 챌린지’로, 루틴은 v4(매일 스쿼트·푸시업·매달리기)입니다. Day1 목표인 스쿼트 10회·푸시업 5회·매달리기 22초를 모두 맞췄습니다. 직전 수행일(7/25)로부터 21일 공백이 있었지만, 오늘 부하는 낮고 명확해 재시작에 적합한 선택입니다. 내일(Day2) 목표는 스쿼트 20·푸시업 10·매달리기 1회 max입니다. 10일차에 스쿼트 100·푸시업 50에 도달한 뒤에는 같은 횟수를 100일까지 유지하는 구조입니다. 체중은 오늘 미기록입니다.",
+    "highlights": [
+      "100일 챌린지 Day1 — 계획 대비 100% 달성",
+      "결혼 전 아내와 함께하던 운동을 되살린 의미 있는 시작",
+      "부담 낮은 3종으로 21일 공백 후 무리 없이 복귀"
+    ],
+    "cautions": [
+      "21일 공백 직후 — 내일부터 횟수가 빠르게 늘어나므로 관절·근육 통증 시 하루 쉬거나 목표를 1일 유예해도 됨",
+      "매달리기는 어깨·팔꿈치 부담이 있으니 1회 max 후 충분히 풀어주기",
+      "아내와 함께하되 각자 페이스가 다를 수 있음 — 비교보다 꾸준함 우선"
+    ],
+    "suggestions": [
+      "내일(Day2): 스쿼트 20·푸시업 10·매달리기 max 1회",
+      "가능하면 같은 시간대에 함께 수행해 습관 고정",
+      "체중 측정이 가능하면 body-metrics에 기록해 두면 100일 후 비교에 도움"
+    ],
+    "vsGoal": "유연성: 스트레칭은 별도 DB 없이 생활 습관으로 유지. 기능성: 100일 챌린지 1/100일 완료 — 10일차(스쿼트 100·푸시업 50)가 첫 마일스톤.",
+    "vsRoutine": "routine-v4 daily_challenge Day1 — aligned. 스쿼트 10·푸시업 5·매달리기 22초 모두 목표 일치."
+  },
+  "reviewedAt": "2026-08-15T13:30:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}

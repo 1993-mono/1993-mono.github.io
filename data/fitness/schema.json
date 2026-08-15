@@ -47,7 +47,9 @@
     "effectiveTo": "YYYY-MM-DD | null",
     "supersedesId": "이전 routine id | null",
     "title": "버전 제목",
-    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec 등)",
+    "planType": "weekly_split | daily_challenge — 기본 weekly_split",
+    "challenge": "daily_challenge일 때 — startDate, durationDays, endDate, exercises[] (day1Target, incrementPerDay, cap, unit, maxAttempts 등)",
+    "days": "mon..sun — plan/label/detail (+ blocks | exercises | futsalDurationSec | exercisesRef 등)",
     "changeReason": "string | null — 버전업 이유",
     "changedAt": "YYYY-MM-DD"
   },
