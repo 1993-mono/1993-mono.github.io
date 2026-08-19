@@ -55,7 +55,7 @@
     "id": "string — {date}T{HH:mm}",
     "date": "YYYY-MM-DD",
     "startedAt": "ISO 8601 with offset — 날짜/시간",
-    "activity": "run | walk | soccer | futsal | outdoor_cycling | home_training | ...",
+    "activity": "run | walk | soccer | futsal | outdoor_cycling | home_training | other_exercise | ...",
     "content": "string | optional — 수행 요약 한 덩어리 (홈트는 세트 상세 없이 시간·심박 등)",
     "durationSec": "number | optional",
     "avgHeartRateBpm": "number | optional",

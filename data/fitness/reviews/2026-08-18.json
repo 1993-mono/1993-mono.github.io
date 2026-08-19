@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-18",
+  "workoutIds": [
+    "2026-08-18T12:00"
+  ],
+  "goalId": "goal-flexible-functional-v1",
+  "routineId": "routine-v3",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25",
+    "lastKnownBmi": 26.2
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
+    "goalEffectiveFrom": "2026-07-25",
+    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
+    "routineEffectiveFrom": "2026-08-04",
+    "planned": "run_walk_run",
+    "plannedLabel": "10분 달리기 + 10분 걷기 + 10분 달리기",
+    "actualSummary": "home_training (매달리기 챌린지 39초)",
+    "adherence": "off_plan",
+    "daysSinceLastWorkout": 2,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-17",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "8/16 수행 다음 날이자 계획상 월요 홈트일. 기록 없음"
+      }
+    ],
+    "historyNote": "직전 수행은 8/16 홈트이며 그날 매달리기는 40초였다. 8/17 하루를 쉬고 8/18 매달리기 챌린지 39초로 재개했다. 세션 시각은 미기재(12:00 자리표시)."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "hangSec": 39
+  },
+  "review": {
+    "headline": "하루 쉬고 매달리기 39초로 재개 — 화요 러닝 계획과는 다른 수행",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v3입니다. 화요일 계획은 10분 달리기 + 10분 걷기 + 10분 달리기인데, 실제는 매달리기 챌린지 39초라 off_plan입니다. 직전 수행은 8/16 홈트로 daysSinceLastWorkout=2일이며, 사이의 8/17은 기록이 없어 미수행으로 봅니다. 8/16의 매달리기 40초와 비교하면 1초 차이여서 수행 수준은 거의 유지됐습니다. 다만 매달리기는 악력·등·어깨 자극에는 도움이 되지만 5km 연속 달리기 목표의 심폐 자극이나 루틴 v3의 화요 러닝을 대신하지는 못합니다. 체중은 미기록이며 직전 측정은 7/25 78.5kg(BMI≈26.2)입니다.",
+    "highlights": [
+      "8/17 하루 미수행 뒤 챌린지를 재개",
+      "매달리기 39초로 8/16 기록 40초와 거의 같은 수준",
+      "짧은 수행이라 다시 이어 가는 진입 부담이 낮음"
+    ],
+    "cautions": [
+      "화요 런-워크-런은 미수행이라 5km 목표에 필요한 달리기 적응은 쌓이지 않음",
+      "매달리기를 연속해서 할 때 어깨·팔꿈치·손가락 통증이나 악력 저하가 생기면 시간을 줄이거나 쉬어야 함",
+      "체중·세션 시각·심박은 미기록이라 전체 부하 평가는 제한적"
+    ],
+    "suggestions": [
+      "다음 수요 홈트에서는 루틴 v3의 푸시업·캡틴체어·스쿼트를 무리 없는 범위에서 우선 수행",
+      "매달리기는 어깨가 들리지 않고 통증 없는 자세가 유지되는 시간까지만 진행",
+      "다음 러닝은 짧은 런-워크-런으로 다시 시작해 기능성 목표와 연결",
+      "스트레칭은 별도 DB 없이 생활 습관으로 유지"
+    ],
+    "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 매달리기로 상체 기능 자극은 있었지만 5km 연속·28:00 마일스톤 진척은 없음. 긴 공백 없이 다시 수행한 점은 no_long_layoff 원칙에 긍정적이다.",
+    "vsRoutine": "routine-v3 화요 run_walk_run 계획에 매달리기 챌린지를 수행해 off_plan. 계획된 30분 블록의 달리기·걷기는 미수행이다."
+  },
+  "reviewedAt": "2026-08-20T00:01:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
