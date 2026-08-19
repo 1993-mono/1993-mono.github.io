@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-18",
+  "workoutIds": [
+    "2026-08-18T12:00"
+  ],
+  "goalId": "goal-flexible-functional-v1",
+  "routineId": "routine-v3",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25",
+    "lastKnownBmi": 26.2
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
+    "goalEffectiveFrom": "2026-07-25",
+    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
+    "routineEffectiveFrom": "2026-08-04",
+    "planned": "run_walk_run",
+    "plannedLabel": "10분 달리기 + 10분 걷기 + 10분 달리기",
+    "actualSummary": "home_training (매달리기 39초)",
+    "adherence": "off_plan",
+    "daysSinceLastWorkout": 2,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-17",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "8/16 이후 하루 공백. 계획상 월요 홈트 미이행"
+      },
+      {
+        "date": "2026-08-14",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "복귀(8/15) 전날. 계획상 금요 홈트 미이행"
+      }
+    ],
+    "historyNote": "8/15·8/16 홈트(매달리기 포함)로 복귀 후, 8/17은 미기록. 이날은 이틀 만에 챌린지 매달리기만 이어감. 스쿼트·푸시업·세션 시각은 미기재(12:00 자리표시)."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "hangSec": 39
+  },
+  "review": {
+    "headline": "화요 러닝 슬롯 대신 챌린지 매달리기 39초 (off_plan) — 8/17 하루 공백 뒤 재개",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v3입니다. 화요일 계획은 런-워크-런인데, 실제는 챌린지 이어하기 — 매달리기 39초 — 이라 off_plan입니다. 직전 수행은 8/16 홈트(스쿼트 20 · 푸쉬업 10 · 매달리기 40초)로, 8/17은 rest_unlogged라 daysSinceLastWorkout=2일입니다. 매달리기만으로는 부하가 작아 공백 하루 뒤 재개로는 무리 없습니다. 다만 8/15·8/16에 있던 스쿼트·푸시업은 이날 미기재라, 챌린지 3종을 이어간 건지 매달리기만 한 건지는 기록상 구분되지 않습니다. 체중·심박도 미기록(직전 체중 7/25 78.5kg·BMI≈26.2). 기능성 본게임(5km 연속·28:00)은 러닝 데이에서 측정할 단계입니다.",
+    "highlights": [
+      "8/17 하루 공백 뒤에도 챌린지 매달리기를 이어감",
+      "매달리기 39초 — 직전(8/16) 40초에 근접",
+      "부하가 낮아 하루 공백 후 재개 강도로는 안전"
+    ],
+    "cautions": [
+      "화요 런-워크-런을 비우면 5km 28:00 쪽으로의 자극이 끊김",
+      "스쿼트·푸시업이 미기재면 챌린지 연속성·볼륨 판단이 어려움",
+      "매달리기만 반복하면 어깨·팔꿈치에 편중 부하가 쌓일 수 있음"
+    ],
+    "suggestions": [
+      "다음 홈트(수·금)에는 푸시업·캡틴체어·스쿼트 중 가능한 종목을 짧게라도 넣기",
+      "러닝은 짧은 런-워크-런부터 다시 슬롯에 넣기",
+      "스쿼트·푸시업을 했으면 횟수만 남겨 두면 이후 리뷰가 정확해짐",
+      "스트레칭은 별도 DB 없이 생활 습관으로 유지",
+      "체중이 있으면 측정일만 남겨 두면 이후 리뷰가 정확해짐"
+    ],
+    "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 5km 연속·28:00과는 별개 자극(매달리기). 8/17 하루 공백은 짧음. 마일스톤 진척은 아직 없음.",
+    "vsRoutine": "routine-v3 화요 run_walk_run — off_plan. 러닝 대신 매달리기만. 홈트 3종·실패 기준과도 불일치."
+  },
+  "reviewedAt": "2026-08-19T15:10:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
