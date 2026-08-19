@@ -1,0 +1,75 @@
+{
+  "date": "2026-08-18",
+  "workoutIds": [
+    "2026-08-18T12:00"
+  ],
+  "goalId": "goal-flexible-functional-v1",
+  "routineId": "routine-v3",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25",
+    "lastKnownBmi": 26.2
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
+    "goalEffectiveFrom": "2026-07-25",
+    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
+    "routineEffectiveFrom": "2026-08-04",
+    "planned": "run_walk_run",
+    "plannedLabel": "10분 달리기 + 10분 걷기 + 10분 달리기",
+    "actualSummary": "home_training (스쿼트 30 · 푸쉬업 15 · 매달리기 39초)",
+    "adherence": "off_plan",
+    "daysSinceLastWorkout": 2,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-17",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "8/16 이후 하루 공백. 계획상 월요 홈트 미이행"
+      },
+      {
+        "date": "2026-08-14",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "8/15 복귀 전 공백 구간"
+      }
+    ],
+    "historyNote": "8/15·8/16 주말 홈트 챌린지 이후 8/17 미수행. 이날은 2일 공백 뒤 챌린지 홈트로 복귀. 시각은 미기재(12:00 자리표시)."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "squatReps": 30,
+    "pushUpReps": 15,
+    "hangSec": 39
+  },
+  "review": {
+    "headline": "2일 공백 후 챌린지 홈트 복귀 — 화요 런-워크-런 대신 스쿼트 30 · 푸쉬업 15 · 매달리기 39초 (off_plan)",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v3입니다. 화요일 계획은 run_walk_run인데, 실제는 챌린지 홈트 — 스쿼트 30회 · 푸쉬업 15회 · 매달리기 39초 — 이라 off_plan입니다. 직전 수행은 8/16 홈트(스쿼트 20 · 푸쉬업 10 · 매달리기 40초)로, daysSinceLastWorkout=2일입니다. 8/17 월요 홈트 슬롯은 기록 없이 지나갔고, 이날 복귀 볼륨은 8/16 대비 스쿼트·푸쉬업이 각각 1.5배, 매달리기는 39초로 소폭 조정입니다. 루틴 v3 홈트 3종·실패 기준과는 불완전 일치(캡틴체어 대신 매달리기, 회수 기준). 체중은 미기록(직전 7/25 78.5kg·BMI≈26.2). 기능성 본게임(5km 연속·28:00)은 아직 러닝 데이에서 측정할 단계가 아닙니다.",
+    "highlights": [
+      "8/17 공백 다음 챌린지 홈트를 이어감",
+      "스쿼트·푸쉬업 볼륨이 8/16(20/10) 대비 30/15로 증가",
+      "매달리기 39초 — 전날 40초와 거의 동일 수준 유지"
+    ],
+    "cautions": [
+      "화요 런-워크-런 슬롯을 건너뛰어 기능성 러닝 자극은 아직 부족",
+      "2일 공백 직후 볼륨 증가 — 다음 세션에서 무릎·어깨 컨디션 확인",
+      "체중·세션 시각·심박은 미기록"
+    ],
+    "suggestions": [
+      "챌린지 홈트는 수·금 슬롯에 맞춰 이어가되, 실패 전까지 여유를 두고 중단",
+      "러닝은 짧은 런-워크-런(화요 슬롯)부터 다시 넣기",
+      "스트레칭은 별도 DB 없이 생활 습관으로 유지",
+      "체중이 있으면 측정일만 남겨 두면 이후 리뷰가 정확해짐"
+    ],
+    "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 5km 연속·28:00과는 별개 자극. no_long_layoff 기준으로 2일 공백 후 복귀. 마일스톤 진척은 아직 없음.",
+    "vsRoutine": "routine-v3 화요 run_walk_run — off_plan. 홈트 내용도 계획 3종·실패 기준과 불완전 일치."
+  },
+  "reviewedAt": "2026-08-19T15:05:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
