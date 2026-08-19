@@ -1,0 +1,74 @@
+{
+  "date": "2026-08-19",
+  "workoutIds": [
+    "2026-08-19T23:26"
+  ],
+  "goalId": "goal-flexible-functional-v1",
+  "routineId": "routine-v3",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25",
+    "lastKnownBmi": 26.2
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
+    "goalEffectiveFrom": "2026-07-25",
+    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
+    "routineEffectiveFrom": "2026-08-04",
+    "planned": "home_training",
+    "plannedLabel": "홈트",
+    "actualSummary": "home_training (매달리기 챌린지 40초 · 운동 칼로리 74 kcal · 평균 심박수 163 bpm · 최대 심박수 190 bpm)",
+    "adherence": "partial",
+    "daysSinceLastWorkout": 1,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-17",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "이틀 연속 챌린지 시작 전 마지막 무기록일"
+      }
+    ],
+    "historyNote": "8/18 매달리기 챌린지 39초에 이어 8/19에는 40초를 수행해 이틀 연속 기록. 삼성 헬스 기타 운동의 시작 시각·칼로리·심박을 반영했으며, 사용자 요청에 따라 총 시간은 기록에서 제외."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "hangSec": 40,
+    "exerciseCaloriesKcal": 74,
+    "totalCaloriesKcal": 74,
+    "avgHeartRateBpm": 163,
+    "maxHeartRateBpm": 190
+  },
+  "review": {
+    "headline": "매달리기 이틀 연속 39→40초 — 수요 홈트 슬롯을 짧게나마 이어 감",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’이고 당일 루틴은 v3입니다. 수요일은 홈트 계획일이며, 매달리기 챌린지 40초와 삼성 헬스 기타 운동 기록을 남겨 운동일 자체는 맞췄지만 계획된 푸시업·캡틴체어·스쿼트 3종은 확인되지 않아 partial입니다. 전날 39초에서 1초 늘었고 daysSinceLastWorkout=1일로 이틀 연속 챌린지를 이어 갔습니다. 운동 칼로리는 74kcal, 평균 심박수는 163bpm, 최대 심박수는 190bpm입니다. 33세의 단순 추정 최대심박수 187bpm과 비교하면 평균은 약 87%이고 최대값은 추정치를 조금 넘으므로 강한 심박 반응으로 보이지만, 추정식의 개인차와 손목 센서 오차가 있습니다. 총 시간은 요청에 따라 제외했으므로 심박이 높게 유지된 기간과 누적 부하는 판단하지 않습니다. 체중은 미기록이며 직전 측정은 7/25 78.5kg(BMI≈26.2)입니다.",
+    "highlights": [
+      "매달리기 챌린지를 이틀 연속 수행",
+      "전날 39초에서 40초로 1초 증가",
+      "수요일 홈트 계획일에 운동 기록을 남김",
+      "운동 칼로리 74kcal · 평균 심박수 163bpm · 최대 심박수 190bpm"
+    ],
+    "cautions": [
+      "평균 163bpm·최대 190bpm은 높은 편이지만, 총 시간을 제외해 고강도 구간의 지속 시간은 알 수 없음",
+      "손목 심박 센서는 매달리기처럼 손목에 힘이 많이 들어가는 동작에서 오차가 생길 수 있음",
+      "이틀 연속 매달리기 후 손가락·팔꿈치·어깨에 통증이나 저림이 있으면 다음 기록 도전은 쉬기",
+      "계획된 홈트 3종 수행 여부와 체중은 미기록"
+    ],
+    "suggestions": [
+      "다음 매달리기는 40초 초과 자체보다 어깨를 귀에서 떼고 흔들림 없이 유지하는 자세를 우선",
+      "그립과 어깨가 회복된 뒤 다시 도전하고, 매일 최고기록을 강제하지 않기",
+      "다음 홈트 슬롯에는 푸시업·캡틴체어·스쿼트 중 무리 없는 종목을 함께 수행",
+      "러닝 목표를 위해 다음 가능한 러닝 날에는 짧은 런-워크-런부터 재개",
+      "스트레칭은 별도 DB 없이 생활 습관으로 유지"
+    ],
+    "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 매달리기 40초로 악력·상체 지지력 자극을 이틀 연속 이어 갔으나, 5km 연속·28:00 마일스톤의 직접 진척은 없음.",
+    "vsRoutine": "routine-v3 수요 홈트 계획일에 운동해 요일은 맞았지만, 계획된 푸시업·캡틴체어·스쿼트 대신 매달리기 챌린지만 확인되어 partial."
+  },
+  "reviewedAt": "2026-08-20T00:01:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}

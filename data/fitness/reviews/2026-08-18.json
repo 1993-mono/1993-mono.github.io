@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-18",
+  "workoutIds": [
+    "2026-08-18T12:00"
+  ],
+  "goalId": "goal-flexible-functional-v1",
+  "routineId": "routine-v3",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25",
+    "lastKnownBmi": 26.2
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
+    "goalEffectiveFrom": "2026-07-25",
+    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
+    "routineEffectiveFrom": "2026-08-04",
+    "planned": "run_walk_run",
+    "plannedLabel": "10분 달리기 + 10분 걷기 + 10분 달리기",
+    "actualSummary": "home_training (매달리기 챌린지 39초)",
+    "adherence": "off_plan",
+    "daysSinceLastWorkout": 2,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-17",
+        "status": "rest_unlogged",
+        "plannedLabel": "홈트",
+        "note": "8/16 수행 다음 날. 계획상 월요 홈트 기록 없음"
+      }
+    ],
+    "historyNote": "8/15·8/16 저볼륨 홈트 후 8/17은 수행 기록이 없고, 8/18 매달리기 챌린지 39초로 다시 수행. 세션 시각은 미기재(12:00 자리표시)."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "hangSec": 39
+  },
+  "review": {
+    "headline": "하루 공백 뒤 매달리기 39초 — 화요 러닝 대신 챌린지를 수행",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’이고 당일 루틴은 v3입니다. 화요일 계획은 10분 달리기 + 10분 걷기 + 10분 달리기였지만 실제 수행은 매달리기 챌린지 39초라 off_plan입니다. 직전 운동은 8/16 홈트로 daysSinceLastWorkout=2일이며, 8/17 월요 홈트는 기록이 없습니다. 매달리기는 악력과 상체 지지력을 이어 가는 짧은 자극이지만 5km 연속·28:00 목표를 위한 러닝 자극을 대신하지는 못합니다. 체중은 미기록이며 직전 측정은 7/25 78.5kg(BMI≈26.2)입니다.",
+    "highlights": [
+      "매달리기 챌린지 39초 수행",
+      "8/16 이후 이틀 만에 운동 기록을 다시 남김",
+      "짧은 수행으로 운동 습관을 이어 감"
+    ],
+    "cautions": [
+      "화요 런-워크-런은 수행하지 않아 기능성 러닝 목표와의 직접적인 진척은 없음",
+      "어깨가 들리거나 손가락이 풀리는 등 자세가 무너지면 기록을 늘리기보다 중단",
+      "체중·심박·세션 시각은 미기록"
+    ],
+    "suggestions": [
+      "매달리기는 초 단위 기록보다 어깨를 귀에서 떼고 몸통을 안정적으로 유지하는 자세를 우선",
+      "다음 수요 홈트 슬롯에는 가능하면 푸시업·캡틴체어·스쿼트 중 무리 없는 종목을 함께 수행",
+      "러닝은 다음 가능한 날에 짧은 런-워크-런부터 재개",
+      "스트레칭은 별도 DB 없이 생활 습관으로 유지"
+    ],
+    "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 악력·상체 지지력 자극은 있었으나 5km 연속·28:00 마일스톤의 직접 진척은 없음.",
+    "vsRoutine": "routine-v3 화요 런-워크-런 대신 매달리기 챌린지를 수행해 off_plan. 전날인 월요일 홈트도 기록이 없어 계획상 이틀 연속 이탈."
+  },
+  "reviewedAt": "2026-08-20T00:01:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
