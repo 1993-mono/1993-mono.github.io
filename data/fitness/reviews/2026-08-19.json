@@ -1,0 +1,96 @@
+{
+  "date": "2026-08-19",
+  "workoutIds": [
+    "2026-08-19T23:26"
+  ],
+  "goalId": "goal-flexible-functional-v2",
+  "routineId": "routine-v4",
+  "bodyWeightKg": null,
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": null,
+    "lastKnownWeightKg": 78.5,
+    "lastKnownWeightDate": "2026-07-25",
+    "lastKnownBmi": 26.2
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00 + 아내와 100일 챌린지(스쿼트 100·푸시업 50 한 번에)",
+    "goalEffectiveFrom": "2026-08-15",
+    "routineSummary": "v4 — 매일 부부 챌린지 3종(스쿼트·푸시업·매달리기) / 화 런-워크-런·목 연속 30분·토일 휴식 또는 풋살은 그 위에 유지",
+    "routineEffectiveFrom": "2026-08-15",
+    "planned": "home_training",
+    "plannedLabel": "100일 챌린지 3종 (+ 선택: 캡틴체어)",
+    "actualSummary": "home_training (부부 챌린지 5일차 — 매달리기 본인 40초 · 아내 39초, 삼성헬스 기타 운동 05:52 · 74kcal · 평균심박 163 · 최대 190)",
+    "adherence": "partial",
+    "daysSinceLastWorkout": 1,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-17",
+        "status": "rest_unlogged",
+        "plannedLabel": "100일 챌린지 3종 (+ 선택: 캡틴체어)",
+        "note": "챌린지 3일차 미기록 — 8/18·8/19 이틀 연속 재개 직전의 하루 공백"
+      }
+    ],
+    "historyNote": "어제(8/18) 챌린지 4일차에 이어 오늘 5일차. 삼성헬스 ‘기타 운동’ 23:26 시작. 표시 시간 05:52만 수행 시간으로 사용(총 시간 31:59는 미사용). 스쿼트·푸시업 횟수는 미보고."
+  },
+  "challengeContext": {
+    "challengeId": "challenge-couple-100d",
+    "day": 5,
+    "totalDays": 100,
+    "stage": 1,
+    "stageTargets": {
+      "squatReps": 10,
+      "pushupReps": 5,
+      "hang": "max 1회"
+    },
+    "result": {
+      "squatReps": null,
+      "pushupReps": null,
+      "hangMaxSec": 40,
+      "partnerHangMaxSec": 39
+    },
+    "finalTargets": {
+      "squatReps": 100,
+      "pushupReps": 50,
+      "hang": "max 갱신"
+    }
+  },
+  "totals": {
+    "sessionCount": 1,
+    "durationSec": 352,
+    "caloriesKcal": 74,
+    "avgHeartRateBpm": 163,
+    "maxHeartRateBpm": 190,
+    "hangSec": 40,
+    "partnerHangSec": 39
+  },
+  "review": {
+    "headline": "챌린지 5일차 연속 — 매달리기 40초(아내 39초), 짧은 고심박 세션, 3종 횟수는 미완 확인 (partial)",
+    "body": "유효 목표는 v2, 당일 루틴은 v4입니다. 수요일 계획은 챌린지 3종(+ 선택 캡틴체어)인데, 실제는 삼성헬스 기타 운동 23:26 시작 · 표시 시간 05:52(352초) · 74kcal와 매달리기 본인 40초 · 아내 39초가 확인됐습니다. 총 시간 31:59는 요청대로 쓰지 않았습니다. 스쿼트·푸시업 횟수가 없어 1단계 목표(10·5) 달성 여부는 비어 있고, 캡틴체어도 미언급이라 partial입니다. 직전 수행은 8/18, daysSinceLastWorkout=1일(8/17 하루 공백 뒤 어제·오늘 이틀 연속). 평균 심박 163bpm은 추정 최대심박(220−33≈187)의 약 87%, 최대 190bpm은 추정 최대를 소폭 넘습니다. 5분대 세션치고 심박이 높은 편이라 강도는 있었으나, 손목 센서 오차 여지는 남습니다. 체중은 미기록(직전 7/25 78.5kg·BMI≈26.2). 기능성 러닝(5km 28:00)은 수요 슬롯과 무관합니다.",
+    "highlights": [
+      "어제에 이어 이틀 연속 챌린지 (4일차→5일차)",
+      "매달리기 본인 40초 — 8/16 기록과 동률, 아내 39초",
+      "삼성헬스 숫자(05:52 · 74kcal · 평균 163 · 최대 190)가 남아 부하를 숫자로 볼 수 있음"
+    ],
+    "cautions": [
+      "최대 190bpm은 추정 최대(≈187) 근처·초과 — 짧은 세션이라도 손목 센서 오차와 회복을 같이 보기",
+      "총 시간 31:59를 보면 일시정지가 길었을 수 있음. 수행 시간은 05:52만 기준으로 둠",
+      "스쿼트·푸시업 미기재가 이틀 연속이면 단계 목표 진척을 추적할 수 없음",
+      "늦은 밤(23:26) 고심박은 수면에 남을 수 있음"
+    ],
+    "suggestions": [
+      "다음부터는 챌린지 3종 횟수(스쿼트·푸시업)를 매달리기와 함께 남겨 1단계 10·5 달성 여부를 닫기",
+      "매달리기는 40초대가 반복되고 있으니 매일 max보다 그립·팔꿈치가 괜찮으면 유지",
+      "목요일은 연속 30분 러닝 슬롯 — 챌린지를 먼저 채우고, 러닝은 쉬운 페이스로만",
+      "스트레칭은 별도 DB 없이 생활 습관으로 유지",
+      "체중이 있으면 측정일만 남겨 두면 이후 리뷰가 정확해짐"
+    ],
+    "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성-근력: 매달리기 40초는 baseline 20초를 유지·동률. 스쿼트·푸시업은 미기재. 기능성-러닝: 이날 슬롯과 무관, 진척 없음.",
+    "vsRoutine": "routine-v4 수요 챌린지 3종 — partial. 매달리기·세션 메트릭은 있으나 스쿼트·푸시업 횟수와 선택 캡틴체어는 확인 불가."
+  },
+  "reviewedAt": "2026-08-19T23:40:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
