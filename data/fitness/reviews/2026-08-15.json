@@ -4,7 +4,7 @@
     "2026-08-15T12:00"
   ],
   "goalId": "goal-flexible-functional-v1",
-  "routineId": "routine-v3",
+  "routineId": "routine-v4",
   "bodyWeightKg": null,
   "profileSnapshot": {
     "heightCm": 173,
@@ -18,12 +18,12 @@
   "planContext": {
     "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
     "goalEffectiveFrom": "2026-07-25",
-    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
-    "routineEffectiveFrom": "2026-08-04",
-    "planned": "rest_or_futsal",
-    "plannedLabel": "완전 휴식 또는 풋살 2시간",
+    "routineSummary": "v4 — 매일 부부 챌린지 홈트(푸쉬업 +10/스쿼트 +5/매달리기 MAX) / 토일 휴식 또는 풋살 2시간(풋살 날 홈트 X) / 런닝 보류",
+    "routineEffectiveFrom": "2026-08-15",
+    "planned": "home_training_challenge",
+    "plannedLabel": "챌린지 홈트",
     "actualSummary": "home_training (스쿼트 10 · 푸쉬업 5 · 매달리기 20초)",
-    "adherence": "off_plan",
+    "adherence": "aligned",
     "daysSinceLastWorkout": 21,
     "nearbyRestDays": [
       {
@@ -54,8 +54,8 @@
     "hangSec": 20
   },
   "review": {
-    "headline": "21일 공백 후 아주 가벼운 홈트로 복귀 — 토요 풋살 슬롯 대신 저볼륨 (off_plan), 복귀 강도는 적절",
-    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v3입니다. 토요일 계획은 rest_or_futsal(토·일 중 하루 완전 휴식, 하루 풋살 약 2시간)인데, 실제는 홈트 요약 — 스쿼트 10회 · 푸쉬업 5회 · 매달리기 20초 — 이라 off_plan입니다. 직전 수행은 7/25 풋살(약 2시간)로, daysSinceLastWorkout=21일입니다. 공백이 긴 만큼 풋살 2시간이나 실패 기준 홈트로 바로 들어가기보다, 볼륨을 이 정도로 낮춰 몸을 다시 깨우는 편이 맞습니다. 루틴 v3 홈트는 월·수·금 푸시업(실패까지)·캡틴체어 3·스쿼트 3인데, 이날은 요일도 종목도 볼륨도 계획과 다릅니다(캡틴체어 대신 매달리기, 실패 기준 아님). 체중은 미기록(직전 7/25 78.5kg·BMI≈26.2). 기능성 본게임(5km 연속·28:00)은 아직 러닝 데이에서 측정할 단계가 아닙니다.",
+    "headline": "21일 공백 후 부부 챌린지 홈트 시작 — 스쿼트 10 · 푸쉬업 5 · 매달리기 20초 (aligned), 복귀 강도는 적절",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v4(부부 챌린지 홈트)입니다. 토요일은 주말 휴식 날로 챌린지 홈트가 가능하며, 실제 — 스쿼트 10회 · 푸쉬업 5회 · 매달리기 20초 — 로 aligned입니다. 직전 수행은 7/25 풋살(약 2시간)로, daysSinceLastWorkout=21일입니다. 공백이 긴 만큼 풋살 2시간이나 높은 볼륨으로 바로 들어가기보다, 이 정도로 낮춰 몸을 다시 깨우는 편이 맞습니다. v4 챌린지 규칙(+10/+5/MAX)의 시작점으로 적절합니다. 런닝은 v4에서 당분간 보류. 체중은 미기록(직전 7/25 78.5kg·BMI≈26.2).",
     "highlights": [
       "21일 미수행 공백을 끊고 다시 움직인 날",
       "복귀 볼륨이 매우 낮음(스쿼트 10 · 푸쉬업 5 · 매달리기 20초) — 공백 후 강도 선택은 적절",
@@ -74,7 +74,7 @@
       "체중이 있으면 측정일만 남겨 두면 이후 리뷰가 정확해짐"
     ],
     "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 5km 연속·28:00과는 별개 자극. no_long_layoff 원칙 기준으로는 21일 공백이 길었고, 이날 세션은 그 공백을 끊는 복귀에 해당. 마일스톤 진척은 아직 없음.",
-    "vsRoutine": "routine-v3 토요 rest_or_futsal — off_plan. 풋살 대신 저볼륨 홈트. 홈트 내용도 계획 3종·실패 기준과 불완전 일치."
+    "vsRoutine": "routine-v4 토요 home_training_challenge(주말 휴식 날) — aligned. v4 챌린지 시작일."
   },
   "reviewedAt": "2026-08-18T11:40:00+09:00",
   "reviewer": "ai",

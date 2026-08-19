@@ -4,7 +4,7 @@
     "2026-08-16T12:00"
   ],
   "goalId": "goal-flexible-functional-v1",
-  "routineId": "routine-v3",
+  "routineId": "routine-v4",
   "bodyWeightKg": null,
   "profileSnapshot": {
     "heightCm": 173,
@@ -18,12 +18,12 @@
   "planContext": {
     "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
     "goalEffectiveFrom": "2026-07-25",
-    "routineSummary": "v3 — 월수금 홈트(푸시업·캡틴체어·스쿼트) / 화 런-워크-런 / 목 연속 30분 / 토일 휴식 또는 풋살 2시간",
-    "routineEffectiveFrom": "2026-08-04",
-    "planned": "rest_or_futsal",
-    "plannedLabel": "완전 휴식 또는 풋살 2시간",
+    "routineSummary": "v4 — 매일 부부 챌린지 홈트(푸쉬업 +10/스쿼트 +5/매달리기 MAX) / 토일 휴식 또는 풋살 2시간(풋살 날 홈트 X) / 런닝 보류",
+    "routineEffectiveFrom": "2026-08-15",
+    "planned": "home_training_challenge",
+    "plannedLabel": "챌린지 홈트",
     "actualSummary": "home_training (스쿼트 20 · 푸쉬업 10 · 매달리기 40초)",
-    "adherence": "off_plan",
+    "adherence": "aligned",
     "daysSinceLastWorkout": 1,
     "nearbyRestDays": [
       {
@@ -54,8 +54,8 @@
     "hangSec": 40
   },
   "review": {
-    "headline": "복귀 이틀째 — 전날 대비 볼륨 약 2배, 일요 풋살 슬롯 대신 홈트 (off_plan), 증가폭은 아직 낮음",
-    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v3입니다. 일요일 계획은 rest_or_futsal인데, 실제는 홈트 — 스쿼트 20회 · 푸쉬업 10회 · 매달리기 40초 — 이라 off_plan입니다. 직전 수행은 8/15 홈트(스쿼트 10 · 푸쉬업 5 · 매달리기 20초)로, daysSinceLastWorkout=1일입니다. 21일 공백을 끊은 다음 날이라 실패 기준 세트나 풋살로 올리기보다, 전날의 약 2배(여전히 저볼륨)로 늘린 선택은 무난합니다. 다만 토·일 모두 홈트라 주말 세트(하루 휴식 + 하루 풋살 2시간)는 이틀 연속 이탈입니다. 루틴 v3 홈트 3종·실패 기준과도 불완전 일치(캡틴체어 대신 매달리기). 체중은 미기록(직전 7/25 78.5kg·BMI≈26.2). 기능성 본게임(5km 연속·28:00)은 아직 러닝 데이에서 측정할 단계가 아닙니다.",
+    "headline": "챌린지 홈트 이틀째 — 전날 대비 +5/+10 규칙에 맞게 증가 (aligned)",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’(유연성 고정·스트레칭 지속, 기능성 5km 28:00)이고, 당일 루틴은 v4(부부 챌린지 홈트)입니다. 일요일은 주말 휴식 날로 챌린지 홈트가 가능하며, 실제 — 스쿼트 20회 · 푸쉬업 10회 · 매달리기 40초 — 로 aligned입니다. 직전 수행은 8/15 홈트(스쿼트 10 · 푸쉬업 5 · 매달리기 20초)로, daysSinceLastWorkout=1일입니다. +5/+10 규칙에 맞게 전날 대비 볼륨이 증가했습니다. 런닝은 v4에서 당분간 보류. 체중은 미기록(직전 7/25 78.5kg·BMI≈26.2).",
     "highlights": [
       "전날 복귀 세션 다음 날도 수행을 이어감 (daysSinceLastWorkout=1)",
       "볼륨이 전날의 약 2배(10/5/20초 → 20/10/40초)이지만 절대량은 여전히 낮음",
@@ -74,7 +74,7 @@
       "체중이 있으면 측정일만 남겨 두면 이후 리뷰가 정확해짐"
     ],
     "vsGoal": "유연성: 스트레칭 수행은 미기재. 기능성: 5km 연속·28:00과는 별개 자극. 긴 공백은 전날(8/15)에 이미 끊겼고, 이날은 연속 수행의 둘째 날. 마일스톤 진척은 아직 없음.",
-    "vsRoutine": "routine-v3 일요 rest_or_futsal — off_plan. 토(8/15)·일 모두 홈트라 주말 휴식/풋살 쌍과도 불일치. 홈트 내용도 계획 3종·실패 기준과 불완전 일치."
+    "vsRoutine": "routine-v4 일요 home_training_challenge(주말 휴식 날) — aligned."
   },
   "reviewedAt": "2026-08-18T11:40:00+09:00",
   "reviewer": "ai",
