@@ -1,0 +1,77 @@
+{
+  "date": "2026-08-30",
+  "workoutIds": [
+    "2026-08-30T21:00"
+  ],
+  "goalId": "goal-flexible-functional-v1",
+  "routineId": "routine-v4",
+  "bodyWeightKg": 77.5,
+  "weightContext": "풋살 후 샤워 뒤 측정",
+  "profileSnapshot": {
+    "heightCm": 173,
+    "birthYear": 1993,
+    "ageYearsApprox": 33,
+    "bmi": 25.9
+  },
+  "planContext": {
+    "goalSummary": "유연하고 기능성 좋은 몸 — 유연성(고정·스트레칭 지속) + 기능성 5km 28:00",
+    "goalEffectiveFrom": "2026-07-25",
+    "routineSummary": "v4 — 매일 부부 챌린지 홈트(스쿼트 +10/100 · 푸쉬업 +5/50 · 매달리기 MAX) / 토일 휴식 또는 풋살 2시간(풋살 날 홈트 X) / 런닝 보류",
+    "routineEffectiveFrom": "2026-08-15",
+    "planned": "rest_or_futsal",
+    "plannedLabel": "완전 휴식 또는 풋살 2시간",
+    "actualSummary": "futsal ~2h (21:00–23:00) · 체중 77.5kg",
+    "adherence": "aligned",
+    "daysSinceLastWorkout": 7,
+    "nearbyRestDays": [
+      {
+        "date": "2026-08-24",
+        "status": "rest_unlogged",
+        "plannedLabel": "챌린지 홈트",
+        "note": "8/23 이후 공백 시작 — 월요 챌린지 홈트 미이행"
+      },
+      {
+        "date": "2026-08-28",
+        "status": "rest_unlogged",
+        "plannedLabel": "챌린지 홈트",
+        "note": "금요 챌린지 홈트 미이행 — 주말 직전"
+      },
+      {
+        "date": "2026-08-29",
+        "status": "rest_unlogged",
+        "plannedLabel": "완전 휴식 또는 풋살 2시간",
+        "note": "토요 무기록 — 일요 풋살과 짝이면 주말 휴식일로 해석"
+      }
+    ],
+    "historyNote": "직전 수행은 8/23 풋살(1:58·avg186·max212·1729kcal·체중 77.5). 8/24–28 챌린지 홈트 전부 미기록. 기기 기록은 시도했으나 실패해 심박·칼로리 없음. 체중 77.5kg는 풋살 후 샤워 뒤 측정."
+  },
+  "totals": {
+    "sessionCount": 1,
+    "durationSec": 7200
+  },
+  "review": {
+    "headline": "일요 풋살 ~2시간 + 샤워 후 체중 77.5 — 주말 세트 정렬, 주중 챌린지는 일주일 공백",
+    "body": "유효 목표는 ‘유연하고 기능성 좋은 몸’이고, 당일 루틴은 v4입니다. 일요일 rest_or_futsal에 사용자 보고 기준 풋살 약 2시간(21:00–23:00)으로, 토(8/29) 무기록을 휴식으로 읽으면 주말 세트와 aligned입니다. v4는 풋살 날 홈트를 생략합니다. 직전 수행은 8/23 풋살(daysSinceLastWorkout=7)이고, 8/24–28 챌린지 홈트는 전부 미기록입니다. 기기 기록을 남기려 했으나 실패해 심박·칼로리는 없습니다. 같은 주말 슬롯의 직전 세션(8/23)과 시간대·시간량이 비슷합니다. 체중은 77.5kg(BMI≈25.9, 키 173)로 8/23과 같고, 풋살 후 샤워 뒤 측정이라 아침 공복 체중과는 조건이 다릅니다. 기능성 본게임(5km 28:00)은 v4에서 런닝이 보류라 당장은 과제가 아닙니다.",
+    "highlights": [
+      "주말 rest_or_futsal에 풋살 ~2시간으로 정렬",
+      "체중 77.5kg 재측정 (8/23과 동일, BMI≈25.9)",
+      "직전 일요 풋살(8/23)과 비슷한 저녁 슬롯·시간량"
+    ],
+    "cautions": [
+      "8/24–28 챌린지 홈트 전부 비어 있음 — 주말만 고강도인 패턴이 반복",
+      "기기 기록 실패로 심박·칼로리 비교 불가",
+      "체중은 풋살·샤워 후 측정 — 하루 변동·수분 영향 큼"
+    ],
+    "suggestions": [
+      "다음 주는 월~금 챌린지 홈트부터 리듬을 다시 맞추기 (직전 홈트 8/19 기준이면 스쿼트 50 · 푸쉬업 25 · 매달리기 MAX부터)",
+      "런닝은 v4에서 보류 — 챌린지가 안정된 뒤 재개 검토",
+      "기기 기록이 안 되면 시작·종료 시각만이라도 남겨 두면 이후 리뷰가 쉬워짐",
+      "체중은 가능하면 아침 공복·같은 조건으로도 한 번씩 남겨 두기"
+    ],
+    "vsGoal": "유연성: 스트레칭 미기재. 기능성: 풋살은 5km 28:00과 별개지만 심폐·방향전환·하체 부하에는 충분. 런닝은 v4에서 보류. 체중 77.5는 8/23과 동일(식후/샤워 후 조건).",
+    "vsRoutine": "routine-v4 일요 rest_or_futsal — aligned. 풋살 날 홈트 생략. 직전 주중 월~금 챌린지는 rest_unlogged."
+  },
+  "reviewedAt": "2026-08-31T11:10:00+09:00",
+  "reviewer": "ai",
+  "disclaimer": "일반 피트니스 관점 메모이며 의료 진단이 아닙니다."
+}
