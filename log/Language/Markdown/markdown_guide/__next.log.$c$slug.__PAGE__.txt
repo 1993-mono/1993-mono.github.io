@@ -1,0 +1,454 @@
+1:"$Sreact.fragment"
+2:I[22016,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js","/_next/static/chunks/7cf7167f25f1abda.js"],""]
+8:I[61689,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js","/_next/static/chunks/7cf7167f25f1abda.js"],"default"]
+9:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+:HL["/_next/static/chunks/c0d05b1511eb13d2.css","style"]
+3:T41e4,<p>Markdown is a text-based markup language that lets you write documents with simple syntax.</p>
+<hr>
+<h1 id="heading-01-00-00">Headings</h1>
+<p>Headings are written using the <code>#</code> symbol. The number of <code>#</code> characters determines the heading size.</p>
+<pre><code class="language-markdown"># Heading 1 (largest heading)
+## Heading 2
+### Heading 3 (smallest heading)
+</code></pre>
+<h3 id="heading-01-00-01">Usage</h3>
+<h1 id="heading-02-00-00">Heading 1</h1>
+<h2 id="heading-02-01-00">Heading 2</h2>
+<h3 id="heading-02-01-01">Heading 3</h3>
+<hr>
+<h1 id="heading-03-00-00">Line Breaks</h1>
+<p>There are several ways to create line breaks in Markdown.</p>
+<h2 id="heading-03-01-00">Paragraph Break</h2>
+<p>Adding a blank line creates a new paragraph.</p>
+<pre><code class="language-markdown">This is the first paragraph.
+
+This is the second paragraph.
+</code></pre>
+<h3 id="heading-03-01-01">Usage</h3>
+<p>This is the first paragraph.</p>
+<p>This is the second paragraph.</p>
+<h2 id="heading-03-02-00">Line Break</h2>
+<p>To break a line within the same paragraph, add two spaces at the end of the line and press Enter.</p>
+<pre><code class="language-markdown">First line  
+Second line
+</code></pre>
+<h3 id="heading-03-02-01">Usage</h3>
+<p>First line<br>
+Second line</p>
+<hr>
+<h1 id="heading-04-00-00">Lists</h1>
+<h2 id="heading-04-01-00">Unordered List</h2>
+<p>Unordered lists use <code>-</code>, <code>*</code>, or <code>+</code>.</p>
+<p>To enter multiple lines within a list item:</p>
+<ol>
+<li>Add two spaces</li>
+<li>Line break</li>
+<li>Indent 4 spaces</li>
+</ol>
+<pre><code class="language-markdown">- First item  
+    This is the second line of this item.  
+    The third line is also part of the same item.
+- Second item
+
+    You can write a description across multiple lines.
+
+    Each line starts with a 4-space indent.
+- Third item
+    - Sub-item 1  
+        This is the second line of the sub-item.
+    - Sub-item 2
+</code></pre>
+<h3 id="heading-04-01-01">Usage</h3>
+<ul>
+<li>
+<p>First item<br>
+This is the second line of this item.<br>
+The third line is also part of the same item.</p>
+</li>
+<li>
+<p>Second item</p>
+<p>You can write a description across multiple lines.</p>
+<p>Each line starts with a 4-space indent.</p>
+</li>
+<li>
+<p>Third item</p>
+<ul>
+<li>Sub-item 1<br>
+This is the second line of the sub-item.</li>
+<li>Sub-item 2</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-04-02-00">Ordered List</h2>
+<p>Ordered lists use numbers followed by a period.</p>
+<p>You can also enter multiple lines within an ordered list item.</p>
+<pre><code class="language-markdown">1. First item  
+    This is the second line of this item.  
+    The third line is also part of the same item.
+2. Second item
+
+    You can write a description across multiple lines.
+
+    Each line starts with an indent of 4 or more spaces.
+3. Third item
+    1. Sub-item 1  
+        This is the second line of the sub-item.
+    2. Sub-item 2
+</code></pre>
+<h3 id="heading-04-02-01">Usage</h3>
+<ol>
+<li>
+<p>First item<br>
+This is the second line of this item.<br>
+The third line is also part of the same item.</p>
+</li>
+<li>
+<p>Second item</p>
+<p>You can write a description across multiple lines.</p>
+<p>Each line starts with an indent of 4 or more spaces.</p>
+</li>
+<li>
+<p>Third item</p>
+<ol>
+<li>Sub-item 1<br>
+This is the second line of the sub-item.</li>
+<li>Sub-item 2</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="heading-05-00-00">Checkboxes</h1>
+<p>Checkboxes are useful for creating task lists.</p>
+<p>You can also enter multiple lines within a checkbox item.</p>
+<pre><code class="language-markdown">- [ ] Task 1  
+    Detailed description of this task.  
+    You can write across multiple lines.
+- [x] Completed task
+
+    Description of the completed task.
+
+    You can add additional information across multiple lines.
+- [ ] Task 3
+    - [x] Sub-task 1  
+        Detailed description of the sub-task.
+    - [ ] Sub-task 2
+</code></pre>
+<h3 id="heading-05-00-01">Usage</h3>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled id="checkbox-1"><label for="checkbox-1"><span aria-hidden="true"></span> Task 1</label><br>
+Detailed description of this task.<br>
+You can write across multiple lines.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" checked disabled id="checkbox-2"><label for="checkbox-2"><span aria-hidden="true"></span> Completed task</label></p>
+<p>Description of the completed task.</p>
+<p>You can add additional information across multiple lines.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled id="checkbox-3"><label for="checkbox-3"><span aria-hidden="true"></span> Task 3</label></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled id="checkbox-4"><label for="checkbox-4"><span aria-hidden="true"></span> Sub-task 1</label><br>
+Detailed description of the sub-task.</li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-5"><label for="checkbox-5"><span aria-hidden="true"></span> Sub-task 2</label></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="heading-06-00-00">Emphasis</h1>
+<p>There are several ways to emphasize text.</p>
+<p>Bold text can use the <code>&#x3C;strong></code> tag, italic text can use the <code>&#x3C;em></code> tag, and strikethrough can use the <code>&#x3C;del></code> or <code>&#x3C;s></code> tag.</p>
+<p>Use <code>&#x3C;strong></code> for bold emphasis, <code>&#x3C;em></code> for italic emphasis, <code>&#x3C;del></code> to indicate deleted content, and <code>&#x3C;s></code> when you only want the strikethrough style.</p>
+<p>Symbols like <code>**</code>, <code>*</code>, and <code>~~</code> may not render in every environment, so using tags such as <code>&#x3C;strong></code>, <code>&#x3C;em></code>, <code>&#x3C;del></code>, and <code>&#x3C;s></code> is recommended.</p>
+<pre><code class="language-markdown">&#x3C;strong>bold text&#x3C;/strong> or **bold text** or __bold text__  
+&#x3C;em>italic&#x3C;/em> or *italic* or _italic_  
+&#x3C;strong>&#x3C;em>bold and italic&#x3C;/em>&#x3C;/strong> or ***bold and italic*** or ___bold and italic___  
+&#x3C;del>strikethrough&#x3C;/del> or &#x3C;s>strikethrough&#x3C;/s> or ~~strikethrough~~
+</code></pre>
+<h3 id="heading-06-00-01">Usage</h3>
+<p><strong>bold text</strong> or <strong>bold text</strong> or <strong>bold text</strong><br>
+<em>italic</em> or <em>italic</em> or <em>italic</em><br>
+<strong><em>bold and italic</em></strong> or <em><strong>bold and italic</strong></em> or <em><strong>bold and italic</strong></em><br>
+<del>strikethrough</del> or <del>strikethrough</del></p>
+<h2 id="heading-06-01-00">Mark Tag</h2>
+<p>The <code>&#x3C;mark></code> tag is an HTML tag used to highlight (emphasize) text. By default it displays with a yellow background and is useful for search results or emphasizing important sections.</p>
+<pre><code class="language-markdown">In this sentence, &#x3C;mark>this part&#x3C;/mark> is highlighted.  
+You can &#x3C;mark>highlight multiple words&#x3C;/mark>, and you can also highlight &#x3C;mark>veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery a long sentence&#x3C;/mark>.  
+You can &#x3C;mark>**combine bold text and highlighting**&#x3C;/mark>.
+</code></pre>
+<h3 id="heading-06-01-01">Usage</h3>
+<p>In this sentence, <mark>this part</mark> is highlighted.<br>
+You can <mark>highlight multiple words</mark>, and you can also highlight <mark>veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery a long sentence</mark>.<br>
+You can <mark><strong>combine bold text and highlighting</strong></mark>.</p>
+<hr>
+<h1 id="heading-07-00-00">Links and Images</h1>
+<h2 id="heading-07-01-00">Links</h2>
+<pre><code class="language-markdown">[Google](https://www.google.com)  
+[GitHub](https://github.com "GitHub homepage")
+</code></pre>
+<h3 id="heading-07-01-01">Usage</h3>
+<p><a href="https://www.google.com">Google</a><br>
+<a href="https://github.com" title="GitHub homepage">GitHub</a></p>
+<h2 id="heading-07-02-00">Images</h2>
+<pre><code class="language-markdown">![Local sample image](/images/markdown/sample.jpg)
+
+![Online sample image](https://picsum.photos/seed/markdown-guide/500/280)
+![Online sample image](https://picsum.photos/seed/markdown-guide/500/280 "Online sample image")
+</code></pre>
+<h3 id="heading-07-02-01">Usage</h3>
+<p><img src="/images/markdown/sample.jpg" alt="Local sample image"></p>
+<p><img src="https://picsum.photos/seed/markdown-guide/500/280" alt="Online sample image">
+<img src="https://picsum.photos/seed/markdown-guide/500/280" alt="Online sample image" title="Online sample image"></p>
+<hr>
+<h1 id="heading-08-00-00">Code Blocks</h1>
+<h2 id="heading-08-01-00">Inline Code</h2>
+<p>Inline code is wrapped in a single backtick (`).</p>
+<pre><code class="language-markdown">Use the `console.log()` function.
+</code></pre>
+<h3 id="heading-08-01-01">Usage</h3>
+<p>Use the <code>console.log()</code> function.</p>
+<h2 id="heading-08-02-00">Code Block</h2>
+<p>Code blocks are wrapped in three backticks (`).</p>
+<pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("World"));
+</code></pre>
+<h3 id="heading-08-02-01">Usage</h3>
+<pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet("World"));
+</code></pre>
+<hr>
+<h1 id="heading-09-00-00">Blockquotes</h1>
+<p>Blockquotes use the <code>></code> symbol.</p>
+<pre><code class="language-markdown">> This is a blockquote.  
+> You can write it across multiple lines.
+</code></pre>
+<h3 id="heading-09-00-01">Usage</h3>
+<blockquote>
+<p>This is a blockquote.<br>
+You can write it across multiple lines.</p>
+</blockquote>
+<h2 id="heading-09-01-00">Nested Blockquotes</h2>
+<pre><code class="language-markdown">> First-level blockquote  
+> Second line of first-level blockquote
+> 
+> Another p tag at first level
+> > Second-level blockquote
+> > > Third-level blockquote
+</code></pre>
+<h3 id="heading-09-01-01">Usage</h3>
+<blockquote>
+<p>First-level blockquote<br>
+Second line of first-level blockquote</p>
+<p>Another p tag at first level</p>
+<blockquote>
+<p>Second-level blockquote</p>
+<blockquote>
+<p>Third-level blockquote</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="heading-10-00-00">Tables</h1>
+<p>Tables are written using pipes (<code>|</code>) and hyphens (<code>-</code>).<br>
+A minimum of three hyphens is enough.<br>
+Using four, like indentation, makes them easier to remember.</p>
+<pre><code class="language-markdown">| Header 1 | Header 2 | Header 3 |
+|----|----|----|
+| Cell 1 | Cell 2 | Cell 3 |
+| Cell 4 | Cell 5 | Cell 6 |
+</code></pre>
+<h3 id="heading-10-00-01">Usage</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Header 1</th><th>Header 2</th><th>Header 3</th></tr></thead><tbody><tr><td>Cell 1</td><td>Cell 2</td><td>Cell 3</td></tr><tr><td>Cell 4</td><td>Cell 5</td><td>Cell 6</td></tr></tbody></table>
+<h2 id="heading-10-01-00">Aligned Tables</h2>
+<pre><code class="language-markdown">| Left align | Center align | Right align |
+|:----|:----:|----:|
+| Left | Center | Right |
+| Data 1 | Data 2 | Data 3 |
+</code></pre>
+<h3 id="heading-10-01-01">Usage</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Left align</th><th align="center">Center align</th><th align="right">Right align</th></tr></thead><tbody><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr><tr><td align="left">Data 1</td><td align="center">Data 2</td><td align="right">Data 3</td></tr></tbody></table>
+<h2 id="heading-10-02-00">Limitations of Standard Markdown Tables</h2>
+<p>Standard Markdown table syntax (pipes and hyphens) cannot express the following two features:</p>
+<ul>
+<li><strong>Cell merging (colspan / rowspan)</strong><br>
+There is no syntax for merging cells horizontally or vertically. When needed, use <code>colspan</code> and <code>rowspan</code> on an HTML <code>&#x3C;table></code>.</li>
+<li><strong>th inside tbody (row headers)</strong><br>
+Only the first row is recognized as a header. There is no syntax for separating <code>&#x3C;thead></code>/<code>&#x3C;tbody></code> or adding a row header (<code>&#x3C;th scope="row"></code>) to each data row. In these cases, you must write the HTML table directly.</li>
+</ul>
+<hr>
+<h1 id="heading-11-00-00">Horizontal Rules</h1>
+<p>Horizontal rules use <code>---</code>, <code>***</code>, or <code>___</code>.</p>
+<pre><code class="language-markdown">---
+***
+___
+</code></pre>
+<h3 id="heading-11-00-01">Usage</h3>
+<hr>
+<h1 id="heading-12-00-00">Markdown Extensions</h1>
+<p>These are extension features added to standard Markdown. Let's look at additional features supported by various Markdown parsers.</p>
+<h2 id="heading-12-01-00">Footnotes</h2>
+<p>You can add reference information using footnotes.</p>
+<pre><code class="language-markdown">This is a sentence with a footnote.[^1]
+
+[^1]: This is the footnote content.
+</code></pre>
+<h3 id="heading-12-01-01">Usage</h3>
+<p>This is a sentence with a footnote.<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="" aria-describedby="footnote-label">1</a></sup></p>
+<h2 id="heading-12-02-00">Definition Lists</h2>
+<p>Used to list terms and their definitions.</p>
+<pre><code class="language-markdown">Term 1
+: Definition 1
+
+Term 2
+: Definition 2-1
+: Definition 2-2
+</code></pre>
+<h3 id="heading-12-02-01">Usage</h3>
+<p>Term 1
+: Definition 1</p>
+<p>Term 2
+: Definition 2-1
+: Definition 2-2</p>
+<h2 id="heading-12-03-00">Fenced Code Blocks</h2>
+<p>You can specify a filename or language for code blocks.</p>
+<pre><code class="language-markdown">```javascript:src/app.js
+function hello() {
+  console.log("Hello, World!");
+}
+</code></pre>
+<pre><code>
+## Emoji
+
+Some Markdown parsers support emoji shortcuts.
+
+```markdown
+:smile: :heart: :thumbsup: :rocket:
+</code></pre>
+<h3 id="heading-12-03-01">Usage :smile: :heart: :thumbsup: :rocket:</h3>
+<h2 id="heading-12-04-00">Math</h2>
+<p>An extension feature that supports LaTeX-style math expressions.</p>
+<pre><code class="language-markdown">Inline math: $E = mc^2$
+
+Block math:
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$
+</code></pre>
+<h3 id="heading-12-04-01">Usage</h3>
+<p>Inline math: $E = mc^2$</p>
+<p>Block math:
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$</p>
+<h2 id="heading-12-05-00">Highlight</h2>
+<p>You can highlight text.</p>
+<pre><code class="language-markdown">==highlighted text==
+</code></pre>
+<h3 id="heading-12-05-01">Usage ==highlighted text==</h3>
+<hr>
+<h1 id="heading-13-00-00">GitHub Flavored Markdown (GFM)</h1>
+<p>GitHub Flavored Markdown is the extended version of Markdown used on GitHub. Let's look at the features added to standard Markdown.</p>
+<h2 id="heading-13-01-00">Autolinks</h2>
+<p>URLs and email addresses are automatically converted to links.</p>
+<pre><code class="language-markdown">https://github.com
+user@example.com
+</code></pre>
+<h3 id="heading-13-01-01">Usage</h3>
+<ul>
+<li><a href="https://github.com">https://github.com</a></li>
+<li><a href="mailto:user@example.com">user@example.com</a></li>
+</ul>
+<h2 id="heading-13-02-00">Issue and PR Links</h2>
+<p>GitHub issues and Pull Requests are automatically linked.</p>
+<pre><code class="language-markdown">See issue #123.
+Please check PR #456.
+</code></pre>
+<h3 id="heading-13-02-01">Usage</h3>
+<ul>
+<li>See issue #123.</li>
+<li>Please check PR #456.</li>
+</ul>
+<h2 id="heading-13-03-00">Strikethrough</h2>
+<p>You can add strikethrough to text.</p>
+<pre><code class="language-markdown">~~struck-through text~~
+</code></pre>
+<h3 id="heading-13-03-01">Usage <del>struck-through text</del></h3>
+<h2 id="heading-13-04-00">Emoji</h2>
+<p>On GitHub, you can use emojis directly.</p>
+<pre><code class="language-markdown">:smile: :heart: :thumbsup: :rocket: :tada:
+</code></pre>
+<h3 id="heading-13-04-01">Usage :smile: :heart: :thumbsup: :rocket: :tada:</h3>
+<h2 id="heading-13-05-00">Code Blocks in Blockquotes</h2>
+<p>You can place code blocks inside blockquotes.</p>
+<pre><code class="language-markdown">> Code example:
+> ```javascript
+> console.log("Hello");
+> ```
+</code></pre>
+<h3 id="heading-13-05-01">Usage</h3>
+<blockquote>
+<p>Code example:</p>
+<pre><code class="language-javascript">console.log("Hello");
+</code></pre>
+</blockquote>
+<hr>
+<p><strong>Note:</strong> This document was written to explain Markdown syntax, and it was actually written in Markdown!</p>
+<section data-footnotes="" class="footnotes"><h2 class="sr-only" id="heading-13-06-00">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p>This is the footnote content. <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>0:{"buildId":"njbg0maksHduPLtdgtigY","rsc":["$","$1","c",{"children":[[["$","div",null,{"className":"breadcrumb-container","children":[["$","$L2",null,{"href":"/log","className":"back-link","children":[["$","span",null,{"className":"icn-container","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","className":"icn","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]]}]}],["$","span",null,{"className":"txt","children":"Back to list"}]]}],["$","nav",null,{"className":"category-navigation","aria-label":"Breadcrumb","children":["$","ol",null,{"children":[["$","li","0",{"children":"Log"}],["$","li","1",{"children":"Language"}],["$","li","2",{"children":"Markdown"}]]}]}]]}],["$","article",null,{"className":"post-page","children":[["$","div",null,{"className":"post-header","children":[["$","h1",null,{"className":"title","children":"Markdown Guide"}],["$","p",null,{"className":"date","children":"2026-01-20"}]]}],["$","div",null,{"className":"post-body","children":[["$","div",null,{"className":"markdown-content","dangerouslySetInnerHTML":{"__html":"$3"}}],"$L4"]}]]}]],["$L5","$L6"],"$L7"]}],"loading":null,"isPartial":false}
+4:["$","$L8",null,{"items":[{"id":"heading-01-00-00","text":"Headings","depth":1},{"id":"heading-01-00-01","text":"Usage","depth":3},{"id":"heading-02-00-00","text":"Heading 1","depth":1},{"id":"heading-02-01-00","text":"Heading 2","depth":2},{"id":"heading-02-01-01","text":"Heading 3","depth":3},{"id":"heading-03-00-00","text":"Line Breaks","depth":1},{"id":"heading-03-01-00","text":"Paragraph Break","depth":2},{"id":"heading-03-01-01","text":"Usage","depth":3},{"id":"heading-03-02-00","text":"Line Break","depth":2},{"id":"heading-03-02-01","text":"Usage","depth":3},{"id":"heading-04-00-00","text":"Lists","depth":1},{"id":"heading-04-01-00","text":"Unordered List","depth":2},{"id":"heading-04-01-01","text":"Usage","depth":3},{"id":"heading-04-02-00","text":"Ordered List","depth":2},{"id":"heading-04-02-01","text":"Usage","depth":3},{"id":"heading-05-00-00","text":"Checkboxes","depth":1},{"id":"heading-05-00-01","text":"Usage","depth":3},{"id":"heading-06-00-00","text":"Emphasis","depth":1},{"id":"heading-06-00-01","text":"Usage","depth":3},{"id":"heading-06-01-00","text":"Mark Tag","depth":2},{"id":"heading-06-01-01","text":"Usage","depth":3},{"id":"heading-07-00-00","text":"Links and Images","depth":1},{"id":"heading-07-01-00","text":"Links","depth":2},{"id":"heading-07-01-01","text":"Usage","depth":3},{"id":"heading-07-02-00","text":"Images","depth":2},{"id":"heading-07-02-01","text":"Usage","depth":3},{"id":"heading-08-00-00","text":"Code Blocks","depth":1},{"id":"heading-08-01-00","text":"Inline Code","depth":2},{"id":"heading-08-01-01","text":"Usage","depth":3},{"id":"heading-08-02-00","text":"Code Block","depth":2},{"id":"heading-08-02-01","text":"Usage","depth":3},{"id":"heading-09-00-00","text":"Blockquotes","depth":1},{"id":"heading-09-00-01","text":"Usage","depth":3},{"id":"heading-09-01-00","text":"Nested Blockquotes","depth":2},{"id":"heading-09-01-01","text":"Usage","depth":3},{"id":"heading-10-00-00","text":"Tables","depth":1},{"id":"heading-10-00-01","text":"Usage","depth":3},{"id":"heading-10-01-00","text":"Aligned Tables","depth":2},{"id":"heading-10-01-01","text":"Usage","depth":3},{"id":"heading-10-02-00","text":"Limitations of Standard Markdown Tables","depth":2},{"id":"heading-11-00-00","text":"Horizontal Rules","depth":1},{"id":"heading-11-00-01","text":"Usage","depth":3},{"id":"heading-12-00-00","text":"Markdown Extensions","depth":1},{"id":"heading-12-01-00","text":"Footnotes","depth":2},{"id":"heading-12-01-01","text":"Usage","depth":3},{"id":"heading-12-02-00","text":"Definition Lists","depth":2},{"id":"heading-12-02-01","text":"Usage","depth":3},{"id":"heading-12-03-00","text":"Fenced Code Blocks","depth":2},{"id":"heading-12-03-01","text":"Usage :smile: :heart: :thumbsup: :rocket:","depth":3},{"id":"heading-12-04-00","text":"Math","depth":2},{"id":"heading-12-04-01","text":"Usage","depth":3},{"id":"heading-12-05-00","text":"Highlight","depth":2},{"id":"heading-12-05-01","text":"Usage ==highlighted text==","depth":3},{"id":"heading-13-00-00","text":"GitHub Flavored Markdown (GFM)","depth":1},{"id":"heading-13-01-00","text":"Autolinks","depth":2},{"id":"heading-13-01-01","text":"Usage","depth":3},{"id":"heading-13-02-00","text":"Issue and PR Links","depth":2},{"id":"heading-13-02-01","text":"Usage","depth":3},{"id":"heading-13-03-00","text":"Strikethrough","depth":2},{"id":"heading-13-03-01","text":"Usage struck-through text","depth":3},{"id":"heading-13-04-00","text":"Emoji","depth":2},{"id":"heading-13-04-01","text":"Usage :smile: :heart: :thumbsup: :rocket: :tada:","depth":3},{"id":"heading-13-05-00","text":"Code Blocks in Blockquotes","depth":2},{"id":"heading-13-05-01","text":"Usage","depth":3},{"id":"heading-13-06-00","text":"Footnotes","depth":2}]}]
+5:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/c0d05b1511eb13d2.css","precedence":"next"}]
+6:["$","script","script-0",{"src":"/_next/static/chunks/7cf7167f25f1abda.js","async":true}]
+7:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

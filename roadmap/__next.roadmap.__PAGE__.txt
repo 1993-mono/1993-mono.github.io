@@ -1,0 +1,67 @@
+1:"$Sreact.fragment"
+4:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+2:T103e,<h1 id="heading-01-00-00">Menu</h1>
+<h2 id="heading-01-01-00">Log</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled id="checkbox-1"><label for="checkbox-1"><span aria-hidden="true"></span> Markdown</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-2"><label for="checkbox-2"><span aria-hidden="true"></span> Javascript</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-3"><label for="checkbox-3"><span aria-hidden="true"></span> React</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-4"><label for="checkbox-4"><span aria-hidden="true"></span> Next.js</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-5"><label for="checkbox-5"><span aria-hidden="true"></span> Typescript</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-6"><label for="checkbox-6"><span aria-hidden="true"></span> React Native</label></li>
+</ul>
+<h2 id="heading-01-02-00">Portfolio</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-7"><label for="checkbox-7"><span aria-hidden="true"></span> Implement gallery layout</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-8"><label for="checkbox-8"><span aria-hidden="true"></span> Design project cards</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-9"><label for="checkbox-9"><span aria-hidden="true"></span> Add filtering (optional)</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-10"><label for="checkbox-10"><span aria-hidden="true"></span> Add first real project entry</label></li>
+</ul>
+<h2 id="heading-01-03-00">About</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-11"><label for="checkbox-11"><span aria-hidden="true"></span> Build page layout</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-12"><label for="checkbox-12"><span aria-hidden="true"></span> Add visual elements</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-13"><label for="checkbox-13"><span aria-hidden="true"></span> Write recruiter-friendly bio (English)</label></li>
+</ul>
+<h1 id="heading-02-00-00">UI</h1>
+<h2 id="heading-02-01-00">Anchors</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled id="checkbox-14"><label for="checkbox-14"><span aria-hidden="true"></span> Improve heading id scheme in markdown pipeline</label></li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-15"><label for="checkbox-15"><span aria-hidden="true"></span> Add heading anchor links in posts
+</label><ul>
+<li>Click an anchor to jump to that heading</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-02-00">Responsive</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-16"><label for="checkbox-16"><span aria-hidden="true"></span> Optimize mobile layout
+</label><ul>
+<li>Layout adjustments for small screens</li>
+<li>Fix: mobile menu should close when a nav link is clicked</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-17"><label for="checkbox-17"><span aria-hidden="true"></span> Support tablet viewport
+</label><ul>
+<li>Intermediate layout between mobile and desktop</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-03-00">Dark Mode</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-18"><label for="checkbox-18"><span aria-hidden="true"></span> Define dark mode color palette
+</label><ul>
+<li>CSS variables for theme tokens</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" disabled id="checkbox-19"><label for="checkbox-19"><span aria-hidden="true"></span> Implement dark mode toggle
+</label><ul>
+<li>Detect system preference</li>
+<li>Manual toggle button</li>
+<li>Persist user preference</li>
+</ul>
+</li>
+</ul>0:{"buildId":"njbg0maksHduPLtdgtigY","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"markdown-content","dangerouslySetInnerHTML":{"__html":"$2"}}],null,"$L3"]}],"loading":null,"isPartial":false}
+3:["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]
+6:null

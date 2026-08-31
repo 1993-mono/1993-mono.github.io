@@ -1,0 +1,977 @@
+1:"$Sreact.fragment"
+2:I[81021,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js"],"default"]
+3:I[96537,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js"],"default"]
+4:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+5:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+7:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+8:"$Sreact.suspense"
+a:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+e:I[68027,[],"default"]
+:HL["/_next/static/chunks/ea1badeba581a807.css","style"]
+:HL["/_next/static/chunks/5e984a00f47d0d77.css","style"]
+:HL["/_next/static/chunks/c0d05b1511eb13d2.css","style"]
+0:{"P":null,"b":"njbg0maksHduPLtdgtigY","c":["","log","Language","English","understanding_react_useEffectEvent",""],"q":"","i":false,"f":[[["",{"children":["log",{"children":[["slug","Language/English/understanding_react_useEffectEvent","c"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ea1badeba581a807.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3f7ef446b0b499b0.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/80510036683d7409.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/5e984a00f47d0d77.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","main",null,{"id":"log","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L6",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/c0d05b1511eb13d2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/7cf7167f25f1abda.js","async":true,"nonce":"$undefined"}]],["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$La",null,{"children":"$@b"}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$8",null,{"name":"Next.Metadata","children":"$@d"}]}]}],null]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[22016,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js","/_next/static/chunks/7cf7167f25f1abda.js"],""]
+10:Tad16,<h1 id="heading-01-00-00">Passage</h1>
+<p><a href="https://peterkellner.net/2026/01/09/understanding-react-useeffectevent-vs-useeffect/">Understanding React's useEffectEvent: A Complete Guide to Solving Stale Closures</a></p>
+<p><a href="https://handhand.tistory.com/entry/understanding-react-useeffectevent">(번역) 리액트의 useEffectEvent 이해하기: 오래된 클로저 해결을 위한 완벽 가이드</a></p>
+<hr>
+<h1 id="heading-02-00-00">Vocabulary</h1>
+<h2 id="heading-02-01-00">stale / stale closure</h2>
+<p><strong>Stale</strong> means no longer fresh, current, or up to date. In React, a <strong>stale closure</strong> appears when a callback still reads values from an older render. The function is still running correctly from JavaScript's point of view, but the data it sees is outdated, which creates subtle bugs.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"The interval callback had a stale closure, so it kept logging the initial count."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>outdated</strong>: synonym — no longer fresh, current, or up to date</li>
+<li><strong>obsolete</strong>: synonym — no longer used or produced</li>
+<li><strong>old</strong>: synonym — from an earlier time; not new</li>
+<li><strong>fresh</strong>: antonym — newly made or obtained; current</li>
+<li><strong>up-to-date</strong>: antonym — including the latest information</li>
+<li><strong>current</strong>: antonym — happening or existing now</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>stale closure</strong>: callback still reads values from an older render</li>
+<li><strong>stale state</strong>: component state that a handler no longer reflects</li>
+<li><strong>stale data</strong>: cached or fetched data that is no longer current</li>
+<li><strong>stale value</strong>: any value in scope that has since been updated</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-02-00">closure</h2>
+<p>A <strong>closure</strong> is a function together with the variables it captured from its surrounding scope at creation time. This is a core JavaScript feature and very useful for encapsulation. In UI code, however, the same feature can become tricky when a long-lived callback keeps old state.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"This handler is a closure over <code>roomId</code> and <code>isMuted</code>."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>lexical scope</strong>: related — the region of code where a name is visible</li>
+<li><strong>captured variables</strong>: related — variables enclosed by a function closure</li>
+<li><strong>global state</strong>: contrast — state shared across the entire application</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>create a closure</strong>: form a function that captures surrounding variables</li>
+<li><strong>closure over state</strong>: function that captures component state at creation time</li>
+<li><strong>closure scope</strong>: the lexical scope a closure can still access</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-03-00">TL;DR</h2>
+<p><strong>TL;DR</strong> stands for <em>"Too Long; Didn't Read."</em> It introduces a short summary for readers who want the key conclusion first. In technical writing, TL;DR usually gives the practical takeaway in one or two sentences.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"TL;DR: Use <code>useEffectEvent</code> when you need the latest values without retriggering the effect."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>summary</strong>: near-synonym — a brief statement of the main points</li>
+<li><strong>gist</strong>: near-synonym — the substance or essence of a matter</li>
+<li><strong>quick takeaway</strong>: near-synonym — the key conclusion in short form</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>TL;DR section</strong>: a short summary block placed near the top</li>
+<li><strong>TL;DR summary</strong>: the condensed version of a longer explanation</li>
+<li><strong>TL;DR version</strong>: a shortened form of the full article or guide</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-04-00">archived</h2>
+<p><strong>Archived</strong> means kept for record or reference, but no longer active in the main workflow. Something archived is not deleted; it is simply moved out of the "current" area. In software tools, archived items are often read-only or less visible.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"The old repository is archived, so issues are closed and development is paused."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>stored</strong>: synonym — kept in a place for later use</li>
+<li><strong>preserved</strong>: synonym — kept in its existing state</li>
+<li><strong>retained</strong>: synonym — continued to have or hold</li>
+<li><strong>active</strong>: antonym — currently in use or operation</li>
+<li><strong>live</strong>: antonym — currently running or available</li>
+<li><strong>current</strong>: antonym — belonging to the present time</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>archived project</strong>: a project kept for reference but no longer maintained</li>
+<li><strong>archived issue</strong>: a closed issue kept in the record only</li>
+<li><strong>archived document</strong>: a document moved out of the active workflow</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-05-00">workaround</h2>
+<p>A <strong>workaround</strong> is an alternative path used to avoid a problem without truly removing its root cause. It is often useful under time pressure, but it can increase complexity if it stays too long. Good teams usually treat workarounds as temporary and revisit them later.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Using <code>useRef</code> here is a workaround until we can migrate to <code>useEffectEvent</code>."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>temporary fix</strong>: near-synonym — a short-term solution to a problem</li>
+<li><strong>patch</strong>: near-synonym — a quick fix applied to cover a defect</li>
+<li><strong>stopgap</strong>: near-synonym — a temporary substitute until something better exists</li>
+<li><strong>root fix</strong>: antonym — a solution that removes the underlying cause</li>
+<li><strong>permanent solution</strong>: antonym — a lasting fix rather than a temporary bypass</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>temporary workaround</strong>: a short-term fix meant to be replaced later</li>
+<li><strong>apply a workaround</strong>: use an alternative path to avoid a problem</li>
+<li><strong>workaround for a bug</strong>: a non-ideal fix that sidesteps the root cause</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-06-00">declaration</h2>
+<p>A <strong>declaration</strong> introduces a name and its role in code, such as a variable, function, or type. It tells both the runtime and the reader, "this thing exists and should be used in this way." Clear declarations improve readability and reduce confusion.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Move the function declaration above the effect for clarity."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>definition</strong>: related — the full specification of what something is</li>
+<li><strong>statement</strong>: related — a single unit of executable code</li>
+<li><strong>initialization</strong>: related — the act of giving a variable its first value</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>variable declaration</strong>: introducing a named variable and its role</li>
+<li><strong>function declaration</strong>: introducing a named function before it is used</li>
+<li><strong>type declaration</strong>: introducing a named type in TypeScript or similar systems</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-07-00">declaration order</h2>
+<p><strong>Declaration order</strong> is the sequence in which declarations appear in source code. That order can affect how easily code is understood and, in some cases, how logic behaves. In React hooks code, order is especially important because relationships between hooks are read top-to-bottom.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"The declaration order makes it clear that <code>onMessage</code> is used inside the effect."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>sequence</strong>: synonym — the order in which things follow one another</li>
+<li><strong>ordering</strong>: synonym — the arrangement of items in a particular sequence</li>
+<li><strong>arrangement</strong>: synonym — the way things are organized or placed</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>declaration order matters</strong>: the sequence affects readability or behavior</li>
+<li><strong>preserve declaration order</strong>: keep declarations in a stable, intentional sequence</li>
+<li><strong>declaration order in hooks</strong>: the top-to-bottom order of hook-related declarations</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-08-00">explicitly</h2>
+<p>To do something <strong>explicitly</strong> is to say it directly instead of implying it. In code, this means writing intent in a visible way so humans and tools do not need to guess. Explicit code usually improves maintainability because assumptions are reduced.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Add <code>roomId</code> explicitly to the dependency array."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>clearly</strong>: synonym — in a way that is easy to see or understand</li>
+<li><strong>directly</strong>: synonym — without anything in between</li>
+<li><strong>plainly</strong>: synonym — in a simple and direct way</li>
+<li><strong>implicitly</strong>: antonym — in a way that is suggested but not stated</li>
+<li><strong>indirectly</strong>: antonym — not in a direct way</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>explicitly state</strong>: say something directly instead of leaving it implied</li>
+<li><strong>explicitly pass</strong>: pass a value or argument in a visible, intentional way</li>
+<li><strong>explicitly declare</strong>: write a declaration so intent is obvious in code</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-09-00">guarantee</h2>
+<p>To <strong>guarantee</strong> means to provide a strong promise that a behavior will hold under stated conditions. Documentation uses this word carefully, because guarantees define what developers can safely depend on. If something is not guaranteed, relying on it is risky.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"React does not guarantee the same timing in every rendering scenario."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>ensure</strong>: near-synonym — to make certain that something happens</li>
+<li><strong>promise</strong>: near-synonym — to assure that something will happen</li>
+<li><strong>assure</strong>: near-synonym — to tell someone confidently that something is true</li>
+<li><strong>risk</strong>: contrast — the possibility of something going wrong</li>
+<li><strong>uncertainty</strong>: contrast — lack of certainty about an outcome</li>
+<li><strong>undefined behavior</strong>: contrast — behavior not specified by a contract</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>guarantee behavior</strong>: promise that a behavior will hold under stated conditions</li>
+<li><strong>guarantee order</strong>: promise that execution order will remain stable</li>
+<li><strong>no guarantee</strong>: a warning that behavior cannot be safely depended on</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-10-00">here's the catch</h2>
+<p><strong>Here's the catch</strong> is a phrase used when introducing a hidden condition, cost, or limitation. It often comes after an idea that first sounds simple or attractive. In technical explanations, this phrase signals an important trade-off.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Here's the catch: adding <code>isMuted</code> to dependencies will reconnect the socket."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>the downside is</strong>: related phrase — introduces a disadvantage</li>
+<li><strong>the catch is</strong>: related phrase — points to the hidden limitation</li>
+<li><strong>however</strong>: discourse marker — signals a contrast or exception</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>here's the catch</strong>: introduces a hidden limitation after a simple-sounding idea</li>
+<li><strong>that's the catch</strong>: points to the key limitation just explained</li>
+<li><strong>but here's the catch</strong>: contrasts an attractive idea with its hidden cost</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-11-00">precise</h2>
+<p><strong>Precise</strong> means exact in detail and clearly bounded in meaning. A precise explanation avoids ambiguity, and a precise API contract limits misinterpretation. Precision does not just mean "correct"; it means "correct in a carefully defined way."</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Use precise wording when describing effect timing."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>exact</strong>: near-synonym — completely accurate or correct</li>
+<li><strong>accurate</strong>: near-synonym — correct in all details</li>
+<li><strong>specific</strong>: near-synonym — clearly defined or identified</li>
+<li><strong>vague</strong>: antonym — not clearly expressed or defined</li>
+<li><strong>loose</strong>: antonym — not strict or exact</li>
+<li><strong>ambiguous</strong>: antonym — open to more than one interpretation</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>precise definition</strong>: a definition with clearly bounded meaning</li>
+<li><strong>precise control</strong>: control with clearly defined limits and behavior</li>
+<li><strong>precise timing</strong>: timing described without ambiguity</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-12-00">ordering</h2>
+<p><strong>Ordering</strong> focuses on how elements are arranged relative to each other, not only the final sequence itself. It often implies rules such as "A must happen before B." In engineering discussions, ordering matters when timing and dependencies affect correctness.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Hook ordering must stay stable across renders."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>arrangement</strong>: synonym — the way things are organized or placed</li>
+<li><strong>sequencing</strong>: synonym — arranging in a particular order</li>
+<li><strong>order</strong>: synonym — the sequence in which things occur</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>execution ordering</strong>: the sequence in which operations run</li>
+<li><strong>hook ordering</strong>: the required stable order of hooks in a component</li>
+<li><strong>strict ordering</strong>: a rule that one step must happen before another</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-13-00">concurrent / concurrently</h2>
+<p><strong>Concurrent</strong> work overlaps in time. Tasks may interleave, pause, and resume without fully waiting for one another. In modern UI frameworks, concurrency is usually about scheduling and responsiveness rather than literal hardware-level parallel execution.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Concurrent rendering can pause and resume work to keep the UI responsive."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>overlapping</strong>: near-synonym — occurring partly at the same time</li>
+<li><strong>interleaved</strong>: near-synonym — alternating or woven together in time</li>
+<li><strong>sequential</strong>: antonym — following one after another in order</li>
+<li><strong>synchronous-only</strong>: antonym — operating without overlap or deferral</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>concurrent rendering</strong>: rendering work that can pause and resume</li>
+<li><strong>concurrent updates</strong>: multiple updates overlapping in time</li>
+<li><strong>run concurrently</strong>: execute in an overlapping or interleaved way</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-14-00">boundaries</h2>
+<p><strong>Boundaries</strong> are conceptual limits between components, responsibilities, or lifecycles. Good boundaries keep side effects contained and make systems easier to reason about. Weak boundaries often cause hidden coupling and harder debugging.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Keep clear boundaries between reactive logic and effect-only logic."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>limits</strong>: synonym — points beyond which something does not extend</li>
+<li><strong>borders</strong>: synonym — edges that separate one area from another</li>
+<li><strong>separation lines</strong>: synonym — conceptual dividers between concerns</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>component boundaries</strong>: limits between what one component owns</li>
+<li><strong>system boundaries</strong>: limits between subsystems or responsibilities</li>
+<li><strong>boundary between A and B</strong>: a conceptual line separating two concerns</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-15-00">contract</h2>
+<p>A <strong>contract</strong> is an agreed behavioral promise between a caller and a system: valid inputs, expected outputs, and required usage rules. Even if code compiles, violating the contract can still produce broken behavior. Contracts are the foundation of reliable APIs.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Calling this API outside an effect breaks its contract."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>agreement</strong>: related — a mutual understanding of expected behavior</li>
+<li><strong>specification</strong>: related — a detailed description of requirements</li>
+<li><strong>guarantee</strong>: related — a promise that certain behavior will hold</li>
+<li><strong>violation</strong>: contrast in usage — breaking the agreed rules</li>
+<li><strong>breach</strong>: contrast in usage — failure to honor an agreement</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>API contract</strong>: the agreed rules for using an API correctly</li>
+<li><strong>contract violation</strong>: using an API in a way that breaks its rules</li>
+<li><strong>honor the contract</strong>: follow the agreed usage rules</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-16-00">scheduled</h2>
+<p>If work is <strong>scheduled</strong>, it is planned or queued to run later rather than executed immediately. Scheduling helps systems balance responsiveness, priority, and workload. In rendering systems, scheduling is central to smooth user experience.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"The update was scheduled after the current event loop tick."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>queued</strong>: near-synonym — placed in a line to be processed later</li>
+<li><strong>planned</strong>: near-synonym — arranged to happen at a future time</li>
+<li><strong>deferred</strong>: near-synonym — postponed to a later time</li>
+<li><strong>immediate</strong>: antonym — happening at once without delay</li>
+<li><strong>instant</strong>: antonym — occurring immediately</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>scheduled update</strong>: an update queued to run later</li>
+<li><strong>scheduled task</strong>: work planned for future execution</li>
+<li><strong>be scheduled to run</strong>: be queued to execute at a later point</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-17-00">synchronously</h2>
+<p><strong>Synchronously</strong> means step-by-step execution where each step finishes before the next begins. This model is straightforward to reason about, but it can block progress if one step is slow. It trades flexibility for predictability.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"<code>useLayoutEffect</code> runs synchronously before paint."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>in sequence</strong>: near-synonym — one after another in order</li>
+<li><strong>blocking</strong>: near-synonym — preventing other work until finished</li>
+<li><strong>step-by-step</strong>: near-synonym — proceeding one stage at a time</li>
+<li><strong>asynchronously</strong>: antonym — without waiting for each step to finish</li>
+<li><strong>non-blocking</strong>: antonym — allowing other work to continue</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>run synchronously</strong>: execute step by step without deferring</li>
+<li><strong>execute synchronously</strong>: complete each step before the next begins</li>
+<li><strong>synchronous operation</strong>: an operation that blocks until it finishes</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-18-00">implementation</h2>
+<p>An <strong>implementation</strong> is the concrete internal mechanism that realizes an idea, interface, or API. Two systems can expose similar behavior while using very different implementations underneath. Understanding this distinction helps separate public usage from internal details.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"This is an implementation detail, not part of the public API contract."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>realization</strong>: synonym — the act of making something concrete</li>
+<li><strong>internal design</strong>: synonym — the structure beneath the public surface</li>
+<li><strong>underlying mechanism</strong>: synonym — the hidden process that makes something work</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>implementation detail</strong>: an internal mechanism not meant for public reliance</li>
+<li><strong>reference implementation</strong>: a canonical example of how something is built</li>
+<li><strong>implementation strategy</strong>: the chosen approach for building something internally</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-19-00">downsides</h2>
+<p><strong>Downsides</strong> are disadvantages, costs, or risks that come with a choice. Mature technical decisions consider both benefits and downsides together. Ignoring downsides often leads to short-term wins and long-term pain.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"One downside of this pattern is repeated setup and teardown."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>drawbacks</strong>: synonym — features that make something less acceptable</li>
+<li><strong>disadvantages</strong>: synonym — unfavorable conditions or consequences</li>
+<li><strong>cons</strong>: synonym — negative aspects of a choice</li>
+<li><strong>benefits</strong>: antonym — advantages gained from a choice</li>
+<li><strong>upsides</strong>: antonym — positive aspects of a choice</li>
+<li><strong>pros</strong>: antonym — arguments in favor of a choice</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>potential downsides</strong>: possible costs or risks to consider</li>
+<li><strong>major downside</strong>: a significant disadvantage of a choice</li>
+<li><strong>weigh the downsides</strong>: compare disadvantages against benefits</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-20-00">declaration (revisited)</h2>
+<p>This term appears again because it is central to React examples. Declarations are not only syntax markers; they define where values come from and what later logic can safely reference. In hook-based code, declaration clarity directly supports correctness.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"A clear declaration makes dependencies easier to reason about."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>declaration style</strong>: related — the way declarations are written in code</li>
+<li><strong>declaration clarity</strong>: related — how easy declarations are to understand</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>clear declaration</strong>: a declaration that makes intent easy to follow</li>
+<li><strong>declaration placement</strong>: where a declaration appears in the code</li>
+<li><strong>declaration scope</strong>: the scope in which a declaration is visible</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-21-00">exact</h2>
+<p><strong>Exact</strong> means perfectly matching, with no approximation. It is often used for identity-level sameness, such as "the exact same value" or "the exact condition." Compared with "precise," exactness emphasizes full match rather than detailed clarity.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"This callback uses the exact same reference across memoized renders."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>identical</strong>: near-synonym — exactly the same in every way</li>
+<li><strong>precise</strong>: near-synonym — exact in detail (context-dependent)</li>
+<li><strong>accurate</strong>: near-synonym — correct in all respects</li>
+<li><strong>approximate</strong>: antonym — close to but not exactly correct</li>
+<li><strong>rough</strong>: antonym — not exact or detailed</li>
+<li><strong>inexact</strong>: antonym — not perfectly accurate</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>exact match</strong>: a perfect match with no difference</li>
+<li><strong>exact same</strong>: identical in every relevant way</li>
+<li><strong>exact value</strong>: the precise value with no approximation</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-22-00">footguns</h2>
+<p><strong>Footguns</strong> are features that are valid and available, but easy to misuse in ways that hurt the person using them. They often look convenient at first and fail later under edge cases. The best APIs try to reduce footguns by making safe usage the default.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Manual dependency management can become a footgun in large components."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>pitfall</strong>: near-synonym — a hidden danger or difficulty</li>
+<li><strong>gotcha</strong>: near-synonym — an unexpected trap in usage</li>
+<li><strong>trap</strong>: near-synonym — something that catches people by surprise</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>common footgun</strong>: a frequent way developers accidentally hurt themselves</li>
+<li><strong>avoid footguns</strong>: design or code in a way that reduces misuse risk</li>
+<li><strong>API footgun</strong>: an API that is easy to misuse despite being valid</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-23-00">passage</h2>
+<p>A <strong>passage</strong> is a piece of text meant to be read, studied, or interpreted. In language learning, it usually means a reading selection rather than a single word or sentence. In this document, <strong>Passage</strong> names the source article you are studying, while <strong>Vocabulary</strong> collects terms from that article.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Read the passage first, then check unfamiliar words in the vocabulary section."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>reading passage</strong>: near-synonym — a text selected for reading practice</li>
+<li><strong>excerpt</strong>: near-synonym — a short extract from a longer work</li>
+<li><strong>text</strong>: near-synonym — a written work or passage</li>
+<li><strong>passage of time</strong>: different sense — the progression of time, not a reading text</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>reading passage</strong>: a passage used in reading comprehension</li>
+<li><strong>passage from</strong>: an extracted portion of a longer text</li>
+<li><strong>source passage</strong>: the original text being studied or translated</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-24-00">bottom line</h2>
+<p><strong>Bottom line</strong> is the final, most important conclusion after a longer explanation. It comes from accounting, where the "bottom line" of a financial statement shows net profit. In everyday and technical writing, it signals "here is what actually matters."</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Bottom line: use <code>useEffectEvent</code> when you need the latest values without retriggering the effect."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>in short</strong>: near-synonym — briefly stated</li>
+<li><strong>to sum up</strong>: near-synonym — to give a brief summary</li>
+<li><strong>the takeaway</strong>: near-synonym — the key lesson or conclusion</li>
+<li><strong>TL;DR</strong>: near-synonym — a very short summary (more casual)</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>bottom line is</strong>: introduces the core conclusion</li>
+<li><strong>the bottom line</strong>: the most important point to remember</li>
+<li><strong>bottom line:</strong>: used as a label before a one-line conclusion</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-25-00">under the hood</h2>
+<p><strong>Under the hood</strong> describes what happens internally, beneath the visible surface of a system. The phrase comes from cars: the engine sits under the hood, while the driver only sees the controls. In software writing, it contrasts public usage with internal implementation or runtime behavior.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Under the hood, <code>useEffectEvent</code> keeps a stable reference while still reading the latest values."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>behind the scenes</strong>: near-synonym — happening out of view</li>
+<li><strong>internally</strong>: near-synonym — inside the system or process</li>
+<li><strong>at a lower level</strong>: related — at the implementation or runtime layer</li>
+<li><strong>on the surface</strong>: contrast — what is visible or obvious from the API</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>under the hood</strong>: describes internal behavior beneath the public interface</li>
+<li><strong>look under the hood</strong>: examine how something works internally</li>
+<li><strong>what happens under the hood</strong>: the hidden mechanism behind visible behavior</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-26-00">caveats</h2>
+<p>A <strong>caveat</strong> is a warning, condition, or limitation that readers should keep in mind. The word comes from Latin meaning "let him beware." In technical writing, <strong>caveats</strong> usually introduce restrictions, edge cases, or important conditions after a generally positive explanation.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"Caveats: this hook must be declared before the effect that uses it."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>warning</strong>: near-synonym — a stronger alert about risk or danger</li>
+<li><strong>limitation</strong>: near-synonym — a boundary on what something can do</li>
+<li><strong>catch</strong>: near-synonym — a hidden drawback or trap</li>
+<li><strong>note</strong>: near-synonym — a lighter remark or reminder</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>important caveats</strong>: significant conditions readers should not miss</li>
+<li><strong>with the caveat that</strong>: introduces a condition attached to a claim</li>
+<li><strong>caveats and limitations</strong>: a section listing restrictions and boundaries</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-27-00">enforce</h2>
+<p>To <strong>enforce</strong> means to make a rule, constraint, or policy actually apply in practice, not just state it in theory. In software writing, enforcement often happens through runtime checks, linters, type systems, or APIs that reject invalid usage.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"React enforces the Rules of Hooks, so invalid hook calls fail at runtime."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>apply</strong>: near-synonym — to put a rule or policy into effect</li>
+<li><strong>impose</strong>: near-synonym — to force a rule or restriction on someone</li>
+<li><strong>require</strong>: related — to make something necessary</li>
+<li><strong>ensure</strong>: contrast — to make an outcome happen, without necessarily punishing violations</li>
+<li><strong>suggest</strong>: contrast — to recommend without forcing compliance</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>enforce a rule</strong>: make a rule actually apply</li>
+<li><strong>enforce constraints</strong>: apply limits so they cannot be ignored</li>
+<li><strong>enforce order</strong>: require a specific sequence to be followed</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-02-28-00">suppress</h2>
+<p>To <strong>suppress</strong> means to prevent something from appearing, spreading, or taking effect. In software writing, it often describes hiding warnings, blocking output, or stopping a reaction from surfacing, rather than removing the underlying cause.</p>
+<ul>
+<li><strong>Example</strong>
+<blockquote>
+<p>"We suppressed the lint warning with a comment for this line."</p>
+</blockquote>
+</li>
+<li><strong>Related expressions</strong>
+<ul>
+<li><strong>hide</strong>: near-synonym — to keep something out of view</li>
+<li><strong>block</strong>: near-synonym — to stop something from passing through</li>
+<li><strong>disable</strong>: related — to turn a feature off entirely</li>
+<li><strong>ignore</strong>: contrast — to pay no attention without actively stopping output</li>
+<li><strong>remove</strong>: contrast — to eliminate the source itself</li>
+</ul>
+</li>
+<li><strong>Common collocations</strong>
+<ul>
+<li><strong>suppress a warning</strong>: prevent a warning from being shown</li>
+<li><strong>suppress an error</strong>: stop an error from surfacing</li>
+<li><strong>suppress output</strong>: prevent output from appearing</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="heading-03-00-00">Grammar</h1>
+<h2 id="heading-03-01-00">Source sentence</h2>
+<blockquote>
+<p>So when a subscription calls the onMessage it captured on render 1, it still reads the current callback with current values.</p>
+</blockquote>
+<p><strong>Meaning:</strong> Even when a subscription calls the <code>onMessage</code> captured during render 1, <code>useEffectEvent</code> still reads the latest callback with the latest values.</p>
+<h2 id="heading-03-02-00">Sentence structure</h2>
+<pre><code>So [when-clause], [main clause]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Part</th><th>Role</th></tr></thead><tbody><tr><td><strong>So</strong></td><td>discourse marker — connects this sentence to the previous explanation</td></tr><tr><td><strong>when a subscription calls ...</strong></td><td>adverbial clause of time — "when ~ happens"</td></tr><tr><td><strong>it still reads ...</strong></td><td>main clause — states what still happens</td></tr></tbody></table>
+<h2 id="heading-03-03-00">When-clause breakdown</h2>
+<p><strong>when a subscription calls the onMessage (that) it captured on render 1</strong></p>
+<pre><code>when
+  a subscription              ← subject
+  calls                       ← verb
+  the onMessage               ← object
+    (that) it captured on render 1   ← relative clause modifying onMessage
+</code></pre>
+<h3 id="heading-03-03-01">the onMessage (that) it captured on render 1</h3>
+<p>This is an <strong>object relative clause</strong> with <strong>that</strong> omitted.</p>
+<p>Expanded form:</p>
+<blockquote>
+<p>the onMessage <strong>that</strong> it captured on render 1</p>
+</blockquote>
+<p>Underlying sentence:</p>
+<blockquote>
+<p>it captured <strong>the onMessage</strong> on render 1</p>
+</blockquote>
+<ul>
+<li><strong>it</strong> = the subscription (or the effect closure)</li>
+<li><strong>captured</strong> = verb</li>
+<li><strong>the onMessage</strong> = object → relative pronoun position</li>
+<li><strong>on render 1</strong> = at the time of the first render</li>
+</ul>
+<h2 id="heading-03-04-00">Main clause breakdown</h2>
+<p><strong>it still reads the current callback with current values</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Element</th><th>Meaning</th></tr></thead><tbody><tr><td><strong>it</strong></td><td><code>useEffectEvent</code> (or its stable reference mechanism)</td></tr><tr><td><strong>still</strong></td><td>even so; contrary to expectation</td></tr><tr><td><strong>reads</strong></td><td>accesses / refers to internally</td></tr><tr><td><strong>the current callback</strong></td><td>the latest version of the callback</td></tr><tr><td><strong>with current values</strong></td><td>carrying the latest values (prepositional phrase modifying callback)</td></tr></tbody></table>
+<h2 id="heading-03-05-00">Key grammar points</h2>
+<ol>
+<li><strong>So</strong> — introduces a result or follow-up conclusion.</li>
+<li><strong>when-clause</strong> — sets the timing or condition.</li>
+<li><strong>Omitted that</strong> — common in object relative clauses.</li>
+<li><strong>capture</strong> — in closure contexts, "to hold onto a value or function from a specific render."</li>
+<li><strong>on render 1</strong> — "during / at the time of render 1."</li>
+<li><strong>still</strong> — emphasizes that the outcome does not change even under the condition above.</li>
+<li><strong>with current values</strong> — prepositional phrase describing the callback.</li>
+</ol>
+<h2 id="heading-03-06-00">Why this contrast matters (React context)</h2>
+<p>A normal effect callback may read <strong>stale values</strong> from an older render. <code>useEffectEvent</code> keeps a <strong>stable reference</strong>, so even if the subscription still calls the <code>onMessage</code> captured on render 1, execution still sees the <strong>current callback with current values</strong>.</p>
+<hr>
+<h2 id="heading-03-07-00">Relative clauses</h2>
+<p>A <strong>relative clause</strong> modifies a noun (the <strong>antecedent</strong>) and is introduced by a relative pronoun such as <strong>who</strong>, <strong>which</strong>, <strong>that</strong>, or <strong>whose</strong>.</p>
+<p>Relative clauses are classified by the role the relative pronoun plays inside the clause.</p>
+<h3 id="heading-03-07-01">Subject relative clause</h3>
+<p>The relative pronoun is the <strong>subject</strong> of the clause.</p>
+<blockquote>
+<p>the developer <strong>who wrote this hook</strong></p>
+</blockquote>
+<p>Expanded:</p>
+<blockquote>
+<p>the developer = subject, who wrote this hook</p>
+</blockquote>
+<ul>
+<li><strong>who / which / that</strong> is usually <strong>not omitted</strong></li>
+<li>Example: The callback <strong>that runs on every message</strong> is stable.</li>
+</ul>
+<h3 id="heading-03-07-02">Object relative clause</h3>
+<p>The relative pronoun is the <strong>object</strong> of the clause.</p>
+<blockquote>
+<p>the onMessage <strong>(that) it captured on render 1</strong></p>
+</blockquote>
+<p>Expanded:</p>
+<blockquote>
+<p>it captured <strong>the onMessage</strong> on render 1</p>
+</blockquote>
+<ul>
+<li><strong>that / which / whom</strong> is often <strong>omitted</strong>, especially <strong>that</strong></li>
+<li>If the clause already has a subject (<code>it</code>), the relative pronoun is likely an object</li>
+</ul>
+<h3 id="heading-03-07-03">Possessive relative clause</h3>
+<p>The relative pronoun shows <strong>possession</strong>.</p>
+<blockquote>
+<p>the component <strong>whose state is stale</strong></p>
+</blockquote>
+<p>Expanded:</p>
+<blockquote>
+<p>the component's state is stale</p>
+</blockquote>
+<ul>
+<li><strong>whose</strong> is followed by a noun: <strong>whose state</strong>, <strong>whose values</strong></li>
+<li>For things, formal style may use <strong>of which</strong>: the API, <strong>the behavior of which</strong> is tricky</li>
+</ul>
+<h2 id="heading-03-08-00">Relative clause comparison</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Type</th><th>Pronoun role</th><th>Omission</th><th>Example</th></tr></thead><tbody><tr><td><strong>Subject</strong></td><td>subject</td><td>rarely omitted</td><td>the dev <strong>who built it</strong></td></tr><tr><td><strong>Object</strong></td><td>object</td><td>often omitted</td><td>the hook <strong>(that) I use</strong></td></tr><tr><td><strong>Possessive</strong></td><td>possession</td><td>not omitted</td><td>the file <strong>whose name is long</strong></td></tr></tbody></table>
+<h2 id="heading-03-09-00">How to identify the type</h2>
+<p>Turn the relative clause into a standalone sentence:</p>
+<ul>
+<li><strong>Subject:</strong> That <strong>runs</strong> on every message. → subject relative clause</li>
+<li><strong>Object:</strong> The subscription calls <strong>that</strong>. → object relative clause</li>
+<li><strong>Possessive:</strong> <strong>Its</strong> state is stale. → possessive relative clause</li>
+</ul>
+<h2 id="heading-03-10-00">Relative clauses are adjective clauses</h2>
+<p>A relative clause is a type of <strong>adjective clause</strong> because it <strong>modifies a noun</strong>.</p>
+<ul>
+<li><strong>Adjective:</strong> a <strong>red</strong> car</li>
+<li><strong>Adjective clause:</strong> a car <strong>that is red</strong></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Clause type</th><th>Function</th><th>Example</th></tr></thead><tbody><tr><td><strong>Noun clause</strong></td><td>acts as a noun</td><td>I know <strong>that he left</strong>.</td></tr><tr><td><strong>Adverb clause</strong></td><td>acts as an adverb</td><td>I left <strong>when he called</strong>.</td></tr><tr><td><strong>Adjective clause</strong></td><td>modifies a noun</td><td>The hook <strong>that we use</strong> is stable.</td></tr></tbody></table>
+<p>A relative clause modifies a noun from <strong>after</strong> the noun, so it is also called a <strong>relative adjective clause</strong>.</p>
+<h3 id="heading-03-10-01">that-clause vs relative that</h3>
+<p>Do not confuse these two uses of <strong>that</strong>:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Function</th><th>Example</th></tr></thead><tbody><tr><td><strong>Relative that (adjective clause)</strong></td><td>modifies a noun</td><td>The fact <strong>that he left</strong> surprised me.</td></tr><tr><td><strong>That-clause (noun clause)</strong></td><td>acts as a noun</td><td>I know <strong>that he left</strong>.</td></tr></tbody></table>
+<p>If <strong>that</strong> modifies a preceding noun, it is a relative pronoun (adjective clause). If <strong>that</strong> fills a noun position in the larger sentence, it is a noun clause.</p>
+<h2 id="heading-03-11-00">Examples from this topic</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Fragment</th><th>Type</th><th>Expanded</th></tr></thead><tbody><tr><td>the callback <strong>that runs on mount</strong></td><td>subject</td><td>The callback runs on mount.</td></tr><tr><td>the values <strong>(that) the effect reads</strong></td><td>object</td><td>The effect reads the values.</td></tr><tr><td>the hook <strong>whose API is stable</strong></td><td>possessive</td><td>The hook's API is stable.</td></tr><tr><td>the onMessage <strong>it captured on render 1</strong></td><td>object (that omitted)</td><td>It captured the onMessage on render 1.</td></tr></tbody></table>6:[["$","div",null,{"className":"breadcrumb-container","children":[["$","$Lf",null,{"href":"/log","className":"back-link","children":[["$","span",null,{"className":"icn-container","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"icn","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]]}]}],["$","span",null,{"className":"txt","children":"Back to list"}]]}],["$","nav",null,{"className":"category-navigation","aria-label":"Breadcrumb","children":["$","ol",null,{"children":[["$","li","0",{"children":"Log"}],["$","li","1",{"children":"Language"}],["$","li","2",{"children":"English"}]]}]}]]}],["$","article",null,{"className":"post-page","children":[["$","div",null,{"className":"post-header","children":[["$","h1",null,{"className":"title","children":"Understanding React's useEffectEvent: A Complete Guide to Solving Stale Closures"}],["$","p",null,{"className":"date","children":"2026-07-09"}]]}],["$","div",null,{"className":"post-body","children":[["$","div",null,{"className":"markdown-content","dangerouslySetInnerHTML":{"__html":"$10"}}],"$L11"]}]]}]]
+12:I[61689,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js","/_next/static/chunks/7cf7167f25f1abda.js"],"default"]
+11:["$","$L12",null,{"items":[{"id":"heading-01-00-00","text":"Passage","depth":1},{"id":"heading-02-00-00","text":"Vocabulary","depth":1},{"id":"heading-02-01-00","text":"stale / stale closure","depth":2},{"id":"heading-02-02-00","text":"closure","depth":2},{"id":"heading-02-03-00","text":"TL;DR","depth":2},{"id":"heading-02-04-00","text":"archived","depth":2},{"id":"heading-02-05-00","text":"workaround","depth":2},{"id":"heading-02-06-00","text":"declaration","depth":2},{"id":"heading-02-07-00","text":"declaration order","depth":2},{"id":"heading-02-08-00","text":"explicitly","depth":2},{"id":"heading-02-09-00","text":"guarantee","depth":2},{"id":"heading-02-10-00","text":"here's the catch","depth":2},{"id":"heading-02-11-00","text":"precise","depth":2},{"id":"heading-02-12-00","text":"ordering","depth":2},{"id":"heading-02-13-00","text":"concurrent / concurrently","depth":2},{"id":"heading-02-14-00","text":"boundaries","depth":2},{"id":"heading-02-15-00","text":"contract","depth":2},{"id":"heading-02-16-00","text":"scheduled","depth":2},{"id":"heading-02-17-00","text":"synchronously","depth":2},{"id":"heading-02-18-00","text":"implementation","depth":2},{"id":"heading-02-19-00","text":"downsides","depth":2},{"id":"heading-02-20-00","text":"declaration (revisited)","depth":2},{"id":"heading-02-21-00","text":"exact","depth":2},{"id":"heading-02-22-00","text":"footguns","depth":2},{"id":"heading-02-23-00","text":"passage","depth":2},{"id":"heading-02-24-00","text":"bottom line","depth":2},{"id":"heading-02-25-00","text":"under the hood","depth":2},{"id":"heading-02-26-00","text":"caveats","depth":2},{"id":"heading-02-27-00","text":"enforce","depth":2},{"id":"heading-02-28-00","text":"suppress","depth":2},{"id":"heading-03-00-00","text":"Grammar","depth":1},{"id":"heading-03-01-00","text":"Source sentence","depth":2},{"id":"heading-03-02-00","text":"Sentence structure","depth":2},{"id":"heading-03-03-00","text":"When-clause breakdown","depth":2},{"id":"heading-03-03-01","text":"the onMessage (that) it captured on render 1","depth":3},{"id":"heading-03-04-00","text":"Main clause breakdown","depth":2},{"id":"heading-03-05-00","text":"Key grammar points","depth":2},{"id":"heading-03-06-00","text":"Why this contrast matters (React context)","depth":2},{"id":"heading-03-07-00","text":"Relative clauses","depth":2},{"id":"heading-03-07-01","text":"Subject relative clause","depth":3},{"id":"heading-03-07-02","text":"Object relative clause","depth":3},{"id":"heading-03-07-03","text":"Possessive relative clause","depth":3},{"id":"heading-03-08-00","text":"Relative clause comparison","depth":2},{"id":"heading-03-09-00","text":"How to identify the type","depth":2},{"id":"heading-03-10-00","text":"Relative clauses are adjective clauses","depth":2},{"id":"heading-03-10-01","text":"that-clause vs relative that","depth":3},{"id":"heading-03-11-00","text":"Examples from this topic","depth":2}]}]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+13:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+d:[["$","title","0",{"children":"Log | DevFolio"}],["$","meta","1",{"name":"description","content":"Notes and learnings from building software"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L13","3",{}]]
+9:null

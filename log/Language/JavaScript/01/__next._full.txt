@@ -1,0 +1,68 @@
+1:"$Sreact.fragment"
+2:I[81021,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js"],"default"]
+3:I[96537,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js"],"default"]
+4:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+5:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+7:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+8:"$Sreact.suspense"
+a:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+e:I[68027,[],"default"]
+:HL["/_next/static/chunks/ea1badeba581a807.css","style"]
+:HL["/_next/static/chunks/5e984a00f47d0d77.css","style"]
+:HL["/_next/static/chunks/c0d05b1511eb13d2.css","style"]
+0:{"P":null,"b":"njbg0maksHduPLtdgtigY","c":["","log","Language","JavaScript","01",""],"q":"","i":false,"f":[[["",{"children":["log",{"children":[["slug","Language/JavaScript/01","c"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ea1badeba581a807.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3f7ef446b0b499b0.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/80510036683d7409.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{"children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/5e984a00f47d0d77.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","main",null,{"id":"log","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L6",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/c0d05b1511eb13d2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/7cf7167f25f1abda.js","async":true,"nonce":"$undefined"}]],["$","$L7",null,{"children":["$","$8",null,{"name":"Next.MetadataOutlet","children":"$@9"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$La",null,{"children":"$@b"}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$8",null,{"name":"Next.Metadata","children":"$@d"}]}]}],null]}],false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+f:I[22016,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js","/_next/static/chunks/7cf7167f25f1abda.js"],""]
+11:I[61689,["/_next/static/chunks/3f7ef446b0b499b0.js","/_next/static/chunks/80510036683d7409.js","/_next/static/chunks/7cf7167f25f1abda.js"],"default"]
+10:Tb73,<h1 id="heading-01-00-00">자바스크립트를 위한 기본 상식</h1>
+<h2 id="heading-01-01-00">정적인 웹 (static web)</h2>
+<p>텍스트나 이미지를 사용해서 사용자에게 정보를 보여 주기만 하는 웹</p>
+<h2 id="heading-01-02-00">자바스크립트와 자바는 다른 언어다</h2>
+<h2 id="heading-01-03-00">자바스크립트와 에크마스크립트는 같은 것일까</h2>
+<hr>
+<h1 id="heading-02-00-00">웹 개발에서 자바스크립트의 역할</h1>
+<h2 id="heading-02-01-00">클라이언트와 서버</h2>
+<h3 id="heading-02-01-01">서버 컴퓨터 (server computer)</h3>
+<ul>
+<li>인터넷에 직접 연결된 컴퓨터</li>
+<li>사이트에서 사용하는 텍스트와 이미지, 동영상, 게시판 정보 등 사이트와 관련된 모든 정보가 저장돼있음</li>
+</ul>
+<h3 id="heading-02-01-02">클라이언트 컴퓨터 (client computer)</h3>
+<p>사용자가 인터넷 정보를 볼 때 사용하는 PC나 노트북, 태블릿, 스마트폰</p>
+<h2 id="heading-02-02-00">프런트엔드 개발과 자바스크립트</h2>
+<h3 id="heading-02-02-01">프런트엔드(front-end)</h3>
+<ul>
+<li>앞(front)에 있어서 사용자에게 보이는 부분을 가리킴</li>
+<li>웹 사이트나 애플리케이션에서 내용을 작성하고 화면을 디자인하는 것부터 사용자의 동작에 반응해서 결과를 만드는 것들이 모두 프런트엔드 개발의 역할</li>
+</ul>
+<h3 id="heading-02-02-02">프런트엔드 개발에서 많이 사용하는 프레임워크와 라이브러리</h3>
+<ul>
+<li>React</li>
+<li>Vue.js</li>
+<li>Angular</li>
+</ul>
+<h2 id="heading-02-03-00">백엔드 개발과 자바스크립트</h2>
+<h3 id="heading-02-03-01">백엔드(back-end)</h3>
+<ul>
+<li>뒤(back)에 있어서 사용자에게 보이지 않는 부분을 말함</li>
+<li>클라이언트 쪽에서 어떤 요청을 하면 서버에서는 요청을 처리하기 위한 프로그램을 실행하는데, 이때 서버에서 실행할 프로그램을 만드는 것이 백엔드 개발</li>
+</ul>
+<h2 id="heading-02-04-00">콘솔 창에서 자바스크립트 사용하기</h2>
+<hr>
+<h1 id="heading-03-00-00">코드 작성을 위한 편집기 설정하기</h1>
+<h2 id="heading-03-01-00">비주얼 스튜디오 코드 알아보기</h2>
+<h3 id="heading-03-01-01">비주얼 스튜디오 코드 설정 화면 열기</h3>
+<h3 id="heading-03-01-02">D2Coding 글꼴 설치하기</h3>
+<h3 id="heading-03-01-03">D2Coding 글꼴 지정하고 탭 크기 조절하기</h3>
+<h2 id="heading-03-02-00">편리하게 개발하기 위한 확장 설치하기</h2>
+<h3 id="heading-03-02-01">라이브 서버</h3>
+<h3 id="heading-03-02-02">프리티어</h3>
+<h3 id="heading-03-02-03">머터리얼 테마</h3>
+<h3 id="heading-03-02-04">머터리얼 아이콘 테마</h3>
+<h2 id="heading-03-03-00">작업 폴더 추가하기</h2>
+<hr>
+<h1 id="heading-04-00-00">간단한 스크립트부터 시작하기</h1>6:[["$","div",null,{"className":"breadcrumb-container","children":[["$","$Lf",null,{"href":"/log","className":"back-link","children":[["$","span",null,{"className":"icn-container","children":["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","fill":"none","viewBox":"0 0 24 24","strokeWidth":1.5,"stroke":"currentColor","aria-hidden":"true","data-slot":"icon","ref":"$undefined","aria-labelledby":"$undefined","className":"icn","children":[null,["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","d":"M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"}]]}]}],["$","span",null,{"className":"txt","children":"Back to list"}]]}],["$","nav",null,{"className":"category-navigation","aria-label":"Breadcrumb","children":["$","ol",null,{"children":[["$","li","0",{"children":"Log"}],["$","li","1",{"children":"Language"}],["$","li","2",{"children":"JavaScript"}]]}]}]]}],["$","article",null,{"className":"post-page","children":[["$","div",null,{"className":"post-header","children":[["$","h1",null,{"className":"title","children":"01. 자바스크립트 시작하기"}],["$","p",null,{"className":"date","children":"2026-07-26"}]]}],["$","div",null,{"className":"post-body","children":[["$","div",null,{"className":"markdown-content","dangerouslySetInnerHTML":{"__html":"$10"}}],["$","$L11",null,{"items":[{"id":"heading-01-00-00","text":"자바스크립트를 위한 기본 상식","depth":1},{"id":"heading-01-01-00","text":"정적인 웹 (static web)","depth":2},{"id":"heading-01-02-00","text":"자바스크립트와 자바는 다른 언어다","depth":2},{"id":"heading-01-03-00","text":"자바스크립트와 에크마스크립트는 같은 것일까","depth":2},{"id":"heading-02-00-00","text":"웹 개발에서 자바스크립트의 역할","depth":1},{"id":"heading-02-01-00","text":"클라이언트와 서버","depth":2},{"id":"heading-02-01-01","text":"서버 컴퓨터 (server computer)","depth":3},{"id":"heading-02-01-02","text":"클라이언트 컴퓨터 (client computer)","depth":3},{"id":"heading-02-02-00","text":"프런트엔드 개발과 자바스크립트","depth":2},{"id":"heading-02-02-01","text":"프런트엔드(front-end)","depth":3},{"id":"heading-02-02-02","text":"프런트엔드 개발에서 많이 사용하는 프레임워크와 라이브러리","depth":3},{"id":"heading-02-03-00","text":"백엔드 개발과 자바스크립트","depth":2},{"id":"heading-02-03-01","text":"백엔드(back-end)","depth":3},{"id":"heading-02-04-00","text":"콘솔 창에서 자바스크립트 사용하기","depth":2},{"id":"heading-03-00-00","text":"코드 작성을 위한 편집기 설정하기","depth":1},{"id":"heading-03-01-00","text":"비주얼 스튜디오 코드 알아보기","depth":2},{"id":"heading-03-01-01","text":"비주얼 스튜디오 코드 설정 화면 열기","depth":3},{"id":"heading-03-01-02","text":"D2Coding 글꼴 설치하기","depth":3},{"id":"heading-03-01-03","text":"D2Coding 글꼴 지정하고 탭 크기 조절하기","depth":3},{"id":"heading-03-02-00","text":"편리하게 개발하기 위한 확장 설치하기","depth":2},{"id":"heading-03-02-01","text":"라이브 서버","depth":3},{"id":"heading-03-02-02","text":"프리티어","depth":3},{"id":"heading-03-02-03","text":"머터리얼 테마","depth":3},{"id":"heading-03-02-04","text":"머터리얼 아이콘 테마","depth":3},{"id":"heading-03-03-00","text":"작업 폴더 추가하기","depth":2},{"id":"heading-04-00-00","text":"간단한 스크립트부터 시작하기","depth":1}]}]]}]]}]]
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+12:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+d:[["$","title","0",{"children":"Log | DevFolio"}],["$","meta","1",{"name":"description","content":"Notes and learnings from building software"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L12","3",{}]]
+9:null
